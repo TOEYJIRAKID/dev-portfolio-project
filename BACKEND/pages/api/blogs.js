@@ -9,7 +9,6 @@ export default async function handle(req, res) {
     const { method } = req;
 
     if (method === 'POST') {
-        debugger;
         const { title, slug, images, description, blogcategory, tags, status } = req.body;
 
         const blogDoc = await Blog.create({
