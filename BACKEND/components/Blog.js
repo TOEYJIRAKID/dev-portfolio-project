@@ -1,16 +1,24 @@
-
+import axios from 'axios';
 import Spinner from './Spinner';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
+import { ReactSortable } from 'react-sortablejs';
+import { MdDeleteForever } from "react-icons/md";
 import 'react-markdown-editor-lite/lib/index.css';
 import MarkdownEditor from 'react-markdown-editor-lite';
-import axios from 'axios';
-import toast from 'react-hot-toast';
 
 export default function Blog(
     {
-        _id
+        _id,
+        title: existingTitle,
+        slug: existingSlug,
+        images: existingImages,
+        description: existingDescription,
+        blogcategory: existingBlogcategory,
+        tags: existingTags,
+        status: existingStatus,
     }
 ) {
 
@@ -18,13 +26,13 @@ export default function Blog(
 
     const router = useRouter();
 
-    const [title, setTitle] = useState('');
-    const [slug, setSlug] = useState('');
-    const [images, setImages] = useState([]);
-    const [description, setDescription] = useState('');
-    const [blogcategory, setBlogcategory] = useState([]);
-    const [tags, setTags] = useState([]);
-    const [status, setStatus] = useState('');
+    const [title, setTitle] = useState(existingTitle || '');
+    const [slug, setSlug] = useState(existingSlug || '');
+    const [images, setImages] = useState(existingImages || []);
+    const [description, setDescription] = useState(existingDescription || '');
+    const [blogcategory, setBlogcategory] = useState(existingBlogcategory || []);
+    const [tags, setTags] = useState(existingTags || []);
+    const [status, setStatus] = useState(existingStatus || '');
 
     // for images uploading
     const [isUploading, setIsUploading] = useState(false);
@@ -32,6 +40,10 @@ export default function Blog(
 
     async function createBlog(ev) {
         ev.preventDefault();
+
+        if (isUploading) {
+            await Promise.all(uploadImagesQueue)
+        }
 
         const data = { title, slug, images, description, blogcategory, tags, status };
 
@@ -45,6 +57,50 @@ export default function Blog(
 
         setRedirect(true);
     };
+
+    async function uploadImages(ev) {
+        const files = ev.target?.files;
+
+        if (files?.length > 0) {
+            setIsUploading(true);
+
+            for (const file of files) {
+                const data = new FormData();
+                data.append('file', file);
+
+                // use the axios.post method and push the promise to the queue
+                uploadImagesQueue.push(
+                    axios.post('/api/upload', data).then(res => {
+                        setImages(oldImage => [...oldImage, ...res.data.links])
+                    })
+                )
+            }
+
+            // wait for all images to finish uploading
+            await Promise.all(uploadImagesQueue);
+            setIsUploading(false);
+            toast.success('Images Uploaded')
+
+        } else {
+            toast.error('An error occurred!')
+        }
+    }
+
+    if (redirect) {
+        router.push('/blogs')
+        return null;
+    }
+
+    function updateImagesOrder(images) {
+        setImages(images)
+    }
+
+    function handleDeleteImage(index) {
+        const updateImages = [...images];
+        updateImages.splice(index, 1);
+        setImages(updateImages);
+        toast.success('Image Deleted Successfully')
+    }
 
     // for slug url
     const handleSlugChange = (ev) => {
@@ -98,15 +154,30 @@ export default function Blog(
             <div className="w-100 flex flex-col flex-left mb-2">
                 <div className="w-100">
                     <label htmlFor="images">Images (first image will be show as thumbnail, you can drag)</label>
-                    <input type="file" id="fileInput" className="mt-1" accept="image/*" multiple />
+                    <input type="file" id="fileInput" className="mt-1" accept="image/*" multiple
+                        onChange={uploadImages} />
                 </div>
-                <div className="w-100 flex flex-left">
-                    <Spinner />
+                <div className="w-100 flex flex-left mt-1">
+                    {isUploading && (<Spinner />)}
                 </div>
             </div>
 
-            {/* image preview and image sortable */}
-            {/* pending */}
+            {/* image preview and image sortable with delete image*/}
+            {!isUploading && (
+                <div className="flex">
+                    <ReactSortable list={Array.isArray(images) ? images : []} setList={updateImagesOrder} animation={200}
+                        className="flex gap-1">
+                        {images?.map((link, index) => (
+                            <div key={link} className="uploadedimg">
+                                <img src={link} alt="image" className="object-cover" />
+                                <div className="deleteimg">
+                                    <button onClick={() => handleDeleteImage(index)}><MdDeleteForever /></button>
+                                </div>
+                            </div>
+                        ))}
+                    </ReactSortable>
+                </div>
+            )}
 
             {/* markdown description */}
             <div className="description w-100 flex flex-col flex-left mb-2">

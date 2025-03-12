@@ -20,7 +20,7 @@ export default async function handle(req, res) {
 
     if (method === 'GET') {
         if (req.query?.id) {
-            res.json(await Blog.findbyId(req.query.id))
+            res.json(await Blog.findById(req.query.id))
         } else {
             res.json((await Blog.find()).reverse())
         }
