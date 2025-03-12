@@ -41,11 +41,11 @@ export default function DeleteProduct() {
         <div className="blogpage">
             <div className="titledashboard flex flex-sb">
                 <div>
-                    <h2>Edit <span>{productInfo?.title}</span></h2>
+                    <h2>Delete <span>{productInfo?.title}</span></h2>
                     <h3>ADMIN PANEL</h3>
                 </div>
                 <div className="breadcrumb">
-                    <BsPostcard /><span>/</span><span>Edit Blog</span>
+                    <BsPostcard /><span>/</span><span>Delete Blog</span>
                 </div>
             </div>
             <div className="deletesec flex flex-center wh_100">
