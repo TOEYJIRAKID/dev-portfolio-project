@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Head from "next/head";
 import Spinner from './Spinner';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -115,6 +116,9 @@ export default function Project(
     }
 
     return <>
+        <Head>
+            <title>Add Project</title>
+        </Head>
         <form className="addWebsiteform" onSubmit={createProject}>
             {/*project title*/}
             <div className="w-100 flex flex-col flex-left mb-2">
@@ -206,7 +210,7 @@ export default function Project(
 
             {/* markdown description */}
             <div className="description w-100 flex flex-col flex-left mb-2">
-                <label htmlFor="description">Blog Content (for image: first upload and copy link and paste in ![alt text](link))</label>
+                <label htmlFor="description">Project Content (for image: first upload and copy link and paste in ![alt text](link))</label>
                 <MarkdownEditor
                     value={description}
                     onChange={(ev) => setDescription(ev.text)}

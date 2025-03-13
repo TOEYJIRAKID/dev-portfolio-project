@@ -27,7 +27,7 @@ export default function EditProject() {
     return <>
 
         <Head>
-            <title>Update Blog</title>
+            <title>Update Project</title>
         </Head>
 
         <div className="blogpage">

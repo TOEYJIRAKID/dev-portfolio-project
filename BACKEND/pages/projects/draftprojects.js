@@ -35,7 +35,7 @@ export default function draftprojects() {
 
     // Get the current pag's blogs
     const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
-    const publishedblogs = currentBlogs.filter(ab => ab.status === 'draft'); // for draft blogs
+    const publishedblogs = currentBlogs.filter(ab => ab.status === 'draft'); // for draft project
     const pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(allblog / perPage); i++) {
