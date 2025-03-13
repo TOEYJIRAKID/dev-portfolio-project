@@ -1081,7 +1081,7 @@ button {
     background: linear-gradient(to right, #9014ac, #b45dc4);
 }
 
-.topaccoutnbox {
+.topaccountnbox {
     width: 450px;
     background-color: #ffffffc6;
     backdrop-filter: blur(5px);
@@ -1091,12 +1091,12 @@ button {
     box-shadow: 0 0 10px #999;
 }
 
-.topaccoutnbox h2 {
+.topaccountnbox h2 {
     padding-bottom: 1rem;
     font-weight: 800;
 }
 
-.topaccoutnbox button {
+.topaccountnbox button {
     padding: 10px 30px;
     font-size: 18px;
     border-radius: 30px;
@@ -1106,7 +1106,7 @@ button {
     font-weight: 600;
 }
 
-.topaccoutnbox button:hover {
+.topaccountnbox button:hover {
     box-shadow: 0 0 10px #d31313;
     background: #888888;
     color: #fff;
@@ -1733,7 +1733,7 @@ button {
         width: 100%;
     }
 
-    .topaccoutnbox {
+    .topaccountnbox {
         width: 100%;
     }
 
