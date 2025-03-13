@@ -2,10 +2,10 @@ import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import Loading from "@/components/Loading";
 import { useState, useEffect } from "react";
-// import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from "next-auth/react"
 import ParentComponent from "@/components/ParentComponent";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
 
   const [loading, setLoading] = useState(true);
 
@@ -47,12 +47,14 @@ export default function App({ Component, pageProps }) {
       </div>
     ) : (
       <>
-        <ParentComponent appOpen={asideOpen} appAsideOpen={AsideClickOpen} />
+        <SessionProvider>
+          <ParentComponent appOpen={asideOpen} appAsideOpen={AsideClickOpen} />
+        </SessionProvider>
         <main>
           <div className={asideOpen ? 'container' : 'container active'}>
-            {/* <SessionProvider> */}
+            <SessionProvider>
               <Component {...pageProps} />
-            {/* </SessionProvider> */}
+            </SessionProvider>
           </div>
         </main>
       </>
