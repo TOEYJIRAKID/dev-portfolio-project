@@ -36,18 +36,18 @@ export default function Home() {
       try {
 
         const response = await fetch('/api/blogs');
-        // const responseProject = await fetch('/api/projects');
-        // const responseShop = await fetch('/api/shops');
-        // const responseGallery = await fetch('/api/photos');
+        const responseProject = await fetch('/api/projects');
+        const responseShop = await fetch('/api/shops');
+        const responseGallery = await fetch('/api/photos');
         const data = await response.json();
-        // const dataProject = await responseProject.json();
-        // const dataShop = await responseShop.json();
-        // const dataGallery = await responseGallery.json();
+        const dataProject = await responseProject.json();
+        const dataShop = await responseShop.json();
+        const dataGallery = await responseGallery.json();
 
         setBlogsData(data); // assuming data is an array of blog objects
-        // setProjectsData(dataProject);
-        // setShopsData(dataShop);
-        // setPhotosData(dataGallery);
+        setProjectsData(dataProject);
+        setShopsData(dataShop);
+        setPhotosData(dataGallery);
         setLoading(false); // after fetching data, set loading to false
 
       } catch (error) {
@@ -110,15 +110,15 @@ export default function Home() {
           </div>
           <div className="four_card">
             <h2>Total Projects</h2>
-            <span>5</span>
+            <span>{projectsData.filter(dat => dat.status === "publish").length}</span>
           </div>
           <div className="four_card">
             <h2>Total Products</h2>
-            <span>5</span>
+            <span>{shopData.filter(dat => dat.status === "publish").length}</span>
           </div>
           <div className="four_card">
             <h2>Gallery Photos</h2>
-            <span>5</span>
+            <span>{photosData.length}</span>
           </div>
         </div>
 
