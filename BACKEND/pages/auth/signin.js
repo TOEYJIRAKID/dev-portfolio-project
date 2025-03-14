@@ -90,11 +90,11 @@ export default function signin() {
             <input className="login-button" type="submit" value="Login" />
             {error && <p className="login-error">{error}</p>}
           </form>
-          <span className="agreement">
+          {/* <span className="agreement">
             <Link href="/agreement" target="_blank">
               Learn Admin license agreement
             </Link>
-          </span>
+          </span> */}
         </>}
       </div>
     </div>
