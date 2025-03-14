@@ -8,7 +8,7 @@ import { React, useEffect, useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import { useSession, signOut } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react";
 
 export default function Aside({ asideOpen, handleAsideOpen }) {
 
@@ -34,11 +34,11 @@ export default function Aside({ asideOpen, handleAsideOpen }) {
 
   const handleLogout = async () => {
     await signOut({ redirect: false }); // Sign out without immediate redirect
+    handleAsideOpen(false); // Close the aside menu when logging out
     router.push('/auth/signin'); // Programmatically redirect after sign-out
   };
 
   if (session) {
-
     return <>
       <aside className={asideOpen ? "asideleft active" : "asideleft"}>
         <ul>
