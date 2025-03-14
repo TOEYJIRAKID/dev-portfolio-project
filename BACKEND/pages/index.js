@@ -3,8 +3,8 @@ import { Bar } from 'react-chartjs-2';
 import { IoHome } from "react-icons/io5";
 import Loading from "@/components/Loading";
 import { useState, useEffect } from "react";
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import LoginLayout from "@/components/LoginLayout";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 export default function Home() {
 
@@ -84,7 +84,6 @@ export default function Home() {
   }
 
   return (
-
     <LoginLayout>
       <>
         <Head>
@@ -207,5 +206,4 @@ export default function Home() {
       </>
     </LoginLayout>
   );
-
 }
