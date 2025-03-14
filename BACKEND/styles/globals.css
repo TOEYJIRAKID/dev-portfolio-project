@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+.login-error {
+    color: red;
+}
+
 /* ================================================== */
 
 /* Flex class */

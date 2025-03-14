@@ -2,16 +2,23 @@
 'use client'
 
 import { useRouter } from "next/router";
-import { signIn } from "next-auth/react";
+import Spinner from "@/components/Spinner";
 import { useEffect, useState } from "react";
+import { signIn, useSession } from "next-auth/react";
 
 export default function signin() {
 
+  const { data: session, status } = useSession();
   const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({ email: '', password: '', confirmPassword: '' });
+  const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
-
   const router = useRouter();
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.push('/');
+    }
+  }, [status, router])
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -40,8 +47,9 @@ export default function signin() {
         }, 4000); // remove error after 4 sec
       }
 
-    } catch (error) {
-      setError('Sign-in failed. please try again');
+    } catch (err) {
+      console.error('Sign-in error:', err);
+      setError('Sign-in failed. please try again.');
       setTimeout(() => {
         setError('')
       }, 4000); // remove error after 4 sec
@@ -51,21 +59,26 @@ export default function signin() {
         setError('')
       }, 4000); // remove error after 4 sec
     }
+  };
+
+  if (status === 'loading') {
+    return <div className="flex flex-center wh_100"><Spinner /></div>;
   }
 
   return (
-    <>
-      <div className="flex flex-center full-h">
-        <div className="loginform">
-          <div className="heading">Sign Up Create Admin</div>
+    <div className="flex flex-center full-h">
+      <div className="loginform">
+        <div className="heading">Sign In</div>
+        {loading ? <div className="flex flex-center w-100 flex-col"><Spinner /> Checking...</div> : <>
           <form className="form" onSubmit={handleSubmit}>
-            <input type="email" name="email" onChange={handleChange} className="input" placeholder="Email" />
-            <input type="password" name="password" onChange={handleChange} className="input" placeholder="Password" />
-            <button className="login-button" type="submit">Sign Up</button>
-            {error && <p>{error}</p>}
+            <input required className="input" type="email" name="email" id="email" value={form.email} onChange={handleChange} placeholder="Email" />
+            <input required className="input" type="password" name="password" id="password" value={form.password} onChange={handleChange} placeholder="Password" />
+            <input className="login-button" type="submit" value="Login" />
+            {error && <p className="login-error">{error}</p>}
           </form>
-        </div>
+          <span className="agreement"><a href="https://google.com/" target="_blank">Learn Admin license agreement</a></span>
+        </>}
       </div>
-    </>
+    </div>
   );
 }
