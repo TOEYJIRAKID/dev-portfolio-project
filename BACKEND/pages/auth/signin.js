@@ -1,10 +1,13 @@
 // pages/auth/signin.js
 'use client'
 
+import Link from "next/link";
 import { useRouter } from "next/router";
 import Spinner from "@/components/Spinner";
 import { useEffect, useState } from "react";
+import { AiOutlineEye } from "react-icons/ai";
 import { signIn, useSession } from "next-auth/react";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 export default function signin() {
 
@@ -12,6 +15,7 @@ export default function signin() {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -61,6 +65,11 @@ export default function signin() {
     }
   };
 
+  // Function to toggle password visibility
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   if (status === 'loading') {
     return <div className="flex flex-center wh_100"><Spinner /></div>;
   }
@@ -72,11 +81,20 @@ export default function signin() {
         {loading ? <div className="flex flex-center w-100 flex-col"><Spinner /> Checking...</div> : <>
           <form className="form" onSubmit={handleSubmit}>
             <input required className="input" type="email" name="email" id="email" value={form.email} onChange={handleChange} placeholder="Email" />
-            <input required className="input" type="password" name="password" id="password" value={form.password} onChange={handleChange} placeholder="Password" />
+            <div className="password-input-container">
+              <input required className="input password-input" type={showPassword ? 'text' : 'password'} name="password" id="password" value={form.password} onChange={handleChange} placeholder="Password" />
+              <button type="button" className="password-toggle-button" onClick={togglePasswordVisibility}>
+                {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+              </button>
+            </div>
             <input className="login-button" type="submit" value="Login" />
             {error && <p className="login-error">{error}</p>}
           </form>
-          <span className="agreement"><a href="https://google.com/" target="_blank">Learn Admin license agreement</a></span>
+          <span className="agreement">
+            <Link href="/agreement" target="_blank">
+              Learn Admin license agreement
+            </Link>
+          </span>
         </>}
       </div>
     </div>

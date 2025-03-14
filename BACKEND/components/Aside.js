@@ -8,7 +8,7 @@ import { React, useEffect, useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react"
 
 export default function Aside({ asideOpen, handleAsideOpen }) {
 
@@ -31,6 +31,11 @@ export default function Aside({ asideOpen, handleAsideOpen }) {
   }, [router.pathname]);
 
   const { data: session } = useSession()
+
+  const handleLogout = async () => {
+    await signOut({ redirect: false }); // Sign out without immediate redirect
+    router.push('/auth/signin'); // Programmatically redirect after sign-out
+  };
 
   if (session) {
 
@@ -151,7 +156,7 @@ export default function Aside({ asideOpen, handleAsideOpen }) {
             </li>
           </Link>
         </ul>
-        <button onClick={() => signOut()} className="logoutbtn">Logout</button>
+        <button onClick={handleLogout} className="logoutbtn">Logout</button>
       </aside>
     </>
   }

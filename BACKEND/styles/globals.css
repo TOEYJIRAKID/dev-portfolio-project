@@ -11,8 +11,74 @@ body {
     overflow-x: hidden;
 }
 
+
+/* ================================================== */
+
+/* Password Toggle */
+
+/* ================================================== */
+
+.password-input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  
+.password-input {
+width: 100%;
+padding-right: 50px; /* Make space for the toggle button */
+}
+
+.password-toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size:25px;
+}
+.password-toggle-button:hover{
+    color: #333;
+}
+
 .login-error {
     color: red;
+}
+
+
+/* ================================================== */
+
+/* Agreement */
+
+/* ================================================== */
+
+.agreement-page{
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh;
+}
+.agreement-content{
+    padding: 2rem;
+}
+.agreement-content h1, .agreement-content h2{
+    margin-bottom: 1rem;
+    color: #000;
+}
+.agreement-content p{
+    color: #555;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.agreement-content ul{
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.agreement-content li{
+    color: #555;
+    line-height: 2rem;
 }
 
 /* ================================================== */
