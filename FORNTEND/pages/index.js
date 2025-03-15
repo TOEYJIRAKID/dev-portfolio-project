@@ -1,13 +1,64 @@
 import Head from "next/head";
 import Link from "next/link";
+import Spinner from "@/components/Spinner";
 import { BiDownload } from "react-icons/bi";
+import { useState, useEffect } from "react";
+import { GoArrowUpRight } from "react-icons/go";
 import { GrLinkedinOption } from "react-icons/gr";
 import { LiaBasketballBallSolid } from "react-icons/lia";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 export default function Home() {
 
+  // active services background color
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  const handleHover = (index) => {
+    setActiveIndex(index);
+  };
+
+  const handleMouseOut = () => {
+    setActiveIndex(0); // set the first item as active when mouse leave
+  };
+
+  const [loading, setLoading] = useState(true);
+  const [alldata, setAlldata] = useState([]);
+  const [allwork, setAllwork] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [projectResponse, blogsResponse] = await Promise.all([
+          fetch('/api/projects')
+        ])
+
+        const projectData = await projectResponse.json();
+        setAlldata(projectData);
+
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, [])
+
+  useEffect(() => {
+    // filter project by select category
+    if (selectedCategory === 'All') {
+      setFilteredProjects(alldata.filter(pro => pro.status === 'publish'));
+    } else {
+      setFilteredProjects(alldata.filter(pro => pro.status === 'publish' && pro.projectcategory[0] === selectedCategory));
+    }
+  }, [selectedCategory, alldata])
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  }
 
   // services data
   const services = [
@@ -98,12 +149,62 @@ export default function Home() {
 
       {/* Services */}
       <section className="services">
-
+        <div className="container">
+          <div className="services_titles">
+            <h2>My Quality Services</h2>
+            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+          </div>
+          <div className="services_menu">
+            {services.map((service, index) => (
+              <div key={index} className={`services_item ${activeIndex === index ? 'sactive' : ''}`}
+                onMouseOver={() => handleHover(index)}
+                onMouseOut={handleMouseOut}>
+                <div className="left_s_box">
+                  <span>0{index + 1}</span>
+                  <h3>{service.title}</h3>
+                </div>
+                <div className="right_s_box">
+                  <p>{service.description}</p>
+                </div>
+                <GoArrowUpRight />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Projects */}
       <section className="projects">
-
+        <div className="container">
+          <div className="project_titles">
+            <h2>My Recent Works</h2>
+            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+          </div>
+          <div className="project_buttons">
+            <button className={selectedCategory === 'All' ? 'active' : ''} onClick={() => setSelectedCategory('All')}>All</button>
+            <button className={selectedCategory === 'Website Development' ? 'active' : ''} onClick={() => setSelectedCategory('Website Development')}>Website</button>
+            <button className={selectedCategory === 'App Development' ? 'active' : ''} onClick={() => setSelectedCategory('App Development')}>Apps</button>
+            <button className={selectedCategory === 'E-commerce Site' ? 'active' : ''} onClick={() => setSelectedCategory('E-commerce Site')}>Digital</button>
+            <button className={selectedCategory === 'Performance Evaluation' ? 'active' : ''} onClick={() => setSelectedCategory('Performance Evaluation')}>Content</button>
+          </div>
+          <div className="projects_cards">
+            {loading ? <div className="flex flex-center wh_50"><Spinner /></div> : (
+              filteredProjects.length === 0 ? (<h1>No Project Found</h1>) : (
+                filteredProjects.slice(0, 4).map((pro) => (
+                  <Link href='/' key={pro._id} className="procard">
+                    <div className="proimgbox">
+                      <img src={pro.images[0]} alt={pro.title} />
+                    </div>
+                    <div className="procontentbox">
+                      <h2>{pro.title}</h2>
+                      <GoArrowUpRight />
+                    </div>
+                  </Link>
+                ))
+              )
+            )}
+          </div>
+        </div>
       </section>
 
       {/* Experience study */}

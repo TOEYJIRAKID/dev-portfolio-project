@@ -282,6 +282,11 @@ img {
     height: 100vh;
 }
 
+.wh_50 {
+    width: 100vw;
+    height: 50vh;
+}
+
 
 a {
     text-decoration: none;
