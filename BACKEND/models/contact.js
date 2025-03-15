@@ -7,9 +7,9 @@ const ContactSchema = new Schema({
     company: { type: String},
     phone: { type: String, required: true },
     country: { type: String},
+    project: [{ type: String }],
     price: { type: String},
     description: { type: String},
-    project: [{ type: String }],
 }, {
     timestamps: true, // automatically manage createdAt and updatedAt
 });
