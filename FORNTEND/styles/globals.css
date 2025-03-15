@@ -1499,7 +1499,7 @@ header.sticky {
     color: var(--dark-black);
 }
 
-.myskils_cards {
+.myskills_cards {
     width: 100%;
     display: flex;
     align-items: center;
@@ -4563,7 +4563,7 @@ header.sticky {
         max-width: 47%;
     }
 
-    .myskils_cards {
+    .myskills_cards {
         flex-wrap: wrap;
     }
 

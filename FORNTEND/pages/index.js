@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
+import { LuMedal } from "react-icons/lu";
 import Spinner from "@/components/Spinner";
 import { BiDownload } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import { PiGraduationCap } from "react-icons/pi";
 import { GrLinkedinOption } from "react-icons/gr";
 import { LiaBasketballBallSolid } from "react-icons/lia";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaCalendarDays, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 export default function Home() {
 
@@ -31,11 +33,16 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const [projectResponse, blogsResponse] = await Promise.all([
-          fetch('/api/projects')
+          fetch('/api/projects'),
+          fetch('/api/blogs')
         ])
 
         const projectData = await projectResponse.json();
+        const blogsData = await blogsResponse.json();
+
         setAlldata(projectData);
+        // setAllwork(blogsData);
+        setAllwork(blogsData.filter(blog => blog.status === 'publish'));
 
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -58,6 +65,23 @@ export default function Home() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+  }
+
+  // function to format the date as '23 may 2025 10:10 pm'
+  const formatDate = (date) => {
+    // check if date if valid
+    if (!date || isNaN(date)) {
+      return ''; // or handle the error as needed
+    }
+
+    const options = {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      hour12: true // use 12-hour format
+    };
+
+    return new Intl.DateTimeFormat('en-US', options).format(date);
   }
 
   // services data
@@ -86,7 +110,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ToeyJira - Personal Portfolio</title>
+        <title>ToeyJira - Portfolio</title>
         <meta name="description" content="vbmcoder - Personal Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -209,17 +233,131 @@ export default function Home() {
 
       {/* Experience study */}
       <section className="exstudy">
-
+        <div className="container flex flex-left flex-sb">
+          <div className="experience">
+            <div className="experience_title flex gap-1">
+              <LuMedal />
+              <h2>My Experience</h2>
+            </div>
+            <div className="exper_cards">
+              <div className="exper_card">
+                <span>2020 - Present</span>
+                <h3>COMPANY NAME</h3>
+                <p>Full Stack Developer (Internship)</p>
+              </div>
+              <div className="exper_card">
+                <span>2018 - 2020</span>
+                <h3>COMPANY NAME</h3>
+                <p>Mobile Developer</p>
+              </div>
+              <div className="exper_card">
+                <span>2015 - 2018</span>
+                <h3>COMPANY NAME</h3>
+                <p>Backend Mobile Developer</p>
+              </div>
+            </div>
+          </div>
+          <div className="education">
+            <div className="experience_title flex gap-1">
+              <PiGraduationCap />
+              <h2>My Education</h2>
+            </div>
+            <div className="exper_cards">
+              <div className="exper_card">
+                <span>2021 - 2024</span>
+                <h3>Walailak University</h3>
+                <p>Bachelor of Science Program in Information Technology and Digital Innovation (GPAX 3.80)</p>
+              </div>
+              <div className="exper_card">
+                <span>2018 - 2020</span>
+                <h3>Rattaphumwittaya School</h3>
+                <p>English-Mathematics Program (GPAX 3.52)</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* My Skills */}
       <section className="myskills">
-
+        <div className="container">
+          <div className="myskills_title">
+            <h2>My Skills</h2>
+            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+          </div>
+          <div className="myskills_cards">
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/python.svg" alt="python" />
+                <h3>92%</h3>
+              </div>
+              <p className="text-center">Python</p>
+            </div>
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/firebase.svg" alt="firebase" />
+                <h3>80%</h3>
+              </div>
+              <p className="text-center">Firebase</p>
+            </div>
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/mongodb.svg" alt="mongodb" />
+                <h3>98%</h3>
+              </div>
+              <p className="text-center">MongoDB</p>
+            </div>
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/redux.svg" alt="redux" />
+                <h3>85%</h3>
+              </div>
+              <p className="text-center">Redux</p>
+            </div>
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/react.svg" alt="react" />
+                <h3>99%</h3>
+              </div>
+              <p className="text-center">React</p>
+            </div>
+            <div className="mys_card">
+              <div className="mys_inner">
+                <img src="/img/js.svg" alt="javascript" />
+                <h3>99%</h3>
+              </div>
+              <p className="text-center">JavaScript</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Recent Blogs */}
       <section className="recentblogs">
-
+        <div className="container">
+          <div className="myskills_title">
+            <h2>Recent Blogs</h2>
+            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+          </div>
+          <div className="recent_blogs">
+            {allwork.slice(0, 3).map((blog) => {
+              return <Link href={`/blogs/${blog.slug}`} key={blog._id} className="re_blog">
+                <div className="re_blogimg">
+                  <img src={blog.images[0] || '/img/noimage.png'} alt={blog.title} />
+                  <span>{blog.blogcategory[0]}</span>
+                </div>
+                <div className="re_bloginfo">
+                  <div className="re_topdate flex gap-1">
+                    <div className="res_date">
+                      <FaCalendarDays /> <span>{formatDate(new Date(blog.createdAt))}</span>
+                    </div>
+                  </div>
+                  <h2>{blog.title}</h2>
+                </div>
+              </Link>
+            })}
+          </div>
+        </div>
       </section>
 
     </>
