@@ -1926,7 +1926,22 @@ header.sticky {
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
     padding: 30px;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.fpostinfo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: -1;
 }
 
 .tegs {
@@ -2179,6 +2194,7 @@ header.sticky {
 
 .blogspaginationbtn {
     gap: 1rem;
+    padding-bottom: 5rem;
 }
 
 .blogspaginationbtn button {
@@ -2218,6 +2234,7 @@ header.sticky {
 
 .poputegs {
     margin-top: 1rem;
+    margin-bottom: 4rem;
     position: relative;
     display: flex;
     align-items: center;
