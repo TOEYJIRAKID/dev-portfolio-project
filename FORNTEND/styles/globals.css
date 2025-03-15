@@ -2525,7 +2525,7 @@ header.sticky {
 .rightimgsec img:hover {
     -webkit-filter: grayscale(100%) blur(3px);
     filter: grayscale(100%) blur(3px);
-    transition: .2s ease-in-out;
+    transition: .8s ease-in-out;
 }
 
 .r_img_top img {
