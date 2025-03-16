@@ -3,25 +3,23 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
-
-
 const extractFirstParagraph = (markdown) => {
     // Split markdown by double newline to separate paragraphs
     const paragraphs = markdown.split('\n\n');
-    
+
     // Return the first paragraph (assuming paragraphs[0] is the first paragraph)
     return paragraphs[0];
 };
 
 export default function Blogsearch(props) {
 
-    const { allwork = [] } = useFetchData('/api/blogs');  // Assuming useFetchData returns an object with allwork and loading
+    const { alldata = [], loading } = useFetchData('/api/blogs');  // Assuming useFetchData returns an object with alldata and loading
 
     const [searchResult, setSearchResult] = useState(null);
     const [blogtitle, setBlogtitle] = useState('');  // blogtitle should be initialized as a string
 
     // filter for published blogs required
-    const publishedData = allwork.filter(ab => ab.status === 'publish');
+    const publishedData = alldata.filter(ab => ab.status === 'publish');
 
     // Function to handle search
     useEffect(() => {
@@ -36,12 +34,13 @@ export default function Blogsearch(props) {
 
         setSearchResult(filteredblogs);  // setSearchResult should be used to update searchResult state
 
-    }, [blogtitle, allwork]);  // Include allwork in dependencies to ensure useEffect updates when data changes
+    }, [blogtitle, publishedData]);
 
     const handleBlogClick = () => {
         setBlogtitle('');  // This clears the input field when a blog is clicked
     };
 
+    if (loading) return <p>Loading...</p>; // optionally handle the loading state
 
     return <>
         <div className="searchblogfix">
@@ -53,16 +52,16 @@ export default function Blogsearch(props) {
                         onChange={(e) => setBlogtitle(e.target.value)}
                     />
                     <div className='sbsinputclose' onClick={props.cls}>
-                        <IoClose />                        
+                        <IoClose />
                     </div>
                 </div>
                 <div className="sbsfsearchlist mt-2">
                     {blogtitle && (<>
-                        {searchResult.length === 0 ? <h3>No Blog Found <span>(please chq your spelling)</span></h3> : <>
+                        {searchResult.length === 0 ? <h3>No Blog Found <span>(please check your spelling)</span></h3> : <>
                             {searchResult.slice(0, 10).map((blog) => {
                                 return <Link href={`/blogs/${blog.slug}`} key={blog._id} className="sbsfsbox" onClick={props.cls}>
                                     <h2>{blog.title}</h2>
-                                    <p>{extractFirstParagraph(blog.description)}</p>    
+                                    <p>{extractFirstParagraph(blog.description)}</p>
                                 </Link>
                             })}
 

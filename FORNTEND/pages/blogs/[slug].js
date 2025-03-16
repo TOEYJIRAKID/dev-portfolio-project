@@ -21,6 +21,7 @@ import { useState, useEffect, useRef } from "react";
 import Spinner from "@/components/Spinner";
 import { set } from "mongoose";
 import { FiSearch } from "react-icons/fi";
+import Blogsearch from "@/components/Blogsearch";
 
 const BlogPage = () => {
 
@@ -29,6 +30,16 @@ const BlogPage = () => {
 
     // hook for all data fetching
     const { alldata } = useFetchData('/api/blogs');
+    const [searchInput, setSearchInput] = useState(false);
+
+    const handleSearchOpen = () => {
+        setSearchInput(!searchInput);
+    }
+
+    const handleSearchClose = () => {
+        setSearchInput(false);
+    }
+
 
     const [blogData, setBlogData] = useState({ blog: {}, comments: [] }); // initialize comments as an empty array
     const [newComment, setNewComment] = useState({
@@ -64,6 +75,8 @@ const BlogPage = () => {
         fetchBlogData();
 
     }, [slug]) // fetch data whenever slug change
+
+    const slugLink = alldata.filter(ab => ab.status === 'publish');
 
     const handleCommentSubmit = async (e) => {
         e.preventDefault();
@@ -422,12 +435,39 @@ const BlogPage = () => {
                                 </div>
                                 <div className="rightsitedetails">
                                     <div className="rightslugsearchbar">
-                                        <input type="text" placeholder="Search..." />
-                                        <button><FiSearch/></button>
+                                        <input onClick={handleSearchOpen} type="text" placeholder="Search..." />
+                                        <button><FiSearch /></button>
+                                    </div>
+                                    <div className="rightslugcategory">
+                                        <h2>CATEGORIES</h2>
+                                        <ul>
+                                            <Link href='/blogs/category/Next JS'><li>Next JS<span>({slugLink.filter(ab => ab.blogcategory[0] === 'Next JS').length})</span></li></Link>
+                                            <Link href='/blogs/category/Digital Marketing'><li>Digital Marketing<span>({slugLink.filter(ab => ab.blogcategory[0] === 'Digital Marketing').length})</span></li></Link>
+                                            <Link href='/blogs/category/React JS'><li>React JS<span>({slugLink.filter(ab => ab.blogcategory[0] === 'React JS').length})</span></li></Link>
+                                            <Link href='/blogs/category/Node JS'><li>Node JS<span>({slugLink.filter(ab => ab.blogcategory[0] === 'Node JS').length})</span></li></Link>
+                                            <Link href='/blogs/category/Flutter Dev'><li>Flutter Dev<span>({slugLink.filter(ab => ab.blogcategory[0] === 'Flutter Dev').length})</span></li></Link>
+                                        </ul>
+                                    </div>
+                                    <div className="rightrecentpost">
+                                        <h2>RECENT POSTS</h2>
+                                        {slugLink.slice(0, 3).map((blog) => {
+                                            return <Link key={blog._id} href={`/blogs/${blog.slug}`} className="rightrecentp">
+                                                <img src={blog.images[0] || '/img/noimage.png'} alt={blog.title} />
+                                                <div>
+                                                    <h3>{blog.title}</h3>
+                                                    <h4 className="mt-1">
+                                                        {blog.tags.map((cat) => {
+                                                            return <span key={cat}>{cat}</span>
+                                                        })}
+                                                    </h4>
+                                                </div>
+                                            </Link>
+                                        })}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        {searchInput ? <Blogsearch cls={handleSearchClose} /> : null}
                     </div>
                 )}
             </div>
