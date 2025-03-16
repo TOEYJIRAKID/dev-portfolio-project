@@ -126,13 +126,13 @@ export default function Home() {
         <div className="container">
           <div className="flex w-100">
             <div className="heroinfoleft">
-              <span className="hero_sb_title">I am ToeyJira</span>
-              <h1 className="hero_title">Web Developer + <br /><span className="typed-text">UX Designer</span></h1>
-              <div className="hero_img_box heroimgbox">
+              <span className="hero_sb_title" data-aos='fade-right'>I am ToeyJira</span>
+              <h1 className="hero_title" data-aos='fade-right'>Web Developer + <br /><span className="typed-text">UX Designer</span></h1>
+              <div className="hero_img_box heroimgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/img/me.jpg" alt="coder" />
               </div>
-              <div className="lead">I break down complex user experience problems to create integrity focussed solutions that connect billions of people</div>
-              <div className="hero_btn_box">
+              <div className="lead" data-aos='fade-up'>I break down complex user experience problems to create integrity focussed solutions that connect billions of people</div>
+              <div className="hero_btn_box" data-aos='fade-up'>
                 <Link href='/' download={'/img/CV.pdf'} className='download_cv'>Download CV <BiDownload /></Link>
                 <ul className="hero_social">
                   <li><a href="/"><FaFacebook /></a></li>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             {/* rightside image section */}
             <div className="heroimageright">
-              <div className="hero_img_box">
+              <div className="hero_img_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/img/me.jpg" alt="coder" />
               </div>
             </div>

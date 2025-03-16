@@ -10,12 +10,23 @@ import Spinner from '@/components/Spinner';
 import { useState, useEffect } from 'react';
 import useFetchData from '@/hooks/useFetchData';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Blogsearch from "@/components/Blogsearch";
 
 export default function blogs() {
 
     // pagination
     const [currentPage, setCurrentPage] = useState(1); // for page 1
     const [perPage] = useState(7);
+
+    const [searchInput, setSearchInput] = useState(false);
+
+    const handleSearchOpen = () => {
+        setSearchInput(!searchInput);
+    }
+
+    const handleSearchClose = () => {
+        setSearchInput(false);
+    }
 
     // search
     const [searchQuery, setSearchQuery] = useState('');
@@ -62,7 +73,7 @@ export default function blogs() {
                             <p>I write about web, mobile development and modern JavaScript frameworks. The best articles, links and news related to web and mobile development</p>
                             <div className="subemail">
                                 <form className='flex'>
-                                    <input placeholder='Search blogs here...' type="text" />
+                                    <input onClick={handleSearchOpen} placeholder='Search blogs here...' type="text" />
                                     <button>Search</button>
                                 </form>
                             </div>
@@ -200,6 +211,7 @@ export default function blogs() {
                         </div>
                     )}
                 </div>
+                {searchInput ? <Blogsearch cls={handleSearchClose} /> : null}
             </section>
         </div>
     </>
