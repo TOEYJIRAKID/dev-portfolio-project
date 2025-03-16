@@ -20,6 +20,7 @@ import useFetchData from "@/hooks/useFetchData";
 import { useState, useEffect, useRef } from "react";
 import Spinner from "@/components/Spinner";
 import { set } from "mongoose";
+import { FiSearch } from "react-icons/fi";
 
 const BlogPage = () => {
 
@@ -273,7 +274,7 @@ const BlogPage = () => {
         });
 
         // render the comments
-        return comments.filter(comment => comment.maincomment).map(parentComment => {
+        return comments.filter(comment => comment.maincomment).map(parentComment => (
             <div className="blogcomment" key={parentComment._id}>
                 <h3>{parentComment.name} <span>{new Date(parentComment.createdAt).toLocaleString()}</span></h3>
                 <h4>Topic: <span>{parentComment.title}</span></h4>
@@ -294,7 +295,7 @@ const BlogPage = () => {
                     ))}
                 </div>
             </div>
-        })
+        ))
     }
 
     return (
@@ -307,7 +308,7 @@ const BlogPage = () => {
                 {blogData && (
                     <div className="blogslugpage">
                         <div className="container">
-                            <div className="blogslugpagecout">
+                            <div className="blogslugpagecont">
                                 <div className="leftsitedetails">
                                     <div className="leftbloginfoimg">
                                         <img src={blogData.blog.images[0] || '/img/noimage.png'} alt={blogData && blogData.blog.title} />
@@ -374,29 +375,37 @@ const BlogPage = () => {
                                         {renderComments(blogData.comments)}
                                     </div>
                                     <div className="blogslugcomments" ref={replyFormRef}>
+                                        {newComment.parentName && (
+                                            <h2>Leave a reply to <span className="perentname">{newComment.parentName} </span>
+                                                <button onClick={handleRemoveReply} className="removereplybtn">Remove Reply</button>
+                                            </h2>
+                                        )}
+                                        {!newComment.parentName && (
+                                            <h2>Leave a reply</h2>
+                                        )}
                                         <p>Your email address will not be published. Required fields are marked *</p>
                                         <form className="leaveareplyform" onSubmit={handleCommentSubmit}>
                                             <div className="nameemailcomment">
-                                                <input
+                                                <input required
                                                     type="text"
                                                     placeholder="Enter Name"
                                                     value={newComment.name}
                                                     onChange={(e) => setNewComment({ ...newComment, name: e.target.value })}
                                                 />
-                                                <input
+                                                <input required
                                                     type="email"
                                                     placeholder="Enter Email"
                                                     value={newComment.email}
                                                     onChange={(e) => setNewComment({ ...newComment, email: e.target.value })}
                                                 />
                                             </div>
-                                            <input
+                                            <input required
                                                 type="text"
                                                 placeholder="Enter Title"
                                                 value={newComment.title}
                                                 onChange={(e) => setNewComment({ ...newComment, title: e.target.value })}
                                             />
-                                            <textarea
+                                            <textarea required
                                                 name=""
                                                 rows={4}
                                                 id="textcomments"
@@ -409,6 +418,12 @@ const BlogPage = () => {
                                                 <p>{messageOk}</p>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                                <div className="rightsitedetails">
+                                    <div className="rightslugsearchbar">
+                                        <input type="text" placeholder="Search..." />
+                                        <button><FiSearch/></button>
                                     </div>
                                 </div>
                             </div>

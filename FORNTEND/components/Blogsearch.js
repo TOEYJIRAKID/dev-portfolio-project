@@ -15,7 +15,7 @@ const extractFirstParagraph = (markdown) => {
 
 export default function Blogsearch(props) {
 
-    const { allwork } = useFetchData('/api/blogs');  // Assuming useFetchData returns an object with allwork and loading
+    const { allwork = [] } = useFetchData('/api/blogs');  // Assuming useFetchData returns an object with allwork and loading
 
     const [searchResult, setSearchResult] = useState(null);
     const [blogtitle, setBlogtitle] = useState('');  // blogtitle should be initialized as a string
