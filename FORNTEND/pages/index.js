@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import Typed from 'typed.js';
 import { LuMedal } from "react-icons/lu";
 import Spinner from "@/components/Spinner";
 import { BiDownload } from "react-icons/bi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { PiGraduationCap } from "react-icons/pi";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -84,6 +85,26 @@ export default function Home() {
     return new Intl.DateTimeFormat('en-US', options).format(date);
   }
 
+  // Typed.js implementation
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['UX Designer', 'Backend Dev', 'Full Stack Dev'], // Add your desired text here
+      startDelay: 500, // slightly increase start delay
+      typeSpeed: 70,   // increase typing speed slightly for natural effect
+      backSpeed: 40, // decrease backspeed slightly for natural effect
+      backDelay: 1200, // give it longer to read before deleting
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+    });
+
+    // Destroy Typed instance on unmounting to prevent memory leaks
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   // services data
   const services = [
     {
@@ -127,7 +148,7 @@ export default function Home() {
           <div className="flex w-100">
             <div className="heroinfoleft">
               <span className="hero_sb_title" data-aos='fade-right'>I am ToeyJira</span>
-              <h1 className="hero_title" data-aos='fade-right'>Web Developer + <br /><span className="typed-text">UX Designer</span></h1>
+              <h1 className="hero_title" data-aos='fade-right'>Web Developer + <br /><span ref={el} className="typed-text"></span></h1>
               <div className="hero_img_box heroimgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/img/me.jpg" alt="coder" />
               </div>
