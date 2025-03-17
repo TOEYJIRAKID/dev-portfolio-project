@@ -27,7 +27,7 @@ export default function contacts() {
     const allblog = alldata.length;
 
     // filter all data based on search query
-    const filteredBlogs = searchQuery.trim() === '' ? alldata : alldata.filter(blog => blog.title.toLowerCase().includes(searchQuery.toLowerCase()));
+    const filteredBlogs = searchQuery.trim() === '' ? alldata : alldata.filter(blog => blog.company.toLowerCase().includes(searchQuery.toLowerCase()));
 
     // calculate index of the first blog displayed on the current page
     const indexOfFirstBlog = (currentPage - 1) * perPage;
@@ -57,15 +57,16 @@ export default function contacts() {
                 <div className="blogstable">
                     <div className="flex gap-2 mb-1">
                         <h2>Search Contacts:</h2>
-                        <input value={searchQuery} onChange={ev => setSearchQuery(ev.target.value)} type="text" placeholder="Search by title..." />
+                        <input value={searchQuery} onChange={ev => setSearchQuery(ev.target.value)} type="text" placeholder="Search by company..." />
                     </div>
                     <table className="table table-styling">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>First Name</th>
+                                <th>Full Name</th>
+                                <th>Company</th>
                                 <th>Email</th>
-                                <th>Phone no</th>
+                                <th>Phone no.</th>
                                 <th>Project</th>
                                 <th>Open Contact</th>
                             </tr>
@@ -86,7 +87,8 @@ export default function contacts() {
                                     publishedblogs.map((blog, index) => (
                                         <tr key={blog._id}>
                                             <td>{indexOfFirstBlog + index + 1}</td>
-                                            <td><h3>{blog.fname}</h3></td>
+                                            <td><h3>{blog.fname + ' ' + blog.lname}</h3></td>
+                                            <td><h3>{blog.company}</h3></td>
                                             <td><h3>{blog.email}</h3></td>
                                             <td><h3>{blog.phone}</h3></td>
                                             <td><h3>{blog.project[0]}</h3></td>
