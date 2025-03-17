@@ -12,8 +12,7 @@ import {
   FaCalendarDays,
   FaFacebook,
   FaGithub,
-  FaInstagram,
-  FaTwitter,
+  FaXTwitter,
 } from "react-icons/fa6";
 
 export default function Home() {
@@ -67,7 +66,7 @@ export default function Home() {
         alldata.filter(
           (pro) =>
             pro.status === "publish" &&
-            pro.projectcategory[0] === selectedCategory
+            pro.projectcategory.includes(selectedCategory)
         )
       );
     }
@@ -124,32 +123,30 @@ export default function Home() {
     {
       title: "Web Development",
       description:
-        "I am very good in web development offering services, I offer reliable web development services to generate the most remarkable results which your business need.",
+        "I provide professional web development services, creating high-performance, SEO-optimized, and responsive websites to help businesses grow and stand out online.",
     },
     {
       title: "Mobile Development",
       description:
-        "Experienced mobile developer offering innovative solutions. Proficient in creating high-performance, user-centric mobile apps. Expertise in iOS, Android, and cross-platform development.",
+        "Experienced mobile app developer specializing in iOS, Android, and cross-platform development. I build fast, scalable, and user-friendly mobile applications to enhance user engagement.",
     },
     {
-      title: "Digital Marketing(SEO)",
+      title: "Machine Learning Engineer",
       description:
-        "My digital marketing services will take your business to the next level, we offer remarkable digital marketing strategies that drives traffic to your website, your business, and improves your brand awareness to potential customers.",
-    },
-    {
-      title: "Content Creator",
-      description:
-        "Passionate photographer and videographer capturing moments with creativity. Transforming visions into visual stories. Expert in visual storytelling, skilled in both photography and videography to deliver captivating content.",
+        "Skilled Machine Learning Engineer with expertise in AI-driven solutions, predictive analytics, and deep learning. I develop intelligent, data-driven applications to optimize business performance.",
     },
   ];
 
   return (
     <>
       <Head>
-        <title>ToeyJira - Portfolio</title>
-        <meta name="description" content="vbmcoder - Personal Portfolio" />
+        <title>TOEYJIRA | PORTFOLIO</title>
+        <meta
+          name="description"
+          content="Jirakit Aiadhet - Personal Portfolio"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/logo.ico" />
       </Head>
 
       {/* hero section */}
@@ -162,7 +159,7 @@ export default function Home() {
               textAnchor="middle"
               className="animate-stroke"
             >
-              HI
+              HELLO!
             </text>
           </svg>
         </div>
@@ -170,7 +167,7 @@ export default function Home() {
           <div className="flex w-100">
             <div className="heroinfoleft">
               <span className="hero_sb_title" data-aos="fade-right">
-                I am ToeyJira
+                I AM TOEYJIRA
               </span>
               <h1 className="hero_title" data-aos="fade-right">
                 Web Developer + <br />
@@ -182,39 +179,44 @@ export default function Home() {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <img src="/img/me.jpg" alt="coder" />
+                <img src="/img/me.jpg" alt="developer" />
               </div>
               <div className="lead" data-aos="fade-up">
                 I specialize in developing practical and high-performance web
                 applications. Let’s discuss your next project
               </div>
               <div className="hero_btn_box" data-aos="fade-up">
-                <Link href="/" download={"/img/CV.pdf"} className="download_cv">
+                <Link
+                  href="https://drive.google.com/file/d/15q-qOtlov-qq69oddgraGPTsVgem1QO6/view?usp=sharing"
+                  target="_blank"
+                  className="download_cv"
+                >
                   Download CV <BiDownload />
                 </Link>
                 <ul className="hero_social">
                   <li>
-                    <a href="/">
+                    <a
+                      href="https://www.facebook.com/discokatto"
+                      target="_blank"
+                    >
                       <FaFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="/">
-                      <FaTwitter />
+                    <a href="https://x.com/canyoucallinamo" target="_blank">
+                      <FaXTwitter />
                     </a>
                   </li>
                   <li>
-                    <a href="/">
-                      <FaInstagram />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/">
+                    <a
+                      href="https://www.linkedin.com/in/toeyjirakid/"
+                      target="_blank"
+                    >
                       <GrLinkedinOption />
                     </a>
                   </li>
                   <li>
-                    <a href="/">
+                    <a href="https://github.com/TOEYJIRAKID" target="_blank">
                       <FaGithub />
                     </a>
                   </li>
@@ -229,40 +231,40 @@ export default function Home() {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <img src="/img/me.jpg" alt="coder" />
+                <img src="/img/me.jpg" alt="developer" />
               </div>
             </div>
           </div>
-          <div className="funfect_area flex flex-sb">
-            <div className="funfect_item">
+          {/* <div className="funfect_area flex flex-sb">
+            <div className="funfect_item" data-aos="fade-right">
               <h3>7+</h3>
               <h4>
                 Years of <br />
                 Experience
               </h4>
             </div>
-            <div className="funfect_item">
+            <div className="funfect_item" data-aos="fade-right">
               <h3>20+</h3>
               <h4>
                 Projects <br />
                 Completed
               </h4>
             </div>
-            <div className="funfect_item">
+            <div className="funfect_item" data-aos="fade-left">
               <h3>12</h3>
               <h4>
                 OpenSource <br />
                 Library
               </h4>
             </div>
-            <div className="funfect_item">
+            <div className="funfect_item" data-aos="fade-left">
               <h3>20+</h3>
               <h4>
                 Happy <br />
                 Customers
               </h4>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -270,13 +272,13 @@ export default function Home() {
       <section className="services">
         <div className="container">
           <div className="services_titles">
-            <h2>My Quality Services</h2>
-            <p>
-              We put your ideas and thus your wishes in the form of a unique web
-              project that inspires you and you customers.
+            <h2 data-aos="fade-up">My Quality Services</h2>
+            <p data-aos="fade-up">
+              I transform your ideas into high-performance, SEO-friendly web
+              solutions that captivate both you and your users.
             </p>
           </div>
-          <div className="services_menu">
+          <div className="services_menu" data-aos="fade-up">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -304,13 +306,13 @@ export default function Home() {
       <section className="projects">
         <div className="container">
           <div className="project_titles">
-            <h2>My Recent Works</h2>
-            <p>
-              We put your ideas and thus your wishes in the form of a unique web
-              project that inspires you and you customers.
+            <h2 data-aos="fade-up">My Recent Works</h2>
+            <p data-aos="fade-up">
+              Explore how I turn ideas into high-performance, user-centric
+              digital experiences with cutting-edge web and mobile solutions.
             </p>
           </div>
-          <div className="project_buttons">
+          <div className="project_buttons" data-aos="fade-up">
             <button
               className={selectedCategory === "All" ? "active" : ""}
               onClick={() => setSelectedCategory("All")}
@@ -345,6 +347,22 @@ export default function Home() {
             >
               Content
             </button>
+            {/* <button
+              className={
+                selectedCategory === "Machine Learning & AI" ? "active" : ""
+              }
+              onClick={() => setSelectedCategory("Machine Learning & AI")}
+            >
+              ML & AI
+            </button>
+            <button
+              className={
+                selectedCategory === "Game Development" ? "active" : ""
+              }
+              onClick={() => setSelectedCategory("Game Development")}
+            >
+              Game
+            </button> */}
           </div>
           <div className="projects_cards">
             {loading ? (
@@ -355,9 +373,14 @@ export default function Home() {
               <h1>No Project Found</h1>
             ) : (
               filteredProjects.slice(0, 4).map((pro) => (
-                <Link href="/" key={pro._id} className="procard">
+                <Link
+                  href={`/projects/${pro.slug}`}
+                  key={pro._id}
+                  className="procard"
+                  data-aos="flip-left"
+                >
                   <div className="proimgbox">
-                    <img src={pro.images[0]} alt={pro.title} />
+                    <img src={pro.images[0]} alt={pro.slug} />
                   </div>
                   <div className="procontentbox">
                     <h2>{pro.title}</h2>
@@ -374,35 +397,25 @@ export default function Home() {
       <section className="exstudy">
         <div className="container flex flex-left flex-sb">
           <div className="experience">
-            <div className="experience_title flex gap-1">
+            <div className="experience_title flex gap-1" data-aos="fade-right">
               <LuMedal />
               <h2>My Experience</h2>
             </div>
             <div className="exper_cards">
-              <div className="exper_card">
-                <span>2020 - Present</span>
-                <h3>COMPANY NAME</h3>
+              <div className="exper_card" data-aos="fade-up">
+                <span>2024 - 2024 (8 months)</span>
+                <h3>APP INTOUCH COMPANY LIMITED</h3>
                 <p>Full Stack Developer (Internship)</p>
-              </div>
-              <div className="exper_card">
-                <span>2018 - 2020</span>
-                <h3>COMPANY NAME</h3>
-                <p>Mobile Developer</p>
-              </div>
-              <div className="exper_card">
-                <span>2015 - 2018</span>
-                <h3>COMPANY NAME</h3>
-                <p>Backend Mobile Developer</p>
               </div>
             </div>
           </div>
           <div className="education">
-            <div className="experience_title flex gap-1">
+            <div className="experience_title flex gap-1" data-aos="fade-left">
               <PiGraduationCap />
               <h2>My Education</h2>
             </div>
             <div className="exper_cards">
-              <div className="exper_card">
+              <div className="exper_card" data-aos="fade-up">
                 <span>2021 - 2024</span>
                 <h3>Walailak University</h3>
                 <p>
@@ -410,7 +423,7 @@ export default function Home() {
                   Digital Innovation (GPAX 3.80)
                 </p>
               </div>
-              <div className="exper_card">
+              <div className="exper_card" data-aos="fade-up">
                 <span>2018 - 2020</span>
                 <h3>Rattaphumwittaya School</h3>
                 <p>English-Mathematics Program (GPAX 3.52)</p>
@@ -424,49 +437,49 @@ export default function Home() {
       <section className="myskills">
         <div className="container">
           <div className="myskills_title">
-            <h2>My Skills</h2>
-            <p>
-              We put your ideas and thus your wishes in the form of a unique web
-              project that inspires you and you customers.
+            <h2 data-aos="fade-up">My Skills</h2>
+            <p data-aos="fade-up">
+              Explore the technologies and tools I use to craft exceptional
+              digital experiences.
             </p>
           </div>
           <div className="myskills_cards">
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/python.svg" alt="python" />
                 <h3>92%</h3>
               </div>
               <p className="text-center">Python</p>
             </div>
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/firebase.svg" alt="firebase" />
                 <h3>80%</h3>
               </div>
               <p className="text-center">Firebase</p>
             </div>
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/mongodb.svg" alt="mongodb" />
                 <h3>98%</h3>
               </div>
               <p className="text-center">MongoDB</p>
             </div>
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
                 <img src="/img/redux.svg" alt="redux" />
                 <h3>85%</h3>
               </div>
               <p className="text-center">Redux</p>
             </div>
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
                 <img src="/img/react.svg" alt="react" />
                 <h3>99%</h3>
               </div>
               <p className="text-center">React</p>
             </div>
-            <div className="mys_card">
+            <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
                 <img src="/img/js.svg" alt="javascript" />
                 <h3>99%</h3>
@@ -481,10 +494,10 @@ export default function Home() {
       <section className="recentblogs">
         <div className="container">
           <div className="myskills_title">
-            <h2>Recent Blogs</h2>
-            <p>
-              We put your ideas and thus your wishes in the form of a unique web
-              project that inspires you and you customers.
+            <h2 data-aos="fade-up">Recent Blogs</h2>
+            <p data-aos="fade-up">
+              Explore insightful articles on coding, software development, and
+              industry trends, helping you stay updated and inspired.
             </p>
           </div>
           <div className="recent_blogs">
@@ -494,11 +507,12 @@ export default function Home() {
                   href={`/blogs/${blog.slug}`}
                   key={blog._id}
                   className="re_blog"
+                  data-aos="flip-right"
                 >
                   <div className="re_blogimg">
                     <img
                       src={blog.images[0] || "/img/noimage.png"}
-                      alt={blog.title}
+                      alt={blog.slug}
                     />
                     <span>{blog.blogcategory[0]}</span>
                   </div>
