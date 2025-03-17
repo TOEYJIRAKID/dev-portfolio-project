@@ -90,7 +90,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['UX Designer', 'Backend Dev', 'Full Stack Dev'], // Add your desired text here
+      strings: [ 'Full Stack Dev', 'Backend Dev', 'Mobile App Dev', 'ML Engineer'], // Add your desired text here
       startDelay: 500, // slightly increase start delay
       typeSpeed: 70,   // increase typing speed slightly for natural effect
       backSpeed: 40, // decrease backspeed slightly for natural effect
