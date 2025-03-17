@@ -19,11 +19,11 @@ body {
 }
 
 :root {
-    --image-url: url('/img/me.png');
+    --image-url: url('/img/me.jpg');
 }
 
 .dark {
-    --image-url: url('/img/coderwhite.png');
+    --image-url: url('/img/me.jpg');
 }
 
 .hero_img_box img {
