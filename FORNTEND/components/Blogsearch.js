@@ -3,12 +3,23 @@ import { IoClose } from "react-icons/io5";
 import useFetchData from "@/hooks/useFetchData";
 import { useEffect, useState, useMemo } from "react";
 
+/**
+ * Extracts the first paragraph from markdown and converts it to plain text.
+ * @param {string} markdown
+ * @returns {string}
+ */
+
 const extractFirstParagraph = (markdown) => {
-  // Split markdown by double newline to separate paragraphs
+  if (!markdown) return "";
+
+  // Split by new lines to separate paragraphs
   const paragraphs = markdown.split("\n\n");
 
-  // Return the first paragraph (assuming paragraphs[0] is the first paragraph)
-  return paragraphs[0];
+  // Convert markdown to plain text using react-markdown
+  const firstParagraph = paragraphs[0] || "";
+
+  // Strip markdown formatting using regex
+  return firstParagraph.replace(/[#_*`]/g, "").trim();
 };
 
 export default function Blogsearch(props) {

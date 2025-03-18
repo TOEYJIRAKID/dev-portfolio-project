@@ -62,6 +62,15 @@ export default function blogs() {
     pageNumbers.push(i);
   }
 
+  const cleanText = (text) => {
+    // Remove any markdown formatting and return plain text
+    const plainText = text.replace(
+      /(?:__|[*#])|\[(.*?)\]\(.*?\)|(?:\n)/g,
+      "$1"
+    );
+    return plainText;
+  };
+
   return (
     <>
       <Head>
@@ -262,14 +271,7 @@ export default function blogs() {
                                 {blog.title}
                               </Link>
                             </h3>
-                            <p>
-                              Lorem, ipsum dolor sit amet consectetur
-                              adipisicing elit. Quis mollitia architecto
-                              aperiam, repellendus dolore suscipit officiis quia
-                              soluta dolorum inventore eveniet. Obcaecati,
-                              molestiae dolore. Blanditiis autem obcaecati
-                              laboriosam quo accusamus.{" "}
-                            </p>
+                            <p>{cleanText(blog.description)}</p>
                             <h4 className="flex">
                               <img src="/img/me.jpg" alt="developer" />
                               By TOEYJIRA<span></span>
