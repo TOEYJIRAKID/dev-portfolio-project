@@ -320,49 +320,29 @@ export default function Home() {
               All
             </button>
             <button
-              className={
-                selectedCategory === "Website Development" ? "active" : ""
-              }
-              onClick={() => setSelectedCategory("Website Development")}
+              className={selectedCategory === "Web" ? "active" : ""}
+              onClick={() => setSelectedCategory("Web")}
             >
               Website
             </button>
             <button
-              className={selectedCategory === "App Development" ? "active" : ""}
-              onClick={() => setSelectedCategory("App Development")}
+              className={selectedCategory === "App" ? "active" : ""}
+              onClick={() => setSelectedCategory("App")}
             >
               Apps
             </button>
             <button
-              className={selectedCategory === "E-commerce Site" ? "active" : ""}
-              onClick={() => setSelectedCategory("E-commerce Site")}
+              className={selectedCategory === "Game" ? "active" : ""}
+              onClick={() => setSelectedCategory("Game")}
             >
-              Digital
+              Game
             </button>
             <button
-              className={
-                selectedCategory === "Performance Evaluation" ? "active" : ""
-              }
-              onClick={() => setSelectedCategory("Performance Evaluation")}
-            >
-              Content
-            </button>
-            {/* <button
-              className={
-                selectedCategory === "Machine Learning & AI" ? "active" : ""
-              }
-              onClick={() => setSelectedCategory("Machine Learning & AI")}
+              className={selectedCategory === "ML" ? "active" : ""}
+              onClick={() => setSelectedCategory("ML")}
             >
               ML & AI
             </button>
-            <button
-              className={
-                selectedCategory === "Game Development" ? "active" : ""
-              }
-              onClick={() => setSelectedCategory("Game Development")}
-            >
-              Game
-            </button> */}
           </div>
           <div className="projects_cards">
             {loading ? (
