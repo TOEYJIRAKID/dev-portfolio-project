@@ -1,16 +1,17 @@
 const { Schema, models, model } = require("mongoose");
 
 const CommentSchema = new Schema({
-    name: { type: String, required: true },
-    email: { type: String },
-    title: { type: String },
-    contentpera: { type: String },
-    maincomment: { type: Boolean },
-    createdAt: { type: Date, default: Date.now },
-    blog: { type: Schema.Types.ObjectId, ref: 'Blog', required: true },
-    parent: { type: Schema.Types.ObjectId, ref: 'Comment' }, // ref to parent comment
-    children: { type: Schema.Types.ObjectId, ref: 'Comment' }, // Array of child comments
-    parentName: { type: String }
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  title: { type: String, required: true },
+  contentpera: { type: String, required: true },
+  maincomment: { type: Boolean, required: true },
+  createdAt: { type: Date, default: Date.now },
+  blog: { type: Schema.Types.ObjectId, ref: "Blog", required: true },
+  parent: { type: Schema.Types.ObjectId, ref: "Comment", default: null },
+  children: { type: [Schema.Types.ObjectId], ref: "Comment", default: [] }, // Add this line
+  parentName: { type: String, default: null },
 });
 
-export const Comment = models.Comment || model('Comment', CommentSchema, 'comments');
+export const Comment =
+  models.Comment || model("Comment", CommentSchema, "comments");

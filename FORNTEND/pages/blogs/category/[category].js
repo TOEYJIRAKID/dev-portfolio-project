@@ -83,12 +83,12 @@ export default function Category() {
                     {category === "ML"
                       ? "Machine Learning & AI"
                       : category === "Web"
-                      ? "Web Development"
-                      : category === "App"
-                      ? "App Development"
-                      : category === "Game"
-                      ? "Game Development"
-                      : category}
+                        ? "Web Development"
+                        : category === "App"
+                          ? "App Development"
+                          : category === "Game"
+                            ? "Game Development"
+                            : category}
                   </span>
                 </h1>
               </div>
@@ -116,7 +116,7 @@ export default function Category() {
                         >
                           <div className="lpostimg">
                             <Link href={`/blogs/${blog.slug}`}>
-                              <img src={blog.images[0]} alt={blog.title} />
+                              <img src={blog.images[0]} alt={blog.slug} />
                             </Link>
                             <div className="tegs">
                               {blog.blogcategory.map((cat) => {
@@ -131,12 +131,12 @@ export default function Category() {
                                     {cat === "ML"
                                       ? "Machine Learning & AI"
                                       : cat === "Web"
-                                      ? "Web Development"
-                                      : cat === "App"
-                                      ? "App Development"
-                                      : cat === "Game"
-                                      ? "Game Development"
-                                      : cat}
+                                        ? "Web Development"
+                                        : cat === "App"
+                                          ? "App Development"
+                                          : cat === "Game"
+                                            ? "Game Development"
+                                            : cat}
                                   </Link>
                                 );
                               })}
