@@ -494,7 +494,17 @@ export default function Home() {
                       src={blog.images[0] || "/img/noimage.png"}
                       alt={blog.slug}
                     />
-                    <span>{blog.blogcategory[0]}</span>
+                    <span>
+                      {blog.blogcategory[0] === "ML"
+                        ? "Machine Learning & AI"
+                        : blog.blogcategory[0] === "Web"
+                        ? "Web Development"
+                        : blog.blogcategory[0] === "App"
+                        ? "App Development"
+                        : blog.blogcategory[0] === "Game"
+                        ? "Game Development"
+                        : blog.blogcategory[0]}
+                    </span>
                   </div>
                   <div className="re_bloginfo">
                     <div className="re_topdate flex gap-1">
