@@ -576,71 +576,56 @@ const BlogPage = () => {
                   <div className="rightslugcategory">
                     <h2>CATEGORIES</h2>
                     <ul>
-                      <Link href="/blogs/category/Next JS">
+                      <Link href="/blogs/category/Web">
                         <li>
-                          Next JS
+                          Web Development
                           <span>
                             (
                             {
                               slugLink.filter(
-                                (ab) => ab.blogcategory[0] === "Next JS"
+                                (ab) => ab.blogcategory[0] === "Web"
                               ).length
                             }
                             )
                           </span>
                         </li>
                       </Link>
-                      <Link href="/blogs/category/Digital Marketing">
+                      <Link href="/blogs/category/App">
                         <li>
-                          Digital Marketing
+                          App Development
                           <span>
                             (
                             {
                               slugLink.filter(
-                                (ab) =>
-                                  ab.blogcategory[0] === "Digital Marketing"
+                                (ab) => ab.blogcategory[0] === "App"
                               ).length
                             }
                             )
                           </span>
                         </li>
                       </Link>
-                      <Link href="/blogs/category/React JS">
+                      <Link href="/blogs/category/Game">
                         <li>
-                          React JS
+                          Game Development
                           <span>
                             (
                             {
                               slugLink.filter(
-                                (ab) => ab.blogcategory[0] === "React JS"
+                                (ab) => ab.blogcategory[0] === "Game"
                               ).length
                             }
                             )
                           </span>
                         </li>
                       </Link>
-                      <Link href="/blogs/category/Node JS">
+                      <Link href="/blogs/category/ML">
                         <li>
-                          Node JS
+                          Machine Learning & AI
                           <span>
                             (
                             {
                               slugLink.filter(
-                                (ab) => ab.blogcategory[0] === "Node JS"
-                              ).length
-                            }
-                            )
-                          </span>
-                        </li>
-                      </Link>
-                      <Link href="/blogs/category/Flutter Dev">
-                        <li>
-                          Flutter Dev
-                          <span>
-                            (
-                            {
-                              slugLink.filter(
-                                (ab) => ab.blogcategory[0] === "Flutter Dev"
+                                (ab) => ab.blogcategory[0] === "ML"
                               ).length
                             }
                             )
@@ -660,7 +645,7 @@ const BlogPage = () => {
                         >
                           <img
                             src={blog.images[0] || "/img/noimage.png"}
-                            alt={blog.title}
+                            alt={blog.slug}
                           />
                           <div>
                             <h3>{blog.title}</h3>
