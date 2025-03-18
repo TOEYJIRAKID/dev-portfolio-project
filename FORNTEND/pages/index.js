@@ -179,7 +179,7 @@ export default function Home() {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <img src="/img/me.jpg" alt="developer" />
+                <img src="/img/me.png" alt="developer" />
               </div>
               <div className="lead" data-aos="fade-up">
                 I specialize in developing practical and high-performance web
@@ -231,7 +231,7 @@ export default function Home() {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <img src="/img/me.jpg" alt="developer" />
+                <img src="/img/me.png" alt="developer" />
               </div>
             </div>
           </div>
