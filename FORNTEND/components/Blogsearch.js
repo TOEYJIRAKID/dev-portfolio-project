@@ -9,18 +9,18 @@ import { useEffect, useState, useMemo } from "react";
  * @returns {string}
  */
 
-const extractFirstParagraph = (markdown) => {
-  if (!markdown) return "";
+// const extractFirstParagraph = (markdown) => {
+//   if (!markdown) return "";
 
-  // Split by new lines to separate paragraphs
-  const paragraphs = markdown.split("\n\n");
+//   // Split by new lines to separate paragraphs
+//   const paragraphs = markdown.split("\n\n");
 
-  // Convert markdown to plain text using react-markdown
-  const firstParagraph = paragraphs[0] || "";
+//   // Convert markdown to plain text using react-markdown
+//   const firstParagraph = paragraphs[0] || "";
 
-  // Strip markdown formatting using regex
-  return firstParagraph.replace(/[#_*`]/g, "").trim();
-};
+//   // Strip markdown formatting using regex
+//   return firstParagraph.replace(/[#_*`]/g, "").trim();
+// };
 
 export default function Blogsearch(props) {
   const { alldata = [], loading } = useFetchData("/api/blogs"); // Assuming useFetchData returns an object with alldata and loading
@@ -90,7 +90,13 @@ export default function Blogsearch(props) {
                           onClick={props.cls}
                         >
                           <h2>{blog.title}</h2>
-                          <p>{extractFirstParagraph(blog.description)}</p>
+                          <p>
+                            {" "}
+                            {blog.tags.map((cat) => {
+                              return <span key={cat}> #{cat}</span>;
+                            })}
+                          </p>
+                          {/* <p>{extractFirstParagraph(blog.description)}</p> */}
                         </Link>
                       );
                     })}
