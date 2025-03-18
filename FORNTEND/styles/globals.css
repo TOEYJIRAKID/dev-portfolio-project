@@ -52,6 +52,19 @@ img {
 
 }
 
+/* Swiper Navigate Color */
+
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+  color: #8750f7;  
+  font-size: 24px; 
+}
+
+.swiper-button-next:hover::after, 
+.swiper-button-prev:hover::after {
+  color: #452482;
+}
+
 /* 
   font-family: "Russo One", sans-serif; */
 
@@ -1928,7 +1941,7 @@ header.sticky {
     left: 0;
     width: 100%;
     padding: 30px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     z-index: 1;
 }
 
