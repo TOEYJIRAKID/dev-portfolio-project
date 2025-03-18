@@ -88,14 +88,14 @@ export default function blogs() {
           <div className="container">
             <div className="toptitle">
               <div className="toptitlecont flex">
-                <h1>
+                <h1 data-aos="fade-right">
                   Welcome to <span>TOEYJIRA Blogs!</span>
                 </h1>
-                <p>
+                <p data-aos="fade-right">
                   Explore insightful articles on coding, software development,
                   and industry trends, helping you stay updated and inspired.
                 </p>
-                <div className="subemail">
+                <div className="subemail" data-aos="fade-up">
                   <form className="flex">
                     <input
                       onClick={handleSearchOpen}
@@ -111,7 +111,7 @@ export default function blogs() {
               <div className="border">
                 <div className="featuredposts">
                   <div className="fetitle flex">
-                    <h3>Featured Posts :</h3>
+                    <h3 data-aos="fade-up">Featured Posts :</h3>
                   </div>
                   <div className="feposts flex">
                     <Swiper
@@ -129,7 +129,11 @@ export default function blogs() {
                           {sliderpubdata.slice(0, 6).map((blog) => {
                             return (
                               <SwiperSlide key={blog._id}>
-                                <div className="fpost" key={blog._id}>
+                                <div
+                                  className="fpost"
+                                  key={blog._id}
+                                  data-aos="flip-left"
+                                >
                                   <Link href={`/blogs/${blog.slug}`}>
                                     <img src={blog.images[0]} alt={blog.slug} />
                                   </Link>
@@ -187,7 +191,11 @@ export default function blogs() {
                 <h3>Popular Categories :</h3>
               </div>
               <div className="poputegs">
-                <Link href="/blogs/category/Web" className="pteg">
+                <Link
+                  href="/blogs/category/Web"
+                  className="pteg"
+                  data-aos="fade-right"
+                >
                   <img src="/img/web-dev.jpg" alt="Web Development" />
                   <div className="tegs">
                     <div className="apps">
@@ -195,7 +203,11 @@ export default function blogs() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/App" className="pteg">
+                <Link
+                  href="/blogs/category/App"
+                  className="pteg"
+                  data-aos="fade-right"
+                >
                   <img src="/img/app-dev.jpg" alt="App Development" />
                   <div className="tegs">
                     <div className="apps">
@@ -203,7 +215,11 @@ export default function blogs() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/Game" className="pteg">
+                <Link
+                  href="/blogs/category/Game"
+                  className="pteg"
+                  data-aos="fade-left"
+                >
                   <img src="/img/game-dev.jpg" alt="Game Development" />
                   <div className="tegs">
                     <div className="apps">
@@ -211,7 +227,11 @@ export default function blogs() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/ML" className="pteg">
+                <Link
+                  href="/blogs/category/ML"
+                  className="pteg"
+                  data-aos="fade-left"
+                >
                   <img src="/img/ml-dev.jpg" alt="Machine Learning & AI" />
                   <div className="tegs">
                     <div className="apps">
@@ -237,10 +257,14 @@ export default function blogs() {
                   <>
                     {publishedData.map((blog) => {
                       return (
-                        <div className="lpost" key={blog._id}>
+                        <div
+                          className="lpost"
+                          key={blog._id}
+                          data-aos="flip-right"
+                        >
                           <div className="lpostimg">
                             <Link href={`/blogs/${blog.slug}`}>
-                              <img src={blog.images[0]} alt={blog.title} />
+                              <img src={blog.images[0]} alt={blog.slug} />
                             </Link>
                             <div className="tegs">
                               {blog.blogcategory.map((cat) => {
