@@ -282,12 +282,47 @@ export default function Blog({
             id="tags"
             multiple
           >
-            <option value="html">html</option>
-            <option value="css">css</option>
-            <option value="javascript">javascript</option>
-            <option value="nextjs">nextjs</option>
-            <option value="reactjs">reactjs</option>
-            <option value="database">database</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="bootstrap">Bootstrap</option>
+            <option value="tailwind">Tailwind CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="typescript">Typescript</option>
+            <option value="reactjs">ReactJS</option>
+            <option value="nextjs">NextJS</option>
+            <option value="vuejs">VueJS</option>
+            <option value="flutter">Flutter</option>
+            <option value="python">Python</option>
+            <option value="django">Django</option>
+            <option value="csharp">C#</option>
+            <option value="java">Java</option>
+            <option value="nodejs">NodeJS</option>
+            <option value="expressjs">ExpressJS</option>
+            <option value="php">PHP</option>
+            <option value="git">Git</option>
+            <option value="github">GitHub</option>
+            <option value="programming">Programming Language</option>
+            <option value="api">API</option>
+            <option value="mongodb">MongoDB</option>
+            <option value="mysql">MySQL</option>
+            <option value="postgresql">PostgreSQL</option>
+            <option value="oracle">Oracle</option>
+            <option value="database">Database</option>
+            <option value="docker">Docker</option>
+            <option value="firebase">Firebase</option>
+            <option value="vercel">Vercel</option>
+            <option value="deployment">Deployment</option>
+            <option value="linux">Linux</option>
+            <option value="ubuntu">Ubuntu</option>
+            <option value="cloud">Cloud</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="fullstack">Fullstack</option>
+            <option value="uiux">UX/UI</option>
+            <option value="websecurity">Web Security</option>
+            <option value="machinelearning">Machine Learning</option>
+            <option value="deeplearning">Deep Learning</option>
+            <option value="microservices">Microservices</option>
           </select>
         </div>
 
