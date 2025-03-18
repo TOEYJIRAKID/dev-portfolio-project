@@ -1632,6 +1632,11 @@ header.sticky {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.re_blog:hover .re_blogimg img {
+    transform: scale(1.1); /* Optional: Zoom in on hover */
 }
 
 .re_blogimg span {
@@ -2153,11 +2158,11 @@ header.sticky {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .lpost:hover .lpostimg img {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 .lpostimg .tegs {
@@ -2192,6 +2197,10 @@ header.sticky {
     gap: 10px;
     font-size: 15px;
     font-weight: 500;
+}
+
+.dark .lpostinfo h4 {
+    color: #333;
 }
 
 .lpostinfo h4 img {
