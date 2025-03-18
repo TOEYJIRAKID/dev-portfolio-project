@@ -130,11 +130,19 @@ export default function blogs() {
                                         return (
                                           <Link
                                             key={cat}
-                                            href={`/blog/category${cat}`}
+                                            href={`/blogs/category/${cat}`}
                                             className="ai"
                                           >
                                             <span></span>
-                                            {cat}
+                                            {cat === "ML"
+                                              ? "Machine Learning & AI"
+                                              : cat === "Web"
+                                              ? "Web Development"
+                                              : cat === "App"
+                                              ? "App Development"
+                                              : cat === "Game"
+                                              ? "Game Development"
+                                              : cat}
                                           </Link>
                                         );
                                       })}
@@ -170,69 +178,35 @@ export default function blogs() {
                 <h3>Popular Categories :</h3>
               </div>
               <div className="poputegs">
-                <Link href="/blogs/category/Next JS" className="pteg">
-                  <img
-                    src="https://images-cdn.openxcell.com/wp-content/uploads/2024/07/24154156/dango-inner-2.webp"
-                    alt="nextjs"
-                  />
+                <Link href="/blogs/category/Web" className="pteg">
+                  <img src="/img/web-dev.jpg" alt="Web Development" />
                   <div className="tegs">
                     <div className="apps">
-                      <span></span>Next JS
+                      <span></span>Web Dev
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/Node JS" className="pteg">
-                  <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-sqAjIvOtpXI%2FXYoCmqOyMwI%2FAAAAAAAAJig%2FCowR8wgEauEs-RXN2IPmLYkC7NHoHuA3gCLcBGAsYHQ%2Fs1600%2Fnode-js-logo.png&f=1&nofb=1&ipt=150fc0483e4465a22a3e277c4648396630b73d7dd21249b50e0f27b5753e8e4f&ipo=images"
-                    alt="nodejs"
-                  />
+                <Link href="/blogs/category/App" className="pteg">
+                  <img src="/img/app-dev.jpg" alt="App Development" />
                   <div className="tegs">
                     <div className="apps">
-                      <span></span>Node JS
+                      <span></span>App Dev
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/React JS" className="pteg">
-                  <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia2.giphy.com%2Fmedia%2FeNAsjO55tPbgaor7ma%2Fsource.gif&f=1&nofb=1&ipt=1b6c2d1f4493f3ac96918899cd5c25eeec185ba33f30d800552d9b6a6655a8c7&ipo=images"
-                    alt="reactjs"
-                  />
+                <Link href="/blogs/category/Game" className="pteg">
+                  <img src="/img/game-dev.jpg" alt="Game Development" />
                   <div className="tegs">
                     <div className="apps">
-                      <span></span>React JS
+                      <span></span>Game Dev
                     </div>
                   </div>
                 </Link>
-                <Link href="/blogs/category/Digital Marketing" className="pteg">
-                  <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bandt.com.au%2Finformation%2Fuploads%2F2016%2F06%2Fwhat-is-digital-marketing.jpg&f=1&nofb=1&ipt=656563f849714c46144b621537bf85f7ac8acb506678f5b0679879dd602bb9b4&ipo=images"
-                    alt="digital"
-                  />
+                <Link href="/blogs/category/ML" className="pteg">
+                  <img src="/img/ml-dev.jpg" alt="Machine Learning & AI" />
                   <div className="tegs">
                     <div className="apps">
-                      <span></span>Digital
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/blogs/category/Flutter Dev" className="pteg">
-                  <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fscholar.fidahasan.com%2Fwp-content%2Fuploads%2F2019%2F11%2Fflutter-logo.png&f=1&nofb=1&ipt=2ea4dd59087272499663573c42b9fce58916ac50f20c7186946de0ffc23acfe1&ipo=images"
-                    alt="flutter"
-                  />
-                  <div className="tegs">
-                    <div className="apps">
-                      <span></span>Flutter
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/blogs/category/Tailwind CSS" className="pteg">
-                  <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd6f6d0kpz0gyr.cloudfront.net%2Fuploads%2Fimages%2F_1200x630_crop_center-center_82_none%2Ftailwind-thumb.jpg%3Fmtime%3D1609771799&f=1&nofb=1&ipt=7905bdb27cec8eef124c91d0809bea12a463ac5d375240e052349785be22fbb9&ipo=images"
-                    alt="tailwind"
-                  />
-                  <div className="tegs">
-                    <div className="apps">
-                      <span></span>Tailwind
+                      <span></span>ML & AI
                     </div>
                   </div>
                 </Link>
@@ -264,11 +238,19 @@ export default function blogs() {
                                 return (
                                   <Link
                                     key={cat}
-                                    href={`/blog/category${cat}`}
+                                    href={`/blogs/category/${cat}`}
                                     className="ai"
                                   >
                                     <span></span>
-                                    {cat}
+                                    {cat === "ML"
+                                      ? "Machine Learning & AI"
+                                      : cat === "Web"
+                                      ? "Web Development"
+                                      : cat === "App"
+                                      ? "App Development"
+                                      : cat === "Game"
+                                      ? "Game Development"
+                                      : cat}
                                   </Link>
                                 );
                               })}
@@ -289,8 +271,8 @@ export default function blogs() {
                               laboriosam quo accusamus.{" "}
                             </p>
                             <h4 className="flex">
-                              <img src="/img/coder.jpg" alt="coder" />
-                              By ToeyJira<span></span>
+                              <img src="/img/me.jpg" alt="developer" />
+                              By TOEYJIRA<span></span>
                             </h4>
                           </div>
                         </div>
