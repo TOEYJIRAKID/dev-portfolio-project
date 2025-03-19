@@ -568,6 +568,7 @@ header.sticky {
     font-size: 30px;
     font-weight: 800;
     /* text-shadow: 2px 2px 2px #8750f7; */
+    letter-spacing: 8px;
     color: #fff;
 }
 
@@ -5245,5 +5246,6 @@ header.sticky {
     .mobilelogo h2 {
         font-size: 25px;
         font-weight: 700;
+        letter-spacing: 1.5px;
     }
 }
