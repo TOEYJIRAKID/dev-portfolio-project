@@ -560,13 +560,13 @@ header.sticky {
 }
 
 .mobilelogo img {
-    width: 70px;
+    width: 50px;
 }
 
 .mobilelogo h2 {
     font-size: 30px;
     font-weight: 800;
-    text-shadow: 5px 5px 5px #8750f7;
+    /* text-shadow: 2px 2px 2px #8750f7; */
     color: #fff;
 }
 
@@ -607,11 +607,11 @@ header.sticky {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: #0000003b;
+    /* background-color: #0000003b; */
     top: 0;
     left: -100vw;
     z-index: -1;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     transition: 0.6s ease-in-out;
 }
 
@@ -5218,7 +5218,7 @@ header.sticky {
     }
 
     .mobilenavlist {
-        width: 350px;
+        width: 270px;
     }
 
     .galeryimgiteminfo p {
@@ -5229,7 +5229,20 @@ header.sticky {
         padding: 0.5rem;
     }
 
+    .mobilenavlist p {
+        font-size: small;
+    }
+
+    .mobilelogo {
+        gap: 1rem;
+    }
+
     .mobilelogo img {
-        width: 50px;
+        width: 30px;
+    }
+
+    .mobilelogo h2 {
+        font-size: 25px;
+        font-weight: 700;
     }
 }
