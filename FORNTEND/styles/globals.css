@@ -2583,7 +2583,7 @@ header.sticky {
     align-items: center;
     justify-content: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
     margin-left: 0; /* ลบ margin-left */
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
     padding-left: 5rem;
     z-index: 2;
 }
@@ -2715,6 +2715,7 @@ header.sticky {
 
 .galeryimgiteminfo h2 {
     font-weight: 500;
+    font-size: 18px;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }

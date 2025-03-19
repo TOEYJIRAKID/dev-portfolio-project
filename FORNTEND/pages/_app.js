@@ -49,13 +49,13 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {/* <Preloader isLoading={isLoading} /> */}
+      <Preloader isLoading={isLoading} />
       <Headers />
-      {/* {!isLoading && ( */}
+      {!isLoading && (
         <main id="site-wrapper">
           <Component {...pageProps} />
         </main>
-      {/* )} */}
+      )}
       <Footer />
     </>
   );
