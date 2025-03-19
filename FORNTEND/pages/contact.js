@@ -89,7 +89,7 @@ export default function contact() {
       </Head>
       <div className="contactpage">
         <div className="container">
-          <div className="contactformp">
+          <div className="contactformp" data-aos="fade-up">
             <div className="leftcontp">
               <h2>Get in touch</h2>
               <h2>Let's talk about your project</h2>
