@@ -102,7 +102,7 @@ img {
     right: 15px; /* Adjust close button position */
     font-size: 35px; /* Adjust close button size */
     cursor: pointer;
-    color: #4d4d4d;
+    color: #868686;
 }
 
 .close-modal:hover,
