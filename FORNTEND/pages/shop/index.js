@@ -46,7 +46,7 @@ export default function shop() {
         <div className="shoppagetoptitle">
           <div className="container">
             <h3 data-aos="fade-up">SHOP ONLINE</h3>
-            <h2 data-aos="fade-up">ALL PRODUCTS</h2>
+            <h2 data-aos="fade-up">ALL TECH PRODUCTS</h2>
           </div>
         </div>
         <div className="shopproducts">
