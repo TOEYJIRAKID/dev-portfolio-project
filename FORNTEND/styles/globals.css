@@ -52,6 +52,14 @@ img {
 
 }
 
+/* error message */
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
 /* .project-title {
     margin-bottom: 55px;
 } */

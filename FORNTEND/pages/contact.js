@@ -12,14 +12,26 @@ export default function contact() {
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
-  const [project, setProject] = useState("");
+  const [project, setProject] = useState([]);
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
 
   const [messageOk, setMessageOk] = useState("");
+  const [projectError, setProjectError] = useState(false);
 
   async function createProduct(ev) {
     ev.preventDefault();
+
+    // Check if at least one checkbox is selected
+    if (project.length === 0) {
+      setProjectError(true);
+      setTimeout(() => {
+        setProjectError(false);
+      }, 5000); // clear message after 5 sec
+      return; // Stop form submission
+    } else {
+      setProjectError(false); // Clear error if checkboxes are selected
+    }
 
     setMessageOk("Sending...");
 
@@ -38,6 +50,9 @@ export default function contact() {
     try {
       await axios.post("/api/contacts", data);
       setMessageOk("✅ Message sent successfully");
+      setTimeout(() => {
+        setMessageOk("");
+      }, 5000); // clear message after 5 sec
 
       // reset all form fields after successful submission
       setFname("");
@@ -46,7 +61,7 @@ export default function contact() {
       setCompany("");
       setPhone("");
       setCountry("");
-      setProject("");
+      setProject([]);
       setPrice("");
       setDescription("");
     } catch (error) {
@@ -62,10 +77,14 @@ export default function contact() {
         console.error("Error", error.message);
       }
       setMessageOk("❌ Failed to send message");
+      setTimeout(() => {
+        setMessageOk("");
+      }, 5000); // clear message after 5 sec
     }
   }
 
   const handleProjectChange = (projectName) => {
+    setProjectError(false); // Clear error when user interacts with checkboxes
     if (project.includes(projectName)) {
       setProject(project.filter((project) => project !== projectName));
     } else {
@@ -233,6 +252,11 @@ export default function contact() {
                       {projectOption}
                     </label>
                   ))}
+                  {projectError && (
+                    <p className="error-message">
+                      Please select at least one service.
+                    </p>
+                  )}
                 </div>
                 <div className="rightconttitle">
                   <h2>
