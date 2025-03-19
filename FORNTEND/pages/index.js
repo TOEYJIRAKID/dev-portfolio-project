@@ -445,10 +445,10 @@ export default function Home() {
             </div>
             <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
-                <img src="/img/redux.svg" alt="redux" />
+                <img src="/img/nextjs.svg" alt="nextjs" />
                 <h3>85%</h3>
               </div>
-              <p className="text-center">Redux</p>
+              <p className="text-center">NextJS</p>
             </div>
             <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
