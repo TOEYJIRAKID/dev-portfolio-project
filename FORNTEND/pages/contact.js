@@ -281,7 +281,7 @@ export default function contact() {
                         required
                       />
                       <span className="radio"></span>
-                      <label htmlFor={priceRange}>{priceRange}</label>
+                      <label htmlFor={priceRange} style={{ cursor: "pointer" }}>{priceRange}</label>
                     </div>
                   ))}
                 </div>
