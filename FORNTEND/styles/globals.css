@@ -560,6 +560,7 @@ header.sticky {
 }
 
 .mobilelogo img {
+    margin-left: 0.2rem;
     width: 50px;
 }
 
@@ -5238,7 +5239,7 @@ header.sticky {
     }
 
     .mobilelogo img {
-        width: 30px;
+        width: 35px;
     }
 
     .mobilelogo h2 {
