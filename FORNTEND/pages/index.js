@@ -102,7 +102,6 @@ export default function Home() {
         "Full Stack Dev",
         "Backend Dev",
         "Mobile App Dev",
-        "ML Engineer",
       ], // Add your desired text here
       startDelay: 500, // slightly increase start delay
       typeSpeed: 70, // increase typing speed slightly for natural effect

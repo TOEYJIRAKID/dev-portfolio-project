@@ -2516,13 +2516,15 @@ header.sticky {
 }
 
 .rightimgsec {
-    width: 100%;
+    width: 100%; /* ปรับให้เต็มความกว้าง */
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-left: -150px;
+    justify-content: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
+    margin-left: 0; /* ลบ margin-left */
+    padding: 10rem 1rem;
+    padding-left: 5rem;
     z-index: 2;
 }
 
@@ -2530,7 +2532,7 @@ header.sticky {
     content: "";
     position: absolute;
     top: 30%;
-    left: 45%;
+    left: 50%; /* ปรับตำแหน่งให้อยู่ตรงกลาง */
     width: 50%;
     height: 35%;
     transform: translate(-50%, -50%);
@@ -2538,6 +2540,21 @@ header.sticky {
     background: linear-gradient(260deg, var(--main-site-color) 0%, rgba(115, 67, 210, 0) 100%);
     filter: blur(130px);
     z-index: -1;
+}
+
+.single-badge-img {
+    width: 350px; 
+    height: auto; 
+    border-radius: 15px;
+    object-fit: contain; 
+    filter: grayscale(0) blur(0);
+    transition: .3s ease-in-out;
+}
+
+.single-badge-img:hover {
+    -webkit-filter: grayscale(100%) blur(3px);
+    filter: grayscale(100%) blur(3px);
+    transition: .8s ease-in-out;
 }
 
 .rightimgsec img {
@@ -2627,10 +2644,28 @@ header.sticky {
     border-radius: 15px;
 }
 
+.image-item-img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-item-img:hover {
+    transform: scale(1.05);
+}
+
 .galeryimgiteminfo h2 {
     font-weight: 500;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.imgiteminfo img {
+    width: 28px;
+    border-radius: 50%;
+}
+
+.imgiteminfo {
+    gap: 10px;
 }
 
 .dark .galeryimgiteminfo h2 {
