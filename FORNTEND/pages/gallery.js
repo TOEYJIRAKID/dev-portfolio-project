@@ -66,6 +66,8 @@ export default function gallery() {
                   alt="Smart-Skill-Certificate"
                   className="single-badge-img"
                   data-aos="flip-left"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
                 />
                 {/* <div className="r_img_top">
                   <img

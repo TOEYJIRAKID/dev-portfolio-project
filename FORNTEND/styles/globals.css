@@ -52,8 +52,9 @@ img {
 
 }
 
-
-
+/* .project-title {
+    margin-bottom: 55px;
+} */
 
 /* In your globals.css file */
 
@@ -4415,6 +4416,11 @@ header.sticky {
 
 .leftmainproinfo {
     width: 48%;
+    gap: 0.rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .rightmainproinfo {

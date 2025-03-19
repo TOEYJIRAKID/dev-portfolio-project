@@ -3,66 +3,114 @@ import Link from "next/link";
 import Spinner from "@/components/Spinner";
 import { useState, useEffect } from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import useFetchData from '@/hooks/useFetchData';
+import useFetchData from "@/hooks/useFetchData";
 
 export default function projects() {
+  // fetch blog data
+  const { alldata, loading } = useFetchData("/api/projects");
 
-    // fetch blog data
-    const { alldata, loading } = useFetchData('/api/projects');
+  const publisheddata = alldata.filter((ab) => ab.status === "publish");
 
-    const publisheddata = alldata.filter(ab => ab.status === 'publish');
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [filteredProjects, setFilteredProjects] = useState([]);
+  useEffect(() => {
+    // filter project by select category
+    if (selectedCategory === "All") {
+      setFilteredProjects(alldata.filter((pro) => pro.status === "publish"));
+    } else {
+      setFilteredProjects(
+        alldata.filter(
+          (pro) =>
+            pro.status === "publish" &&
+            pro.projectcategory.includes(selectedCategory)
+        )
+      );
+    }
+  }, [selectedCategory, alldata]);
 
-    useEffect(() => {
-        // filter project by select category
-        if (selectedCategory === 'All') {
-            setFilteredProjects(alldata.filter(pro => pro.status === 'publish'));
-        } else {
-            setFilteredProjects(alldata.filter(pro => pro.status === 'publish' && pro.projectcategory[0] === selectedCategory));
-        }
-    }, [selectedCategory, alldata])
+  return (
+    <>
+      <Head>
+        <title>Projects | PORTFOLIO</title>
+        <meta
+          name="description"
+          content="Jirakit Aiadhet - Personal Portfolio"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-
-
-    return <>
-        <Head>
-            <title>Project</title>
-        </Head>
-        <div className="projectpage">
-            <div className="projects">
-                <div className="container">
-                    <div className="project_titles">
-                        <h2>My Recent Projects</h2>
-                        <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
-                    </div>
-                    <div className="project_buttons">
-                        <button className={selectedCategory === 'All' ? 'active' : ''} onClick={() => setSelectedCategory('All')}>All</button>
-                        <button className={selectedCategory === 'Website Development' ? 'active' : ''} onClick={() => setSelectedCategory('Website Development')}>Website</button>
-                        <button className={selectedCategory === 'App Development' ? 'active' : ''} onClick={() => setSelectedCategory('App Development')}>Apps</button>
-                        <button className={selectedCategory === 'E-commerce Site' ? 'active' : ''} onClick={() => setSelectedCategory('E-commerce Site')}>Digital</button>
-                        <button className={selectedCategory === 'Performance Evaluation' ? 'active' : ''} onClick={() => setSelectedCategory('Performance Evaluation')}>Content</button>
-                    </div>
-                    <div className="projects_cards">
-                        {loading ? <div className="flex flex-center wh_50"><Spinner /></div> : (
-                            filteredProjects.length === 0 ? (<h1>No Project Found</h1>) : (
-                                filteredProjects.map((pro) => (
-                                    <Link href={`/projects/${pro.slug}`} key={pro._id} className="procard">
-                                        <div className="proimgbox">
-                                            <img src={pro.images[0]} alt={pro.title} />
-                                        </div>
-                                        <div className="procontentbox">
-                                            <h2>{pro.title}</h2>
-                                            <GoArrowUpRight />
-                                        </div>
-                                    </Link>
-                                ))
-                            )
-                        )}
-                    </div>
-                </div>
+      <div className="projectpage">
+        <div className="projects">
+          <div className="container">
+            <div className="project_titles">
+              <h2 data-aos="fade-up">My Recent Projects</h2>
+              <p data-aos="fade-up">
+                Explore how I turn ideas into high-performance, user-centric
+                digital experiences with cutting-edge web and mobile solutions.
+              </p>
             </div>
+            <div className="project_buttons" data-aos="fade-up">
+              <button
+                className={selectedCategory === "All" ? "active" : ""}
+                onClick={() => setSelectedCategory("All")}
+              >
+                All
+              </button>
+              <button
+                className={selectedCategory === "Web" ? "active" : ""}
+                onClick={() => setSelectedCategory("Web")}
+              >
+                Website
+              </button>
+              <button
+                className={selectedCategory === "App" ? "active" : ""}
+                onClick={() => setSelectedCategory("App")}
+              >
+                Apps
+              </button>
+              <button
+                className={selectedCategory === "Game" ? "active" : ""}
+                onClick={() => setSelectedCategory("Game")}
+              >
+                Game
+              </button>
+              <button
+                className={selectedCategory === "ML" ? "active" : ""}
+                onClick={() => setSelectedCategory("ML")}
+              >
+                ML & AI
+              </button>
+            </div>
+            <div className="projects_cards">
+              {loading ? (
+                <div className="flex flex-center wh_50">
+                  <Spinner />
+                </div>
+              ) : filteredProjects.length === 0 ? (
+                <h1>No Project Found</h1>
+              ) : (
+                filteredProjects.map((pro) => (
+                  <Link
+                    href={`/projects/${pro.slug}`}
+                    key={pro._id}
+                    className="procard"
+                    data-aos="flip-left"
+                  >
+                    <div className="proimgbox">
+                      <img src={pro.images[0]} alt={pro.slug} />
+                    </div>
+                    <div className="procontentbox">
+                      <h2>{pro.title}</h2>
+                      <GoArrowUpRight />
+                    </div>
+                  </Link>
+                ))
+              )}
+            </div>
+          </div>
         </div>
+      </div>
     </>
+  );
 }

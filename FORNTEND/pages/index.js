@@ -98,11 +98,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [
-        "Full Stack Dev",
-        "Backend Dev",
-        "Mobile App Dev",
-      ], // Add your desired text here
+      strings: ["Full Stack Dev", "Backend Dev", "Mobile App Dev"], // Add your desired text here
       startDelay: 500, // slightly increase start delay
       typeSpeed: 70, // increase typing speed slightly for natural effect
       backSpeed: 40, // decrease backspeed slightly for natural effect
@@ -304,7 +300,7 @@ export default function Home() {
       <section className="projects">
         <div className="container">
           <div className="project_titles">
-            <h2 data-aos="fade-up">My Recent Works</h2>
+            <h2 data-aos="fade-up">My Recent Projects</h2>
             <p data-aos="fade-up">
               Explore how I turn ideas into high-performance, user-centric
               digital experiences with cutting-edge web and mobile solutions.
