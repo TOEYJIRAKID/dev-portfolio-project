@@ -2,9 +2,40 @@ import Head from "next/head";
 import Link from "next/link";
 import Spinner from "@/components/Spinner";
 import useFetchData from "@/hooks/useFetchData";
+import { useState, useRef, useEffect } from "react";
 
 export default function gallery() {
   const { alldata, loading } = useFetchData("/api/photos");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null); // Create a ref for the modal
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        handleCloseModal();
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
 
   return (
     <>
@@ -78,6 +109,8 @@ export default function gallery() {
                           className="image-item-img"
                           src={photo.images[0]}
                           alt={photo.slug}
+                          onClick={() => handleImageClick(photo.images[0])}
+                          style={{ cursor: "pointer" }}
                         />
                         <div className="galeryimgiteminfo">
                           <h2>{photo.title}</h2>
@@ -94,6 +127,19 @@ export default function gallery() {
             </div>
           </div>
         </div>
+        {/* Modal */}
+        {isModalOpen && (
+          <div className="image-modal">
+            <div className="modal-content" ref={modalRef}>
+              {" "}
+              {/* Add the ref here */}
+              <span className="close-modal" onClick={handleCloseModal}>
+                &times;
+              </span>
+              <img src={selectedImage} alt="Modal Image" />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
