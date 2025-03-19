@@ -87,7 +87,7 @@ export default function gallery() {
           <div className="container">
             <div className="gbtmtitles text-center">
               <h3 data-aos="fade-up">
-                <span>#MY</span> ALL ACHIEVE
+                <span>#ALL</span> MY ACHIEVE
               </h3>
               {/* <h2>
                 Showcasing <span>All of My</span>
@@ -105,7 +105,7 @@ export default function gallery() {
                       <div
                         className="image-item"
                         key={photo._id}
-                        data-aos="flip-left"
+                        data-aos="zoom-in-up"
                       >
                         <img
                           className="image-item-img"

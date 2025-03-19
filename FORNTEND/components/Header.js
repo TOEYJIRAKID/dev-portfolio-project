@@ -138,6 +138,7 @@ export default function Header() {
               className={mobile ? "active" : ""}
             ></span>
             <div className="mobilelogo">
+              <img src="logo.ico" alt="TOEYJIRA-PORTFOLIO" />
               <h2>TOEYJIRA</h2>
             </div>
             <ul
