@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { useState } from "react";
 import remarkGfm from "remark-gfm";
 import { useRouter } from "next/router";
 import { FreeMode } from "swiper/modules";
 import ReactMarkDown from "react-markdown";
+import { useState, useEffect } from "react";
 import useFetchData from "@/hooks/useFetchData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -97,6 +97,20 @@ export default function projectslug() {
     }
   };
 
+  const [mainImage, setMainImage] = useState("");
+
+  // useEffect to set mainImage once alldata is available
+  useEffect(() => {
+    if (alldata && alldata.length > 0 && alldata[0]?.images[0]) {
+      setMainImage(alldata[0]?.images[0]);
+    }
+  }, [alldata]);
+
+  // function to handle click on product
+  const handleImageClick = (imageSrc) => {
+    setMainImage(imageSrc);
+  };
+
   return (
     <>
       <Head>
@@ -113,10 +127,7 @@ export default function projectslug() {
           <div className="projectslugimg">
             <div className="container">
               <div className="proslugimg">
-                <img
-                  src={alldata && alldata[0]?.images[0]}
-                  alt={alldata && alldata[0]?.slug}
-                />
+                <img src={mainImage} alt={alldata && alldata[0]?.slug} />
               </div>
 
               <div className="projectsluginfo">
@@ -167,7 +178,11 @@ export default function projectslug() {
                   {alldata &&
                     alldata[0]?.images.map((image, index) => (
                       <SwiperSlide key={index}>
-                        <img src={image} alt={alldata && alldata[0]?.slug} />
+                        <img
+                          onClick={() => handleImageClick(`${image}`)}
+                          src={image}
+                          alt={alldata && alldata[0]?.slug}
+                        />
                       </SwiperSlide>
                     ))}
                 </Swiper>
