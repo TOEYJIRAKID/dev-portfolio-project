@@ -80,7 +80,6 @@ export default function blogs() {
           content="Jirakit Aiadhet - Personal Portfolio"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="/logo.ico" />
       </Head>
 
       <div className="blogpage">
@@ -111,7 +110,7 @@ export default function blogs() {
               <div className="border">
                 <div className="featuredposts">
                   <div className="fetitle flex">
-                    <h3 data-aos="fade-up">Featured Posts :</h3>
+                    <h3>Featured Posts :</h3>
                   </div>
                   <div className="feposts flex">
                     <Swiper
@@ -188,7 +187,7 @@ export default function blogs() {
             <div className="border"></div>
             <div className="populartegsdata">
               <div className="fetitle">
-                <h3>Popular Categories :</h3>
+                <h3>Categories :</h3>
               </div>
               <div className="poputegs">
                 <Link

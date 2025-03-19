@@ -146,7 +146,6 @@ export default function Home() {
           content="Jirakit Aiadhet - Personal Portfolio"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="/logo.ico" />
       </Head>
 
       {/* hero section */}
