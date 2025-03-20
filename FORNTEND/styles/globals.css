@@ -76,40 +76,54 @@ img {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 10px; /* Reduced padding */
+    padding: 10px;
+    /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto; /* Keep this for scrollbars if needed */
+    overflow: auto;
+    /* Keep this for scrollbars if needed */
 }
 
 .modal-content {
     background-color: #fff;
-    padding: 5px; /* Reduced padding */
+    padding: 5px;
+    /* Reduced padding */
     border-radius: 5px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: auto; /* Make the modal fit its content */
-    max-width: 60%; /* Reduced from 80% */
-    max-height: 100%; /* Reduced from 80vh */
-    min-width: 300px; /* Added minimum width */
-    min-height: 200px; /* Added minimum height */
+    width: auto;
+    /* Make the modal fit its content */
+    max-width: 60%;
+    /* Reduced from 80% */
+    max-height: 100%;
+    /* Reduced from 80vh */
+    min-width: 300px;
+    /* Added minimum width */
+    min-height: 200px;
+    /* Added minimum height */
     overflow: hidden;
 }
 
 .modal-content img {
     max-width: 100%;
     max-height: 100%;
-    width: 100%; /* Make the image fill the modal content area */
-    height: 100%; /* Make the image fill the modal content area */
+    width: 100%;
+    /* Make the image fill the modal content area */
+    height: 100%;
+    /* Make the image fill the modal content area */
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* Keep this for aspect ratio */
+    object-fit: contain;
+    /* Keep this for aspect ratio */
 }
 
 .close-modal {
     position: absolute;
-    top: 5px; /* Adjust close button position */
-    right: 15px; /* Adjust close button position */
-    font-size: 35px; /* Adjust close button size */
+    top: 5px;
+    /* Adjust close button position */
+    right: 15px;
+    /* Adjust close button position */
+    font-size: 35px;
+    /* Adjust close button size */
     cursor: pointer;
     color: #868686;
 }
@@ -120,18 +134,18 @@ img {
     text-decoration: none;
     cursor: pointer;
 }
-  
+
 /* Swiper Navigate Color */
 
-.swiper-button-next::after, 
+.swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #8750f7;  
-  font-size: 24px; 
+    color: #8750f7;
+    font-size: 24px;
 }
 
-.swiper-button-next:hover::after, 
+.swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
-  color: #452482;
+    color: #452482;
 }
 
 /* 
@@ -1707,7 +1721,8 @@ header.sticky {
 }
 
 .re_blog:hover .re_blogimg img {
-    transform: scale(1.1); /* Optional: Zoom in on hover */
+    transform: scale(1.1);
+    /* Optional: Zoom in on hover */
 }
 
 .re_blogimg span {
@@ -2587,13 +2602,16 @@ header.sticky {
 }
 
 .rightimgsec {
-    width: 100%; /* ปรับให้เต็มความกว้าง */
+    width: 100%;
+    /* ปรับให้เต็มความกว้าง */
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
-    margin-left: 0; /* ลบ margin-left */
+    justify-content: center;
+    /* จัดรูปภาพให้อยู่ตรงกลาง */
+    margin-left: 0;
+    /* ลบ margin-left */
     padding: 5rem 1rem;
     padding-left: 5rem;
     z-index: 2;
@@ -2603,7 +2621,8 @@ header.sticky {
     content: "";
     position: absolute;
     top: 30%;
-    left: 50%; /* ปรับตำแหน่งให้อยู่ตรงกลาง */
+    left: 50%;
+    /* ปรับตำแหน่งให้อยู่ตรงกลาง */
     width: 50%;
     height: 35%;
     transform: translate(-50%, -50%);
@@ -2614,10 +2633,10 @@ header.sticky {
 }
 
 .single-badge-img {
-    width: 350px; 
-    height: auto; 
+    width: 350px;
+    height: auto;
     border-radius: 15px;
-    object-fit: contain; 
+    object-fit: contain;
     filter: grayscale(0) blur(0);
     transition: .3s ease-in-out;
 }
@@ -3345,6 +3364,133 @@ header.sticky {
     color: var(--dark-black);
 }
 
+/* Dropdown Div Size */
+.rightcontinputs div {
+    width: 220px;
+}
+
+/* Dark Mode Dropdown */
+.dark .rightcontinputs div .country-dropdown-trigger {
+    background-color: var(--week-white);
+    color: var(--dark-black);
+}
+
+/* Dropdown trigger button */
+.country-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 20px;
+    background-color: #22172e;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #8750f7;
+    cursor: auto;
+    outline: none;
+}
+
+/* Dropdown trigger button on focus */
+.country-dropdown-trigger:focus {
+    border: 0.5px solid #8a81d3;
+    outline-color: #4f3ed0;
+}
+
+/* Dropdown arrow icon */
+.dropdown-arrow {
+    height: 18px;
+    color: #8b5cf6;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown arrow icon open*/
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu div */
+.country-dropdown-menu {
+    position: absolute;
+    z-index: 10;
+    margin-top: 0.3rem;
+    background-color: #140C1C;
+    border: 0.5px solid #8750f7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Dropdown options div */
+.dropdown-options {
+    max-height: 190px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Dropdown options choice */
+.dropdown-option {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+}
+
+/* Dropdown options hover */
+.dropdown-option:hover {
+    background-color: rgba(139, 92, 246, 0.2);
+    cursor: default;
+}
+
+/* Search input div */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+/* Search input wrapper */
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    background-color: #22172e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Search input */
+.search-input-wrapper input.search-input {
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    color: #d1d1d1;
+    border: none;
+    outline: none;
+    padding: 0.25rem 0;
+}
+
+/* Search input */
+.search-input-wrapper input.search-input:focus {
+    border: none;
+}
+
+/* Search icon */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    color: #8b5cf6;
+}
+
+/* Empty results message */
+.no-results {
+    padding: 0.5rem 1rem;
+    color: #666;
+    text-align: center;
+}
+
 .rightcontinputs {
     position: relative;
     padding: 2rem;
@@ -3355,8 +3501,7 @@ header.sticky {
     gap: 10px;
 }
 
-.rightcontinputs input,
-.rightcontinputs select {
+.rightcontinputs input {
     width: 220px;
     padding: 0.8rem;
     font-size: 20px;
@@ -3368,13 +3513,13 @@ header.sticky {
 }
 
 .dark .rightcontinputs input,
-.dark .rightcontinputs select {
+.dark .rightcontinputs div {
     background-color: var(--week-white);
     color: var(--dark-black);
 }
 
 .rightcontinputs input:focus,
-.rightcontinputs select:focus {
+.rightcontinputs seledivct:focus {
     border: 0.5px solid #8a81d3;
     outline-color: #4f3ed0;
 }
@@ -3866,12 +4011,14 @@ header.sticky {
 .rightrecentp:hover h3 {
     color: #8750f7;
 }
+
 .rightrecentpost h4 {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.rightrecentpost h4 span{
+
+.rightrecentpost h4 span {
     background-color: #4600ae7c;
     color: #ffffffc2;
     padding: 8px;
@@ -4603,7 +4750,7 @@ header.sticky {
     }
 
     .rightcontinputs input,
-    .rightcontinputs select {
+    .rightcontinputs div {
         width: 292px;
     }
 
@@ -4641,7 +4788,7 @@ header.sticky {
     }
 
     .rightcontinputs input,
-    .rightcontinputs select {
+    .rightcontinputs div {
         width: 100%;
     }
 

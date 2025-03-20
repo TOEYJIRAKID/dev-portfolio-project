@@ -4,6 +4,7 @@ import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 import { FaPhoneVolume, FaTwitter } from "react-icons/fa6";
+import SearchableCountryDropdown from "@/components/Countrys";
 
 export default function contact() {
   const [fname, setFname] = useState("");
@@ -215,29 +216,11 @@ export default function contact() {
                     placeholder="Phone number"
                     required
                   />
-                  <select
-                    name="country"
-                    id="country"
+                  {/* Replace the select element with: */}
+                  <SearchableCountryDropdown
                     value={country}
-                    onChange={(e) => setCountry(e.target.value)}
-                    required
-                  >
-                    <option value="">Select Country</option>
-                    <option value="malaysia">Malaysia</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="thailand">Thailand</option>
-                    <option value="vietnam">Vietnam</option>
-                    <option value="china">China</option>
-                    <option value="france">France</option>
-                    <option value="germany">Germany</option>
-                    <option value="india">India</option>
-                    <option value="italy">Italy</option>
-                    <option value="japan">Japan</option>
-                    <option value="russia">Russia</option>
-                    <option value="south-korea">South Korea</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="usa">United States</option>
-                  </select>
+                    onChange={(value) => setCountry(value)}
+                  />
                 </div>
                 <div className="rightconttitle">
                   <h2>What positions are available at your company?</h2>
