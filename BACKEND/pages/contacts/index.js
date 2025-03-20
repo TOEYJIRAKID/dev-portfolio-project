@@ -81,7 +81,7 @@ export default function contacts() {
                             </> : <>
                                 {publishedblogs.length === 0 ? (
                                     <tr>
-                                        <td colSpan={6} className="text-center">No Contact Found</td>
+                                        <td colSpan={7} className="text-center">No Contact Found</td>
                                     </tr>
                                 ) : (
                                     publishedblogs.map((blog, index) => (

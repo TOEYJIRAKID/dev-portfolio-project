@@ -1,8 +1,8 @@
 import axios from "axios";
 import Head from "next/head";
-import { useState } from "react";
 import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail } from "react-icons/md";
+import { useState, useRef, useEffect } from "react";
 import { FaPhoneVolume, FaTwitter } from "react-icons/fa6";
 
 export default function contact() {
@@ -17,20 +17,33 @@ export default function contact() {
   const [description, setDescription] = useState("");
 
   const [messageOk, setMessageOk] = useState("");
-  const [projectError, setProjectError] = useState(false);
+  const checkboxGroupRef = useRef(null);
+  const firstCheckboxRef = useRef(null);
+
+  useEffect(() => {
+    // Check if at least one checkbox is selected
+    if (firstCheckboxRef.current) {
+      if (project.length === 0) {
+        // Set custom validity on the first checkbox
+        firstCheckboxRef.current.setCustomValidity(
+          "Please choose at least one position."
+        );
+      } else {
+        // Clear custom validity if checkboxes are selected
+        firstCheckboxRef.current.setCustomValidity("");
+      }
+    }
+  }, [project]);
 
   async function createProduct(ev) {
     ev.preventDefault();
 
-    // Check if at least one checkbox is selected
-    if (project.length === 0) {
-      setProjectError(true);
-      setTimeout(() => {
-        setProjectError(false);
-      }, 5000); // clear message after 5 sec
-      return; // Stop form submission
-    } else {
-      setProjectError(false); // Clear error if checkboxes are selected
+    // Get the first checkbox element
+    const firstCheckbox = firstCheckboxRef.current;
+
+    // Report the validity to show the error
+    if (!firstCheckbox.reportValidity()) {
+      return;
     }
 
     setMessageOk("Sending...");
@@ -84,7 +97,6 @@ export default function contact() {
   }
 
   const handleProjectChange = (projectName) => {
-    setProjectError(false); // Clear error when user interacts with checkboxes
     if (project.includes(projectName)) {
       setProject(project.filter((project) => project !== projectName));
     } else {
@@ -111,15 +123,16 @@ export default function contact() {
           <div className="contactformp" data-aos="fade-up">
             <div className="leftcontp">
               <h2>Get in touch</h2>
-              <h2>Let's talk about your project</h2>
+              <h2>Let's connect about opportunities</h2>
               <p>
-                Thinking about a new project, a problem to solve, or just want
-                to connect? Let's do it!
+                Looking for a talented professional to join your team? I'm ready
+                to bring value to your organization!
+              </p>
+              <p>
+                I'm happy to share more about my experience and skills upon
+                request.
               </p>
               <p>Use the form on this page or get in touch by other means.</p>
-              <p>
-                We love questions and feedback - and we're always happy to help!
-              </p>
               <div className="leftsociinfo">
                 <ul>
                   <li>
@@ -227,17 +240,20 @@ export default function contact() {
                   </select>
                 </div>
                 <div className="rightconttitle">
-                  <h2>What services do you need for your project?</h2>
+                  <h2>What positions are available at your company?</h2>
                 </div>
-                <div className="rightcontcheckbox">
+                <div className="rightcontcheckbox" ref={checkboxGroupRef}>
                   {[
-                    "Website Development",
-                    "App Development",
-                    "Design System",
-                    "Website Migration",
-                    "E-commerce Site",
-                    "Performance Evaluation",
-                  ].map((projectOption) => (
+                    "Frontend Developer",
+                    "Backend Developer",
+                    "Fullstack Developer",
+                    "Mobile App Developer",
+                    "QA Tester",
+                    "Database Administrator",
+                    "ML Engineer",
+                    "DevOps Engineer",
+                    "Cybersecurity Engineer",
+                  ].map((projectOption, index) => (
                     <label
                       key={projectOption}
                       className="cyberpunk-checkbox-label"
@@ -248,25 +264,19 @@ export default function contact() {
                         value={projectOption}
                         checked={project.includes(projectOption)}
                         onChange={() => handleProjectChange(projectOption)}
+                        ref={index === 0 ? firstCheckboxRef : null}
                       />
                       {projectOption}
                     </label>
                   ))}
-                  {projectError && (
-                    <p className="error-message">
-                      Please select at least one service.
-                    </p>
-                  )}
                 </div>
                 <div className="rightconttitle">
-                  <h2>
-                    How much is the anticipated budget for your next project?
-                  </h2>
+                  <h2>What salary range can you offer?</h2>
                 </div>
                 <div className="rightcontredio">
                   {[
-                    "Less than $400",
-                    "$400 - $800",
+                    "Less than $600",
+                    "$600 - $800",
                     "$800 - $1000",
                     "More than $1000",
                   ].map((priceRange) => (
@@ -281,12 +291,14 @@ export default function contact() {
                         required
                       />
                       <span className="radio"></span>
-                      <label htmlFor={priceRange} style={{ cursor: "pointer" }}>{priceRange}</label>
+                      <label htmlFor={priceRange} style={{ cursor: "pointer" }}>
+                        {priceRange}
+                      </label>
                     </div>
                   ))}
                 </div>
                 <div className="rightconttitle">
-                  <h2>Tell me about your project</h2>
+                  <h2>About Your Company and Position</h2>
                 </div>
                 <div className="rightcontpera">
                   <textarea
@@ -295,7 +307,7 @@ export default function contact() {
                     name="description"
                     rows={4}
                     id=""
-                    placeholder="Project description"
+                    placeholder="Company details and job description"
                     required
                   ></textarea>
                 </div>
