@@ -3,7 +3,7 @@ import Head from "next/head";
 import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
-import { FaPhoneVolume, FaTwitter } from "react-icons/fa6";
+import { FaPhoneVolume, FaXTwitter } from "react-icons/fa6";
 import SearchableCountryDropdown from "@/components/Countrys";
 
 export default function contact() {
@@ -140,8 +140,8 @@ export default function contact() {
                     <FaPhoneVolume />{" "}
                     <span>
                       Phone:{" "}
-                      <a href="tel:+123456789" target="_blank">
-                        +91-123456789
+                      <a href="tel:+66950729219" target="_blank">
+                        +66-950729219
                       </a>
                     </span>
                   </li>
@@ -158,16 +158,19 @@ export default function contact() {
                     <GrLinkedin />{" "}
                     <span>
                       Linkedin:{" "}
-                      <a href="tel:+123456789" target="_blank">
-                        +91-123456789
+                      <a
+                        href="https://www.linkedin.com/in/toeyjirakid/"
+                        target="_blank"
+                      >
+                        Jirakit Aiadhet
                       </a>
                     </span>
                   </li>
                   <li>
-                    <FaTwitter />{" "}
+                    <FaXTwitter />{" "}
                     <span>
-                      Twitter:{" "}
-                      <a href="tel:+123456789" target="_blank">
+                    X (Twitter):{" "}
+                      <a href="https://x.com/canyoucallinamo" target="_blank">
                         @canyoucallinamo
                       </a>
                     </span>
