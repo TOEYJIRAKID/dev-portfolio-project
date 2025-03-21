@@ -1820,6 +1820,107 @@ header.sticky {
     font-weight: 700;
 }
 
+/* skill slider */
+.skill-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    /* border-radius: 16px; */
+    padding-top: 2rem;
+}
+
+.skill-track {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: scroll 200s linear infinite;
+    will-change: transform;
+}
+
+.skill-track:hover {
+    animation-play-state: paused;
+}
+
+.skill-item {
+    flex: 0 0 auto;
+    padding: 0 30px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.15);
+}
+
+.skill-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    /* border: 1px solid red; */
+}
+
+.skill-icon:hover {
+    opacity: 1;
+}
+
+/* Overlays for the fade effect on the edges */
+.skill-slider-container::before,
+.skill-slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+
+.skill-slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, #0f0715, rgba(255, 255, 255, 0));
+}
+
+.skill-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, #0f0715, rgba(255, 255, 255, 0));
+}
+
+.dark .skill-slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--pure-white), rgba(255, 255, 255, 0));
+}
+
+.dark .skill-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--pure-white), rgba(255, 255, 255, 0));
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-item {
+        padding: 0 20px;
+    }
+
+    .skill-slider-container {
+        padding: 30px 0;
+    }
+}
+
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ BLOGS PAGE */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
