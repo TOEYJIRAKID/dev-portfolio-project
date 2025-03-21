@@ -1,3 +1,5 @@
+// pages/shop/index.js
+
 import Head from "next/head";
 import Link from "next/link";
 import Spinner from "@/components/Spinner";

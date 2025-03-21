@@ -1,3 +1,5 @@
+// components/BlogSearch.js
+
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import useFetchData from "@/hooks/useFetchData";

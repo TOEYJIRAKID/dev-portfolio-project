@@ -1,7 +1,7 @@
 // components/Preloader.js
 
-import { useEffect } from "react";
 import gsap from "gsap";
+import { useEffect } from "react";
 
 const Preloader = ({ isLoading }) => {
   useEffect(() => {

@@ -1,3 +1,5 @@
+// pages/gallery.js
+
 import Head from "next/head";
 import Link from "next/link";
 import Spinner from "@/components/Spinner";
@@ -47,6 +49,7 @@ export default function gallery() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <div className="gallerypage">
         <div className="container">
           <div className="gallerytopsec">

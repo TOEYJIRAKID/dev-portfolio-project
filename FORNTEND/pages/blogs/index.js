@@ -1,3 +1,5 @@
+// pages/blogs/index.js
+
 import "swiper/css";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,15 +63,6 @@ export default function blogs() {
   for (let i = 1; i <= Math.ceil(allblog / perPage); i++) {
     pageNumbers.push(i);
   }
-
-  // const cleanText = (text) => {
-  //   // Remove any markdown formatting and return plain text
-  //   const plainText = text.replace(
-  //     /(?:__|[*#])|\[(.*?)\]\(.*?\)|(?:\n)/g,
-  //     "$1"
-  //   );
-  //   return plainText;
-  // };
 
   return (
     <>

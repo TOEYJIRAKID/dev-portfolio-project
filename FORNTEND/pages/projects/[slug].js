@@ -1,3 +1,5 @@
+// pages/projects/[slug].js
+
 import Head from "next/head";
 import remarkGfm from "remark-gfm";
 import { useRouter } from "next/router";

@@ -1,3 +1,5 @@
+// pages/blogs/category/[category].js
+
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -82,12 +84,12 @@ export default function Category() {
                     {category === "ML"
                       ? "Machine Learning & AI"
                       : category === "Web"
-                        ? "Web Development"
-                        : category === "App"
-                          ? "App Development"
-                          : category === "Game"
-                            ? "Game Development"
-                            : category}
+                      ? "Web Development"
+                      : category === "App"
+                      ? "App Development"
+                      : category === "Game"
+                      ? "Game Development"
+                      : category}
                   </span>
                 </h1>
               </div>
@@ -130,12 +132,12 @@ export default function Category() {
                                     {cat === "ML"
                                       ? "Machine Learning & AI"
                                       : cat === "Web"
-                                        ? "Web Development"
-                                        : cat === "App"
-                                          ? "App Development"
-                                          : cat === "Game"
-                                            ? "Game Development"
-                                            : cat}
+                                      ? "Web Development"
+                                      : cat === "App"
+                                      ? "App Development"
+                                      : cat === "Game"
+                                      ? "Game Development"
+                                      : cat}
                                   </Link>
                                 );
                               })}

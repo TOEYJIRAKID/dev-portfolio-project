@@ -1,14 +1,15 @@
+// pages/services.js
+
 import Head from "next/head";
 
 export default function services() {
-    return <>
-        <Head>
-            <title>Services</title>
-        </Head>
+  return (
+    <>
+      <Head>
+        <title>Services</title>
+      </Head>
 
-        <div className="servicespage">
-            
-        </div>
-
+      <div className="servicespage"></div>
     </>
+  );
 }

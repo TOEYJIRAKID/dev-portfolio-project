@@ -121,6 +121,7 @@ export default function contact() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <div className="contactpage">
         <div className="container">
           <div className="contactformp" data-aos="fade-up">

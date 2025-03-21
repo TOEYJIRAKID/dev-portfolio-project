@@ -1,3 +1,5 @@
+// models/Comment.js
+
 const { Schema, models, model } = require("mongoose");
 
 const CommentSchema = new Schema({

@@ -1,3 +1,5 @@
+// components/Footer.js
+
 import Link from "next/link";
 import { GrLinkedinOption } from "react-icons/gr";
 import { FaFacebook, FaGithub, FaXTwitter } from "react-icons/fa6";
