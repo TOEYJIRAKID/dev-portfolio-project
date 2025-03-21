@@ -158,6 +158,7 @@ img {
 .swiper-image-container.active {
     border: 1px solid #34269c;
 }
+
 /* 
   font-family: "Russo One", sans-serif; */
 
@@ -2741,16 +2742,18 @@ header.sticky {
 
 .image-item img {
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .image-item-img {
+    height: 300px;
+    width: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .image-item-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .galeryimgiteminfo h2 {
@@ -5396,7 +5399,7 @@ header.sticky {
         height: 100%;
         object-fit: cover;
     }
-    
+
     .leftsimgboxlist img {
         width: 110px;
         height: 100%;
@@ -5409,6 +5412,20 @@ header.sticky {
 
     .leftshopmainimg {
         height: 200px;
+    }
+
+    .image-item-img {
+        height: 150px;
+    }
+
+    .galeryimgiteminfo h2 {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    
+    .galeryimgiteminfo p {
+        font-weight: 400;
+        font-size: 13px;
     }
 }
 
@@ -5472,5 +5489,15 @@ header.sticky {
         font-size: 25px;
         font-weight: 700;
         letter-spacing: 1.5px;
+    }
+
+    .galeryimgiteminfo h2 {
+        font-weight: 500;
+        font-size: 13px;
+    }
+    
+    .galeryimgiteminfo p {
+        font-weight: 400;
+        font-size: 12px;
     }
 }
