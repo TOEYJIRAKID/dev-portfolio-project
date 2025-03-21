@@ -278,9 +278,8 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`services_item ${
-                  activeIndex === index ? "sactive" : ""
-                }`}
+                className={`services_item ${activeIndex === index ? "sactive" : ""
+                  }`}
                 onMouseOver={() => handleHover(index)}
                 onMouseOut={handleMouseOut}
               >
@@ -423,44 +422,56 @@ export default function Home() {
             <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/python.svg" alt="python" />
-                <h3>92%</h3>
+                {/* <h3>92%</h3> */}
               </div>
               <p className="text-center">Python</p>
             </div>
             <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/firebase.svg" alt="firebase" />
-                <h3>80%</h3>
+                {/* <h3>80%</h3> */}
               </div>
               <p className="text-center">Firebase</p>
             </div>
             <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/mongodb.svg" alt="mongodb" />
-                <h3>98%</h3>
+                {/* <h3>98%</h3> */}
               </div>
               <p className="text-center">MongoDB</p>
             </div>
-            <div className="mys_card" data-aos="fade-left">
+            <div className="mys_card" data-aos="fade-right">
               <div className="mys_inner">
                 <img src="/img/nextjs.svg" alt="nextjs" />
-                <h3>85%</h3>
+                {/* <h3>85%</h3> */}
               </div>
               <p className="text-center">NextJS</p>
             </div>
             <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
                 <img src="/img/react.svg" alt="react" />
-                <h3>99%</h3>
+                {/* <h3>99%</h3> */}
               </div>
               <p className="text-center">React</p>
             </div>
             <div className="mys_card" data-aos="fade-left">
               <div className="mys_inner">
                 <img src="/img/js.svg" alt="javascript" />
-                <h3>99%</h3>
+                {/* <h3>99%</h3> */}
               </div>
               <p className="text-center">JavaScript</p>
+            </div>
+            <div className="mys_card" data-aos="fade-left">
+              <div className="mys_inner">
+                <img src="/img/html5.svg" alt="HTML5" />
+              </div>
+              <p className="text-center">HTML5</p>
+            </div>
+            <div className="mys_card" data-aos="fade-left">
+              <div className="mys_inner">
+                <img src="/img/css3.svg" alt="CSS3" />
+              </div>
+              <p className="text-center">CSS3</p>
             </div>
           </div>
         </div>
@@ -494,12 +505,12 @@ export default function Home() {
                       {blog.blogcategory[0] === "ML"
                         ? "Machine Learning & AI"
                         : blog.blogcategory[0] === "Web"
-                        ? "Web Development"
-                        : blog.blogcategory[0] === "App"
-                        ? "App Development"
-                        : blog.blogcategory[0] === "Game"
-                        ? "Game Development"
-                        : blog.blogcategory[0]}
+                          ? "Web Development"
+                          : blog.blogcategory[0] === "App"
+                            ? "App Development"
+                            : blog.blogcategory[0] === "Game"
+                              ? "Game Development"
+                              : blog.blogcategory[0]}
                     </span>
                   </div>
                   <div className="re_bloginfo">

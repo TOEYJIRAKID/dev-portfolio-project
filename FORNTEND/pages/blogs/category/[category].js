@@ -52,14 +52,14 @@ export default function Category() {
     pageNumbers.push(i);
   }
 
-  const cleanText = (text) => {
-    // Remove any markdown formatting and return plain text
-    const plainText = text.replace(
-      /(?:__|[*#])|\[(.*?)\]\(.*?\)|(?:\n)/g,
-      "$1"
-    );
-    return plainText;
-  };
+  // const cleanText = (text) => {
+  //   // Remove any markdown formatting and return plain text
+  //   const plainText = text.replace(
+  //     /(?:__|[*#])|\[(.*?)\]\(.*?\)|(?:\n)/g,
+  //     "$1"
+  //   );
+  //   return plainText;
+  // };
 
   return (
     <>
@@ -149,7 +149,11 @@ export default function Category() {
                                 {blog.title}
                               </Link>
                             </h3>
-                            <p>{cleanText(blog.description)}</p>
+                            <p>
+                              {blog.tags.map((cat) => {
+                                return <span key={cat}> #{cat}</span>;
+                              })}
+                            </p>
                             <h4 className="flex">
                               <img src="/img/me.jpg" alt="developer" />
                               By TOEYJIRA<span></span>
