@@ -1,3 +1,5 @@
+// components/Countrys.js
+
 import { Search } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -236,6 +238,11 @@ export default function SearchableCountryDropdown({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Update selectedCountry when 'value' changes
+  useEffect(() => {
+    setSelectedCountry(value || "");
+  }, [value]);
 
   const handleCountrySelect = (value) => {
     setSelectedCountry(value);

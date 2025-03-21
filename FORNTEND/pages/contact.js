@@ -1,3 +1,5 @@
+// pages/contact.js
+
 import axios from "axios";
 import Head from "next/head";
 import { GrLinkedin } from "react-icons/gr";
@@ -169,7 +171,7 @@ export default function contact() {
                   <li>
                     <FaXTwitter />{" "}
                     <span>
-                    X (Twitter):{" "}
+                      X (Twitter):{" "}
                       <a href="https://x.com/canyoucallinamo" target="_blank">
                         @canyoucallinamo
                       </a>
