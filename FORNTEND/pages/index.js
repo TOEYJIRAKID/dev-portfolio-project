@@ -442,7 +442,7 @@ export default function Home() {
                   href={`/blogs/${blog.slug}`}
                   key={blog._id}
                   className="re_blog"
-                  data-aos="flip-right"
+                  data-aos="flip-left"
                 >
                   <div className="re_blogimg">
                     <img

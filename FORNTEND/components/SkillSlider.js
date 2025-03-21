@@ -50,10 +50,16 @@ const SkillSlider = ({ skills }) => {
   }
 
   return (
-    <div className="skill-slider-container" data-aos="fade-up">
+    <div className="skill-slider-container">
       <div className="skill-track" ref={sliderRef}>
         {duplicatedSkills.map((skill, index) => (
-          <div className="skill-item" key={`${skill.id}-${index}`}>
+          <div
+            className="skill-item"
+            key={`${skill.id}-${index}`}
+            data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2500"
+          >
             <img
               src={skill.icon}
               alt={skill.name}
