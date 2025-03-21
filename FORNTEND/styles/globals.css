@@ -151,6 +151,8 @@ img {
 .swiper-image-container {
     display: flex;
     padding: 4px;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-image-container.active {
@@ -4653,6 +4655,18 @@ header.sticky {
     background-position: -100%;
 }
 
+.projectmainimg {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.projectmainimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .projectslugsliderimg {
     overflow: hidden;
     margin-top: 2rem;
@@ -5061,6 +5075,10 @@ header.sticky {
         height: 100%;
         object-fit: cover;
     }
+
+    .projectmainimg {
+        height: 400px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5377,6 +5395,20 @@ header.sticky {
         width: 110px;
         height: 100%;
         object-fit: cover;
+    }
+    
+    .leftsimgboxlist img {
+        width: 110px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .projectmainimg {
+        height: 200px;
+    }
+
+    .leftshopmainimg {
+        height: 200px;
     }
 }
 

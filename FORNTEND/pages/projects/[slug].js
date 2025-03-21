@@ -2,6 +2,7 @@ import Head from "next/head";
 import remarkGfm from "remark-gfm";
 import { useRouter } from "next/router";
 import { FreeMode } from "swiper/modules";
+import Spinner from "@/components/Spinner";
 import ReactMarkDown from "react-markdown";
 import { useState, useEffect } from "react";
 import useFetchData from "@/hooks/useFetchData";
@@ -127,8 +128,13 @@ export default function projectslug() {
           <div className="projectslugimg">
             <div className="container">
               <div className="proslugimg">
-                <img src={mainImage} alt={alldata && alldata[0]?.slug} />
-
+                <div className="projectmainimg">
+                  {loading ? (
+                    <Spinner />
+                  ) : (
+                    <img src={mainImage} alt={alldata && alldata[0]?.slug} />
+                  )}
+                </div>
                 <div className="projectslugsliderimg">
                   <Swiper
                     slidesPerView={"auto"}

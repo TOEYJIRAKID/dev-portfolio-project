@@ -116,9 +116,9 @@ export default function shopslug() {
                 <div className="leftsimgboxlist">
                   <Swiper
                     slidesPerView={"auto"}
-                    spaceBetween={30}
+                    spaceBetween={20}
                     freeMode={true}
-                    grabCursor={false}
+                    grabCursor={true}
                     modules={[FreeMode]}
                     className="mySwiper"
                   >
