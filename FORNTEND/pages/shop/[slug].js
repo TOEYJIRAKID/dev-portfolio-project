@@ -125,11 +125,17 @@ export default function shopslug() {
                     {alldata &&
                       alldata[0]?.images.map((image, index) => (
                         <SwiperSlide key={index}>
-                          <img
-                            onClick={() => handleImageClick(`${image}`)}
-                            src={image}
-                            alt={alldata && alldata[0]?.slug}
-                          />
+                          <div
+                            className={`swiper-image-container ${
+                              mainImage === image ? "active" : ""
+                            }`}
+                          >
+                            <img
+                              onClick={() => handleImageClick(image)}
+                              src={image}
+                              alt={alldata && alldata[0]?.slug}
+                            />
+                          </div>
                         </SwiperSlide>
                       ))}
                   </Swiper>

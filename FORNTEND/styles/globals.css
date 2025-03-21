@@ -148,6 +148,14 @@ img {
     color: #452482;
 }
 
+.swiper-image-container {
+    display: flex;
+    padding: 4px;
+}
+
+.swiper-image-container.active {
+    border: 1px solid #34269c;
+}
 /* 
   font-family: "Russo One", sans-serif; */
 
