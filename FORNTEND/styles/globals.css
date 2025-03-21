@@ -4664,6 +4664,16 @@ header.sticky {
     object-fit: cover;
 }
 
+.swiper-image-project-container {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+
+.swiper-image-project-container.active {
+    border: 1px solid #34269c;
+}
+
 .projectslugsliderimg .swiper-wrapper {
     display: flex;
 }
@@ -5041,6 +5051,11 @@ header.sticky {
         margin-top: 3rem;
     }
 
+    .projectslugsliderimg img {
+        width: 210px;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5348,6 +5363,11 @@ header.sticky {
         padding: 0 1rem;
     }
 
+    .projectslugsliderimg img {
+        width: 110px;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width: 410px) {

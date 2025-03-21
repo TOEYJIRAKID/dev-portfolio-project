@@ -128,6 +128,34 @@ export default function projectslug() {
             <div className="container">
               <div className="proslugimg">
                 <img src={mainImage} alt={alldata && alldata[0]?.slug} />
+
+                <div className="projectslugsliderimg">
+                  <Swiper
+                    slidesPerView={"auto"}
+                    spaceBetween={30}
+                    freeMode={true}
+                    grabCursor={true}
+                    modules={[FreeMode]}
+                    className="mySwiper"
+                  >
+                    {alldata &&
+                      alldata[0]?.images.map((image, index) => (
+                        <SwiperSlide key={index}>
+                          <div
+                            className={`swiper-image-project-container ${
+                              mainImage === image ? "active" : ""
+                            }`}
+                          >
+                            <img
+                              onClick={() => handleImageClick(`${image}`)}
+                              src={image}
+                              alt={alldata && alldata[0]?.slug}
+                            />
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                  </Swiper>
+                </div>
               </div>
 
               <div className="projectsluginfo">
@@ -164,28 +192,6 @@ export default function projectslug() {
                     <h2>TOEYJIRA</h2>
                   </div>
                 </div>
-              </div>
-
-              <div className="projectslugsliderimg">
-                <Swiper
-                  slidesPerView={"auto"}
-                  spaceBetween={30}
-                  freeMode={true}
-                  grabCursor={true}
-                  modules={[FreeMode]}
-                  className="mySwiper"
-                >
-                  {alldata &&
-                    alldata[0]?.images.map((image, index) => (
-                      <SwiperSlide key={index}>
-                        <img
-                          onClick={() => handleImageClick(`${image}`)}
-                          src={image}
-                          alt={alldata && alldata[0]?.slug}
-                        />
-                      </SwiperSlide>
-                    ))}
-                </Swiper>
               </div>
             </div>
           </div>
