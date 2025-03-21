@@ -4194,7 +4194,7 @@ header.sticky {
     max-width: 100%;
     /* display: flex; */
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .leftsimgboxlist img {
@@ -4655,7 +4655,7 @@ header.sticky {
 
 .projectslugsliderimg {
     overflow: hidden;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .projectslugsliderimg img {
@@ -5051,6 +5051,11 @@ header.sticky {
         margin-top: 3rem;
     }
 
+    .projectslugsliderimg {
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
     .projectslugsliderimg img {
         width: 210px;
         height: 100%;
@@ -5361,6 +5366,11 @@ header.sticky {
 
     .populartegssec {
         padding: 0 1rem;
+    }
+
+    .projectslugsliderimg {
+        overflow: hidden;
+        margin-top: 1rem;
     }
 
     .projectslugsliderimg img {

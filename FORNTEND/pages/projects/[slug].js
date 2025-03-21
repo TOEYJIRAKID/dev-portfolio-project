@@ -132,7 +132,7 @@ export default function projectslug() {
                 <div className="projectslugsliderimg">
                   <Swiper
                     slidesPerView={"auto"}
-                    spaceBetween={30}
+                    spaceBetween={20}
                     freeMode={true}
                     grabCursor={true}
                     modules={[FreeMode]}
