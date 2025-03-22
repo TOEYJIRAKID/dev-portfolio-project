@@ -572,11 +572,15 @@ header.sticky {
     height: 100vh;
     top: 0;
     left: -375px;
-    background-color: #100f12;
+    background-color: var(--dark-black);
     padding: 3rem 2rem;
     z-index: 99999999999999999999999;
-    border-right: 1px solid #fff;
+    border-right: 1px solid var(--main-site-color);
     transition: 0.3s;
+}
+
+.dark .mobilenavlist {
+    background-color: var(--week-white);
 }
 
 .mobilenavlist.active {
@@ -602,7 +606,11 @@ header.sticky {
     font-weight: 800;
     /* text-shadow: 2px 2px 2px #8750f7; */
     letter-spacing: 8px;
-    color: #fff;
+    color: var(--week-white);
+}
+
+.dark .mobilelogo h2 {
+    color: var(--dark-black);
 }
 
 .mobilenavlist li {
@@ -619,11 +627,16 @@ header.sticky {
     width: 100%;
     transition: 0.3s;
     padding: 1rem;
-    color: #fff;
+    color: var(--week-white);
+}
+
+.dark .mobilenavlist li a {
+    color: var(--dark-black);
 }
 
 .mobilenavlist li a.active {
     background-color: var(--main-site-color);
+    color: var(--pure-white);
     border-radius: 8px;
     padding-left: 2rem;
 }

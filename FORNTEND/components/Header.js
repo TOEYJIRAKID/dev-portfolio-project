@@ -62,6 +62,9 @@ export default function Header() {
     setMobile(false);
   };
 
+  // Determine the logo source based on dark mode
+  const logoSrc = darkMode ? "/logo.svg" : "/logo-white.svg";
+
   return (
     <>
       <header>
@@ -140,7 +143,7 @@ export default function Header() {
               className={mobile ? "active" : ""}
             ></span>
             <div className="mobilelogo">
-              <img src="/logo-white.svg" alt="TOEYJIRA-PORTFOLIO" />
+              <img src={logoSrc} alt="TOEYJIRA-PORTFOLIO" />
               <h2>TOEYJIRA</h2>
             </div>
             <ul
