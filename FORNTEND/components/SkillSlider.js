@@ -60,13 +60,17 @@ const SkillSlider = ({ skills }) => {
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2500"
           >
-            <img
-              src={skill.icon}
-              alt={skill.name}
-              className="skill-icon"
-              loading="lazy"
-              title={skill.name}
-            />
+            <div className="skill-card">
+              {" "}
+              {/* Add a card div here */}
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="skill-icon"
+                loading="lazy"
+                title={skill.name}
+              />
+            </div>
           </div>
         ))}
       </div>

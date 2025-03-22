@@ -1827,7 +1827,7 @@ header.sticky {
     overflow: hidden;
     backdrop-filter: blur(10px);
     /* border-radius: 16px; */
-    padding-top: 2rem;
+    padding: 2rem 0rem 3rem 0rem;
 }
 
 .skill-track {
@@ -1845,20 +1845,37 @@ header.sticky {
 .skill-item {
     flex: 0 0 auto;
     padding: 0 30px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .skill-item:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
+}
+
+.skill-card {
+    background-color: var(--week-white);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 1px solid var(--main-site-color);
 }
 
 .skill-icon {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
     opacity: 0.8;
-    transition: all 0.3s ease;
-    /* border: 1px solid red; */
+    transition: all 0.2s ease;
 }
 
 .skill-icon:hover {
