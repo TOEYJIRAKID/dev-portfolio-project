@@ -1512,7 +1512,7 @@ header.sticky {
     transform: translateX(-50%);
     background: linear-gradient(to right, var(--main-site-color) 0%, var(--dark-site-secondary) 100%);
     padding: 1.2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: 0.3s ease-in-out;
     opacity: 0;
 }
@@ -5642,6 +5642,10 @@ header.sticky {
 
     .exper_card p {
         font-size: 13px;
+    }
+
+    .procontentbox {
+        margin-bottom: 0.5rem;
     }
 }
 
