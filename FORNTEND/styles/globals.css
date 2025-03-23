@@ -2697,7 +2697,7 @@ header.sticky {
 .sbsfsearchlist {
     width: 100%;
     max-height: 550px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .sbsfsbox {

@@ -566,7 +566,9 @@ const BlogPage = () => {
                     <input
                       onClick={handleSearchOpen}
                       type="text"
-                      placeholder="Search..."
+                      placeholder="Search blogs here..."
+                      readOnly
+                      style={{ cursor: "pointer" }}
                     />
                     <button>
                       <FiSearch />
