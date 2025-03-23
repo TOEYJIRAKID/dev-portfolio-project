@@ -1870,17 +1870,18 @@ header.sticky {
 .skill-card {
     background-color: var(--week-white);
     border-radius: 16px;
-    padding: 20px;
+    padding: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
     border: 1px solid transparent;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
+    transform: rotate(5deg);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border: 2px solid var(--main-site-color);
 }
@@ -1940,23 +1941,32 @@ header.sticky {
 
 @media (max-width: 768px) {
     .skill-icon {
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
     }
 
     .skill-item {
-        padding: 0 20px;
+        padding: 0 15px;
     }
+
+    .skill-slider-container {
+        padding: 1.5rem 0rem 2rem 0rem;
+    }
+
 }
 
 @media (max-width: 360px) {
     .skill-icon {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .skill-item {
-        padding: 0 20px;
+        padding: 0 10px;
+    }
+
+    .skill-slider-container {
+        padding: 1rem 0rem 1.5rem 0rem;
     }
 
 }
