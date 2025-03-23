@@ -5708,6 +5708,14 @@ header.sticky {
         font-size: 15px;
     }
 
+    .toptitlecont h1 {
+        font-size: 35px;
+    }
+
+    .toptitlecont p {
+        font-size: 15px;
+    }
+
     .exstudy {
         padding: 3rem 1rem;
     }
