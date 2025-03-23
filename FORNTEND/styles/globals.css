@@ -2463,7 +2463,8 @@ header.sticky {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -4221,8 +4222,8 @@ header.sticky {
 }
 
 .rightrecentpost img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
 }
 
@@ -4268,7 +4269,8 @@ header.sticky {
 .rightrecentpost h4 span {
     background-color: #4600ae7c;
     color: #ffffffc2;
-    padding: 8px;
+    padding: 5px;
+    /* padding: 8px; */
 }
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
@@ -4520,6 +4522,7 @@ header.sticky {
     position: relative;
     padding: 1rem 0;
     padding-top: 2rem;
+    margin-bottom: 3rem;
     margin-top: 3rem;
     border-top: 1px solid #333;
 }
