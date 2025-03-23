@@ -140,7 +140,9 @@ img {
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: #8750f7;
-    font-size: 24px;
+    font-weight: 600;
+    border: #000 solid 1px;
+
 }
 
 .swiper-button-next:hover::after,
@@ -5768,9 +5770,9 @@ header.sticky {
     }
 
     .fpost {
-        min-width: 347px;
-        max-width: 347px;
-        height: 350px;
+        min-width: 290px;
+        max-width: 290px;
+        height: 330px;
     }
 
     .featuredposts {
@@ -5783,6 +5785,18 @@ header.sticky {
 
     .populartegssec {
         padding: 0 1rem;
+    }
+
+    .tophero {
+        margin-bottom: 2rem;
+    }
+
+    .fpostinfo {
+        padding: 15px;
+    }
+
+    .fpostinfo h2 {
+        font-size: 0.8rem;
     }
 
     .projectslugsliderimg {

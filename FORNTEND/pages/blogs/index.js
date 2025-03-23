@@ -6,11 +6,11 @@ import Link from "next/link";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
+import { FreeMode } from "swiper/modules";
 import Spinner from "@/components/Spinner";
 import useFetchData from "@/hooks/useFetchData";
 import Blogsearch from "@/components/Blogsearch";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation } from "swiper/modules";
 
 export default function blogs() {
   // pagination
@@ -113,8 +113,7 @@ export default function blogs() {
                       freeMode={true}
                       spaceBetween={30}
                       className="mySwiper"
-                      modules={[FreeMode, Navigation]}
-                      navigation={true}
+                      modules={[FreeMode]}
                     >
                       {loading ? (
                         <Spinner />
