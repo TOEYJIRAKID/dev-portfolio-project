@@ -1669,7 +1669,6 @@ header.sticky {
 }
 
 .dark .exper_card p {
-    font-size: 17px;
     color: #555;
 }
 
@@ -5411,6 +5410,23 @@ header.sticky {
     .skill-slider-container {
         padding: 1.5rem 0rem 2rem 0rem;
     }
+
+    .experience_title {
+        margin-bottom: 3rem;
+    }
+
+    .exper_card span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .exper_card h3 {
+        font-size: 23px;
+    }
+
+    .exper_card p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5601,6 +5617,31 @@ header.sticky {
 
     .hero_img_box {
         padding: 1rem;
+    }
+
+    .experience_title {
+        margin-bottom: 2rem;
+    }
+
+    .experience_title h2 {
+        font-size: 30px;
+    }
+
+    .experience_title svg {
+        font-size: 40px;
+    }
+
+    .exper_card span {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .exper_card h3 {
+        font-size: 18px;
+    }
+
+    .exper_card p {
+        font-size: 13px;
     }
 }
 
