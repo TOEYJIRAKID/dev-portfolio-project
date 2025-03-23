@@ -93,8 +93,10 @@ export default function blogs() {
                       onClick={handleSearchOpen}
                       placeholder="Search blogs here..."
                       type="text"
+                      readOnly
+                      style={{ cursor: "pointer" }}
                     />
-                    <button>Search</button>
+                    <button disabled>Search</button>
                   </form>
                 </div>
               </div>

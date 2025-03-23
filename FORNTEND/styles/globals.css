@@ -2667,9 +2667,9 @@ header.sticky {
 .sbsinputclose {
     background-image: linear-gradient(90deg, var(--main-site-color) 0%, var(--dark-site-secondary) 110.61%);
     color: #cbcbcb;
-    width: 55px;
-    height: 48px;
-    border-radius: 50%;
+    width: 66px;
+    height: 61px;
+    border-radius: 20%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -2677,7 +2677,7 @@ header.sticky {
 }
 
 .sbsinputclose svg {
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .sbsinputclose:hover svg {
@@ -5427,6 +5427,11 @@ header.sticky {
     .exper_card p {
         font-size: 14px;
     }
+
+    .sbsinputclose {
+        width: 71px;
+        height: 61px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5583,12 +5588,17 @@ header.sticky {
         padding: 0 1rem;
     }
 
-    .sbsinputclose {
-        border-radius: 0;
-    }
+    /* .sbsinputclose {
+        border-radius: 50%;
+    } */
 
-    .sbsfinput {
+    /* .sbsfinput {
         gap: 0;
+    } */
+
+    .sbsinputclose {
+        width: 76px;
+        height: 61px;
     }
 
     .gallery_image_grid {
