@@ -437,7 +437,7 @@ const BlogPage = () => {
                       >
                         <RiWhatsappFill />
                       </a>
-                      <a
+                      {/* <a
                         href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
                           blogUrl
                         )}`}
@@ -445,7 +445,7 @@ const BlogPage = () => {
                         rel="noopener noreferrer"
                       >
                         <BiLogoLinkedin />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <h1>{blogData.blog.title}</h1>

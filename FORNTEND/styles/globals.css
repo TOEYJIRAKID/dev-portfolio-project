@@ -5438,6 +5438,10 @@ header.sticky {
         width: 10rem;
         height: 10rem;
     }
+
+    .adminslug {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5572,7 +5576,7 @@ header.sticky {
 
 @media screen and (max-width: 500px) {
     .adminslug {
-        font-size: 13px;
+        font-size: 12px;
         flex-direction: column;
         align-items: center;
     }
