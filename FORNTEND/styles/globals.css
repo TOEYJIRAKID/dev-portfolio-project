@@ -4919,9 +4919,10 @@ header.sticky {
 }
 
 .swiper-image-project-container {
+    display: flex;
+    padding: 4px;
     width: 100%;
     height: 100%;
-    padding: 4px;
 }
 
 .swiper-image-project-container.active {
