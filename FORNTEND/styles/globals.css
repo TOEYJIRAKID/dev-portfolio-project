@@ -2556,6 +2556,7 @@ header.sticky {
 }
 
 .blogspaginationbtn button {
+    min-width: 3rem;
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
