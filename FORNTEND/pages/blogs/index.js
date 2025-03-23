@@ -111,7 +111,7 @@ export default function blogs() {
                     <Swiper
                       slidesPerView={"auto"}
                       freeMode={true}
-                      spaceBetween={30}
+                      spaceBetween={5}
                       className="mySwiper"
                       modules={[FreeMode]}
                     >

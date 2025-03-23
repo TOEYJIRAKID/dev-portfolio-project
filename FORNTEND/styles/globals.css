@@ -2196,7 +2196,8 @@ header.sticky {
 .featuredposts {
     position: relative;
     padding-top: 1rem;
-    padding-bottom: 14rem;
+    /* padding-bottom: 14rem; */
+    padding-bottom: 5rem;
     color: #fff;
 }
 
@@ -2590,10 +2591,7 @@ header.sticky {
 }
 
 .poputegs {
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding: 1rem 0rem 4rem 0rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -2604,8 +2602,8 @@ header.sticky {
 .pteg {
     position: relative;
     display: block;
-    width: 230px;
-    height: 230px;
+    width: 300px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -5434,6 +5432,11 @@ header.sticky {
         width: 71px;
         height: 61px;
     }
+
+    .pteg {
+        width: 10rem;
+        height: 10rem;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5856,6 +5859,16 @@ header.sticky {
     .skill-slider-container {
         padding: 1rem 0rem 1.5rem 0rem;
     }
+
+    .pteg {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .populartegsdata {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media screen and (max-width: 410px) {
@@ -5882,6 +5895,15 @@ header.sticky {
 
     .galeryimgiteminfo h2 {
         font-size: 18px
+    }
+
+    .poputegs {
+        gap: 30px;
+    }
+
+    .pteg {
+        width: 9rem;
+        height: 9rem;
     }
 }
 
