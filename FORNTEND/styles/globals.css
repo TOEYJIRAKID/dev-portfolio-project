@@ -5598,6 +5598,10 @@ header.sticky {
     .procard {
         padding: 0;
     }
+
+    .hero_img_box {
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
