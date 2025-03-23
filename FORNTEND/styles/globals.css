@@ -5670,6 +5670,15 @@ header.sticky {
     .procontentbox {
         margin-bottom: 0.5rem;
     }
+
+    .blogstegs span {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .blogstegs h2 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 450px) {
