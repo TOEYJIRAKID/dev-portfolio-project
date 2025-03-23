@@ -4925,7 +4925,7 @@ header.sticky {
 }
 
 .swiper-image-project-container.active {
-    border: 1px solid #34269c;
+    border: 2px solid #34269c;
 }
 
 .projectslugsliderimg .swiper-wrapper {
@@ -5599,6 +5599,10 @@ header.sticky {
     .searchblogsectionfix {
         width: 100%;
         padding: 0 1rem;
+    }
+
+    .psdescri h2 {
+        font-size: 30px;
     }
 
     /* .sbsinputclose {
