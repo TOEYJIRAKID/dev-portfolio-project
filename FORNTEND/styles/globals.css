@@ -3554,7 +3554,7 @@ header.sticky {
 
 .leftsociinfo ul li {
     margin: 1.5rem 0;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -5930,7 +5930,7 @@ header.sticky {
 
 @media screen and (max-width: 380px) {
     .leftsociinfo ul li {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .mobilenavlist {
