@@ -911,7 +911,7 @@ header.sticky {
     font-size: 240px;
     fill: transparent;
     display: inline-block;
-    text-shadow: 0 0 10px #2a1454, 0 0 20px #2a1454, 0 0 30px #2a1454, 0 0 40px #2a1454;
+    /* text-shadow: 0 0 10px #2a1454, 0 0 20px #2a1454, 0 0 30px #2a1454, 0 0 40px #2a1454; */
 }
 
 
@@ -929,7 +929,7 @@ header.sticky {
 .dark .hero .intro_text svg text {
     stroke: var(--main-site-color);
     stroke-width: 0.8;
-    text-shadow: 0 0 10px var(--main-site-color), 0 0 20px var(--main-site-color), 0 0 30px var(--main-site-color), 0 0 40px var(--main-site-color);
+    /* text-shadow: 0 0 10px var(--main-site-color), 0 0 20px var(--main-site-color), 0 0 30px var(--main-site-color), 0 0 40px var(--main-site-color); */
 }
 
 @keyframes stroke {
