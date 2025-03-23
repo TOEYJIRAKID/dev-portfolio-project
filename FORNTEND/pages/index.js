@@ -12,6 +12,7 @@ import { PiGraduationCap } from "react-icons/pi";
 import { GrLinkedinOption } from "react-icons/gr";
 import SkillSlider from "@/components/SkillSlider";
 import { useState, useEffect, useRef } from "react";
+import ServicesAccordion from "@/components/Accordion";
 import {
   FaCalendarDays,
   FaFacebook,
@@ -20,17 +21,6 @@ import {
 } from "react-icons/fa6";
 
 export default function Home() {
-  // active services background color
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleHover = (index) => {
-    setActiveIndex(index);
-  };
-
-  const handleMouseOut = () => {
-    setActiveIndex(0); // set the first item as active when mouse leave
-  };
-
   const [loading, setLoading] = useState(true);
   const [alldata, setAlldata] = useState([]);
   const [allwork, setAllwork] = useState([]);
@@ -117,27 +107,10 @@ export default function Home() {
       typed.destroy();
     };
   }, []);
-  // services data
-  const services = [
-    {
-      title: "Web Development",
-      description:
-        "I provide professional web development services, creating high-performance, SEO-optimized, and responsive websites to help businesses grow and stand out online.",
-    },
-    {
-      title: "Mobile Development",
-      description:
-        "Experienced mobile app developer specializing in iOS, Android, and cross-platform development. I build fast, scalable, and user-friendly mobile applications to enhance user engagement.",
-    },
-    // {
-    //   title: "Machine Learning Engineer",
-    //   description:
-    //     "Skilled Machine Learning Engineer with expertise in AI-driven solutions, predictive analytics, and deep learning. I develop intelligent, data-driven applications to optimize business performance.",
-    // },
-  ];
 
   return (
     <>
+      {/* header */}
       <Head>
         <title>TOEYJIRA | PORTFOLIO</title>
         <meta
@@ -267,38 +240,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="services">
-        <div className="container">
-          <div className="services_titles">
-            <h2 data-aos="fade-up">My Quality Services</h2>
-            <p data-aos="fade-up">
-              I transform your ideas into high-performance, SEO-friendly web
-              solutions that captivate both you and your users.
-            </p>
-          </div>
-          <div className="services_menu" data-aos="fade-up">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`services_item ${
-                  activeIndex === index ? "sactive" : ""
-                }`}
-                onMouseOver={() => handleHover(index)}
-                onMouseOut={handleMouseOut}
-              >
-                <div className="left_s_box">
-                  <span>0{index + 1}</span>
-                  <h3>{service.title}</h3>
-                </div>
-                <div className="right_s_box">
-                  <p>{service.description}</p>
-                </div>
-                <GoArrowUpRight />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesAccordion />
 
       {/* Projects */}
       <section className="projects">

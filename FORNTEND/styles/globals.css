@@ -977,7 +977,213 @@ header.sticky {
     color: var(--main-site-color);
 }
 
+/* Services Accordion additional styles */
+.right_s_box.hide {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
 
+.right_s_box.show {
+    max-height: 200px;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Responsive styles for accordion */
+@media (max-width: 991px) {
+    .services_item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .left_s_box,
+    .right_s_box {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .left_s_box {
+        padding-bottom: 0;
+    }
+
+    .services_item svg {
+        top: 25px;
+        right: 20px;
+    }
+
+    .left_s_box h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .services_titles h2 {
+        font-size: 32px;
+    }
+
+    .services_titles p {
+        font-size: 16px;
+    }
+
+    .left_s_box span {
+        font-size: 16px;
+    }
+
+    .left_s_box h3 {
+        font-size: 20px;
+    }
+
+    .services_item svg {
+        font-size: 24px;
+        right: 15px;
+    }
+}
+
+/* Add these accordion styles to your global.css file */
+
+.services_accordion {
+    position: relative;
+    width: 100%;
+    padding: 0rem 1rem 0rem 1rem;
+    /* max-width: 900px; */
+    /* margin: 0 auto; */
+}
+
+.accordion_item {
+    border-bottom: 1px solid #2a1454;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.dark .accordion_item {
+    border-bottom: 1px solid #999;
+}
+
+.accordion_header {
+    padding: 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.accordion_left {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.accordion_left span {
+    color: #8750f7;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.accordion_left h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.dark .accordion_left h3 {
+    color: var(--main-site-color);
+}
+
+.accordion_icon {
+    font-size: 35px;
+    line-height: 1;
+    transition: all 0.5s ease;
+    color: var(--main-site-color);
+}
+
+.accordion_item.active .accordion_icon {
+    transform: rotate(90deg);
+}
+
+.accordion_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0 30px;
+}
+
+.accordion_content.show {
+    max-height: 200px;
+    padding: 0 30px 30px;
+}
+
+.accordion_content p {
+    color: #c4c4c4;
+    line-height: 1.6;
+}
+
+.dark .accordion_content p {
+    color: #000;
+}
+
+.accordion_item.active {
+    background: linear-gradient(260deg, var(--dark-site-secondary) 0%, var(--main-site-color) 100%);
+}
+
+.accordion_item.active .accordion_left span,
+.accordion_item.active .accordion_left h3,
+.accordion_item.active .accordion_content p,
+.accordion_item.active .accordion_icon {
+    color: var(--pure-white);
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .accordion_header {
+        padding: 20px;
+    }
+
+    .accordion_left {
+        padding: 10px 0;
+    }
+
+    .accordion_left h3 {
+        font-size: 24px;
+    }
+
+    .accordion_icon {
+        font-size: 28px;
+    }
+
+    .accordion_content.show {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .accordion_left span {
+        font-size: 16px;
+    }
+
+    .accordion_left h3 {
+        font-size: 20px;
+    }
+
+    .accordion_icon {
+        font-size: 24px;
+    }
+
+    .accordion_content.show {
+        padding: 0 20px 15px;
+    }
+}
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Services SECTION */
