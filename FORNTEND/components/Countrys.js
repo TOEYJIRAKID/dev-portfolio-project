@@ -255,6 +255,24 @@ export default function SearchableCountryDropdown({
     }
   };
 
+  // Function to truncate long country names
+  const truncateCountryName = (countryName, maxLength) => {
+    if (countryName.length <= maxLength) {
+      return countryName;
+    }
+    return countryName.substring(0, maxLength) + "...";
+  };
+
+  // Get the label for the selected country
+  const selectedCountryLabel = selectedCountry
+    ? countries.find((c) => c.value === selectedCountry)?.label
+    : null;
+
+  // Truncate the label if it's too long
+  const displayedCountryLabel = selectedCountryLabel
+    ? truncateCountryName(selectedCountryLabel, 50) // Adjust 50 to desired max length
+    : placeholder;
+
   return (
     <div className="country-dropdown" ref={dropdownRef}>
       <button
@@ -262,11 +280,7 @@ export default function SearchableCountryDropdown({
         className="country-dropdown-trigger"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>
-          {selectedCountry
-            ? countries.find((c) => c.value === selectedCountry)?.label
-            : placeholder}
-        </span>
+        <span className="country-label-display">{displayedCountryLabel}</span>
         <svg
           className={`dropdown-arrow ${isOpen ? "open" : ""}`}
           xmlns="http://www.w3.org/2000/svg"

@@ -60,6 +60,14 @@ img {
     margin-top: 5px;
 }
 
+.country-label-display {
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* width: 100%; */
+}
+
 /* .project-title {
     margin-bottom: 55px;
 } */
