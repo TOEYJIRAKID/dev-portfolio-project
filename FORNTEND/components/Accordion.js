@@ -23,7 +23,7 @@ export default function ServicesAccordion() {
         "Experienced mobile app developer specializing in iOS, Android, and cross-platform development. I build fast, scalable, and user-friendly mobile applications to enhance user engagement.",
     },
     {
-      title: "ML Engineer",
+      title: "Machine Learning",
       description:
         "Skilled Machine Learning Engineer with expertise in AI-driven solutions, predictive analytics, and deep learning. I develop intelligent, data-driven applications to optimize business performance.",
     },
