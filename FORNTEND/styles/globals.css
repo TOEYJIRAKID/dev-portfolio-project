@@ -5998,4 +5998,8 @@ header.sticky {
     .adminslug {
         font-size: 10px;
     }
+
+    .fpost {
+        margin-right: 0.5rem;
+    }
 }
