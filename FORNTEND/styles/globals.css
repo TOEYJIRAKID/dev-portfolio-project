@@ -3999,6 +3999,11 @@ header.sticky {
     justify-content: space-between;
 }
 
+.leftadminslug {
+    display: flex;
+    gap: 2rem;
+}
+
 .adminslug {
     display: flex;
     align-items: center;
@@ -4010,8 +4015,8 @@ header.sticky {
 }
 
 .adminslug img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -4024,7 +4029,7 @@ header.sticky {
 
 .adminslug:last-child svg {
     color: #8750f7;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .shareblogslug {
@@ -5065,9 +5070,21 @@ header.sticky {
         width: 100%;
     }
 
+    .adminslug {
+        font-size: 12px;
+    }
+
+    .leftadminslug {
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 1060px) {
+
+    .leftadminslug {
+        gap: 2rem;
+    }
+
     .cservicesbox {
         columns: 2;
     }
@@ -5976,5 +5993,9 @@ header.sticky {
     .galeryimgiteminfo p {
         font-weight: 400;
         font-size: 12px;
+    }
+
+    .adminslug {
+        font-size: 10px;
     }
 }

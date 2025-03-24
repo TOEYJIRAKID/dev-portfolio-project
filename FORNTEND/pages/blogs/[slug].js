@@ -4,14 +4,13 @@ import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 import remarkGfm from "remark-gfm";
-import { CiRead } from "react-icons/ci";
 import { BsCopy } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { FiSearch } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
 import Spinner from "@/components/Spinner";
 import { FaTwitter } from "react-icons/fa";
-import { SlCalender } from "react-icons/sl";
+import { CiCalendar, CiChat1 } from "react-icons/ci";
 import useFetchData from "@/hooks/useFetchData";
 import { RiFacebookFill } from "react-icons/ri";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -381,17 +380,17 @@ const BlogPage = () => {
                     />
                   </div>
                   <div className="slugbloginfopub">
-                    <div className="flex gap-2">
+                    <div className="leftadminslug">
                       <div className="adminslug">
                         <img src="/img/me.jpg" alt="developer" />
                         <span>By TOEYJIRA</span>
                       </div>
                       <div className="adminslug">
-                        <SlCalender />
+                        <CiCalendar />
                         <span>{formatDate(createdAtDate)}</span>
                       </div>
                       <div className="adminslug">
-                        <CiRead />
+                        <CiChat1 />
                         <span>
                           Comments (
                           {blogData.comments ? blogData.comments.length : 0})
