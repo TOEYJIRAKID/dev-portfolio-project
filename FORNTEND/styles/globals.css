@@ -5079,6 +5079,20 @@ header.sticky {
     }
 }
 
+@media screen and (max-width: 1080px) and (min-width: 1024px) {
+    .leftsociinfo ul li {
+        font-size: 15px;
+    }
+
+    .leftsociinfo ul li svg {
+        font-size: 20px;
+    }
+
+    .leftcontp p {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 1060px) {
 
     .leftadminslug {
