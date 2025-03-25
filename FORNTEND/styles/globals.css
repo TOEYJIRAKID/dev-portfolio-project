@@ -6156,6 +6156,19 @@ header.sticky {
     .postbtn p {
         margin-top: 1rem;
     }
+
+    .rightcontsbtn {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .rightcontsbtn button {
+        width: 100%;
+    }
+
+    .rightcontsbtn p {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 410px) {
