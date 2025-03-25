@@ -5359,6 +5359,11 @@ header.sticky {
     .procontentbox h2 {
         font-size: 20px;
     }
+
+    .pteg {
+        width: 14rem;
+        height: 14rem;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -5462,6 +5467,11 @@ header.sticky {
 
     .toptitlecont h1 {
         font-size: 45px;
+    }
+
+    .pteg {
+        width: 10rem;
+        height: 10rem;
     }
 }
 
@@ -5601,10 +5611,10 @@ header.sticky {
         height: 61px;
     }
 
-    .pteg {
+    /* .pteg {
         width: 10rem;
         height: 10rem;
-    }
+    } */
 
     .adminslug {
         font-size: 12px;
