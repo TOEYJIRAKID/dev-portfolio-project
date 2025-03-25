@@ -5477,6 +5477,12 @@ header.sticky {
         width: 10rem;
         height: 10rem;
     }
+
+    .funfect_item {
+        display: inline-block;
+        padding-top: 1rem;
+        text-align: center;
+    }
 }
 
 
