@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
-import { TapeSection } from "@/components/Tape";
+import TapeSection from "@/components/Tape";
 
 export default function ServicesAccordion() {
   const [activeIndex, setActiveIndex] = useState(null);
