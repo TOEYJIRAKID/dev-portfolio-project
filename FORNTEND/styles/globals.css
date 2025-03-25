@@ -1491,8 +1491,8 @@ header.sticky {
 .projects {
     position: relative;
     padding: 8rem 1rem;
-    /* padding-top: 10rem; */
-    padding-top: 1rem;
+    padding-top: 10rem;
+    /* padding-top: 1rem; */
     background-color: #0f0715;
 }
 
@@ -1504,8 +1504,8 @@ header.sticky {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
-    /* margin-top: 5rem; */
-    margin-top: 1rem;
+    margin-top: 5rem;
+    /* margin-top: 1rem; */
     max-width: 700px;
     width: 100%;
     margin-left: auto;
