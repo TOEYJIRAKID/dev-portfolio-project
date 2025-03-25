@@ -66,7 +66,7 @@ img {
 }
 
 .tape-gradient {
-    background-image: linear-gradient(to right, #6ee7b7, #38bdf8);
+    background-image: linear-gradient(to right, var(--main-site-color), var(--main-site-color));
     transform: rotate(-3deg);
     margin-left: -0.25rem;
     margin-right: -0.25rem;
@@ -101,7 +101,7 @@ img {
 }
 
 .word-text {
-    color: #111827;
+    color: #fff;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.875rem;
@@ -110,8 +110,7 @@ img {
 .star-icon {
     width: 1.5rem;
     height: 1.5rem;
-    color: #111827;
-    transform: rotate(-12deg);
+    transform: rotate(-5deg);
 }
 
 @keyframes moveLeft {
@@ -1182,7 +1181,7 @@ header.sticky {
 
 .services {
     position: relative;
-    padding-top: 120px;
+    /* padding-top: 120px; */
     padding-bottom: 120px;
     background-color: #050709;
 }
@@ -5837,7 +5836,7 @@ header.sticky {
     }
 
     .services {
-        padding-top: 3rem;
+        /* padding-top: 3rem; */
     }
 
     .project_titles h2,

@@ -1,6 +1,7 @@
 // components/Tape.js
 
 import { useEffect, useRef } from "react";
+import { PiStarFourFill } from "react-icons/pi";
 
 const words = [
   "Performant",
@@ -64,11 +65,7 @@ export const TapeSection = () => {
               {words.map((word) => (
                 <div key={word} className="word-container">
                   <span className="word-text">{word}</span>
-                  <img
-                    src="/img/star.svg"
-                    alt="star-svg"
-                    className="star-icon"
-                  />
+                  <PiStarFourFill />
                 </div>
               ))}
             </div>
@@ -76,11 +73,7 @@ export const TapeSection = () => {
               {words.map((word) => (
                 <div key={word} className="word-container">
                   <span className="word-text">{word}</span>
-                  <img
-                    src="/img/star.svg"
-                    alt="star-svg"
-                    className="star-icon"
-                  />
+                  <PiStarFourFill />
                 </div>
               ))}
             </div>
