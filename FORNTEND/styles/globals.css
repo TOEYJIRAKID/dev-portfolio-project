@@ -5038,7 +5038,7 @@ header.sticky {
 
 .projectslugsliderimg {
     overflow: hidden;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .projectslugsliderimg img {
@@ -6225,5 +6225,13 @@ header.sticky {
 
     .lefttitlesec h1 {
         font-size: 45px;
+    }
+
+    .project_titles h2 {
+        font-size: 30px;
+    }
+
+    .project_titles p {
+        font-size: 13px;
     }
 }
