@@ -142,7 +142,7 @@ export default function projectslug() {
                     slidesPerView={"auto"}
                     spaceBetween={10}
                     freeMode={true}
-                    grabCursor={true}
+                    grabCursor={false}
                     modules={[FreeMode]}
                     className="mySwiper"
                   >

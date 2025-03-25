@@ -120,7 +120,7 @@ export default function shopslug() {
                     slidesPerView={"auto"}
                     spaceBetween={10}
                     freeMode={true}
-                    grabCursor={true}
+                    grabCursor={false}
                     modules={[FreeMode]}
                     className="mySwiper"
                   >
