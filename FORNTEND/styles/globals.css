@@ -701,6 +701,8 @@ header.sticky {
     border-right: 1px solid rgba(149, 0, 255, 0.5);
     box-shadow: 10px 0px 20px -2px rgba(149, 0, 255, 0.3);
     transition: 0.3s;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .dark .mobilenavlist {

@@ -205,7 +205,7 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
-            <p>
+            {/* <p>
               Copyright &copy; 2025 |{" "}
               <a
                 href="https://www.linkedin.com/in/toeyjirakid/"
@@ -214,7 +214,7 @@ export default function Header() {
               >
                 TOEYJIRA
               </a>
-            </p>
+            </p> */}
           </div>
         </nav>
       </header>
