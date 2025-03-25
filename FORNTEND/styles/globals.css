@@ -6208,4 +6208,12 @@ header.sticky {
     .fpost {
         margin-right: 1rem;
     }
+
+    .lefttitlesec button {
+        font-size: 20px;
+    }
+
+    .lefttitlesec h1 {
+        font-size: 45px;
+    }
 }
