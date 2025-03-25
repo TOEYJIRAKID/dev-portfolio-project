@@ -274,10 +274,13 @@ img {
     padding: 4px;
     width: 100%;
     height: 100%;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color 0.3s ease;
 }
 
 .swiper-image-container.active {
-    border: 2px solid #34269c;
+    outline-color: #6120F8;
 }
 
 /* 
@@ -4558,6 +4561,7 @@ header.sticky {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .leftsimgboxlist {
@@ -5034,6 +5038,7 @@ header.sticky {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .projectslugsliderimg {
@@ -5052,10 +5057,13 @@ header.sticky {
     padding: 4px;
     width: 100%;
     height: 100%;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color 0.3s ease;
 }
 
 .swiper-image-project-container.active {
-    border: 2px solid #34269c;
+    outline-color: #6120F8;
 }
 
 .projectslugsliderimg .swiper-wrapper {
