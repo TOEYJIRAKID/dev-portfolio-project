@@ -57,6 +57,11 @@ export const TapeSection = () => {
 
   return (
     <div className="tape-section">
+      <div className="background-tape">
+        <div className="background-tape-mask">
+          <div className="background-tape-content"></div>
+        </div>
+      </div>
       <div className="tape-gradient">
         <div className="tape-mask">
           <div className="tape-content" ref={tapeContentRef}>
