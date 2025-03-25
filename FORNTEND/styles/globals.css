@@ -56,7 +56,7 @@ img {
 
 .tape-section {
     position: relative;
-    padding: 6rem 0;
+    padding: 3rem 0;
     overflow-x: clip;
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -84,9 +84,9 @@ img {
 .tape-gradient {
     position: relative;
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
-    transform: rotate(-2deg);
+    transform: rotate(-3deg);
     margin: 0 -2rem;
-    padding: 0.6rem 0;
+    padding: 0.2rem 0;
     box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
     z-index: 2;
     overflow: hidden;
@@ -95,9 +95,9 @@ img {
 .background-tape {
     position: absolute;
     width: 110%;
-    height: 3.5rem;
+    height: 4rem;
     background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 50%, #5b21b6 100%);
-    transform: rotate(2deg);
+    transform: rotate(3deg);
     left: -5%;
     right: -5%;
     top: calc(50% - 1.75rem);

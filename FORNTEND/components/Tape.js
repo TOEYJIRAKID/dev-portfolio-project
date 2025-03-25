@@ -35,7 +35,7 @@ export const TapeSection = () => {
 
       // Calculate the duration based on viewport width for responsive speed
       const viewportWidth = window.innerWidth;
-      const baseDuration = scrollWidth / 80; // Base speed
+      const baseDuration = scrollWidth / 70; // Base speed
       const responsiveDuration = Math.max(
         baseDuration * (1000 / viewportWidth),
         15
