@@ -6036,7 +6036,7 @@ header.sticky {
     }
 
     .tegs span {
-        display: none;
+        /* display: none; */
     }
 
     .fpost {
