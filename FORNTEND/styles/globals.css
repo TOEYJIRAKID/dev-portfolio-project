@@ -1224,7 +1224,7 @@ header.sticky {
 
 .services {
     position: relative;
-    /* padding-top: 120px; */
+    padding-top: 20px;
     padding-bottom: 120px;
     background-color: #050709;
 }
@@ -5364,6 +5364,10 @@ header.sticky {
         width: 14rem;
         height: 14rem;
     }
+
+    .services {
+        padding-top: 80px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -6127,7 +6131,7 @@ header.sticky {
     }
 
     .hero {
-        padding: 10rem 1rem;
+        padding: 10rem 1rem 4rem 1rem;
     }
 
     .logo h2 {
