@@ -671,14 +671,15 @@ header.sticky {
     justify-content: center;
     font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: sora;
     color: #fff;
     text-transform: capitalize;
     background-size: 200%;
     background-image: linear-gradient(to right, var(--main-site-color) 0%, #2a1454 51%, var(--main-site-color) 100%);
     border: none;
     border-radius: 50px;
-    padding: 17px 35px;
+    padding: 14px 32px;
     transition: 0.4s;
 }
 
