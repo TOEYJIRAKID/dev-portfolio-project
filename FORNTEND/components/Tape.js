@@ -19,6 +19,7 @@ export const TapeSection = () => {
   const tapeContentRef = useRef(null);
   const animationRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [animationDuration, setAnimationDuration] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -27,42 +28,45 @@ export const TapeSection = () => {
 
     const scrollWidth = tapeContent.scrollWidth;
 
-    // Create a responsive animation with better timing
-    const setupAnimation = () => {
-      if (animationRef.current) {
-        animationRef.current.cancel();
-      }
+    // Calculate the duration based on viewport width for responsive speed
+    const viewportWidth = window.innerWidth;
+    const baseDuration = scrollWidth / 75; // Base speed
+    const responsiveDuration = Math.max(
+      baseDuration * (1000 / viewportWidth),
+      15
+    );
+    setAnimationDuration(responsiveDuration);
 
-      // Calculate the duration based on viewport width for responsive speed
+    // Create a new animation with improved timing
+    const newAnimation = tapeContent.animate(
+      [
+        { transform: "translateX(0)" },
+        { transform: `translateX(-${scrollWidth / 2}px)` },
+      ],
+      {
+        duration: responsiveDuration * 1000, // Convert to milliseconds
+        iterations: Infinity,
+        easing: "linear",
+      }
+    );
+
+    // Store the animation in the ref
+    animationRef.current = newAnimation;
+
+    // Add resize event listener to adjust animation speed on window resize
+    const handleResize = () => {
       const viewportWidth = window.innerWidth;
       const baseDuration = scrollWidth / 75; // Base speed
       const responsiveDuration = Math.max(
         baseDuration * (1000 / viewportWidth),
         15
       );
-
-      // Create a new animation with improved timing
-      const newAnimation = tapeContent.animate(
-        [
-          { transform: "translateX(0)" },
-          { transform: `translateX(-${scrollWidth / 2}px)` },
-        ],
-        {
-          duration: responsiveDuration * 1000, // Convert to milliseconds
-          iterations: Infinity,
-          easing: "linear",
-        }
-      );
-
-      // Store the animation in the ref
-      animationRef.current = newAnimation;
-    };
-
-    setupAnimation();
-
-    // Add resize event listener to adjust animation speed on window resize
-    const handleResize = () => {
-      setupAnimation();
+      setAnimationDuration(responsiveDuration);
+      if (animationRef.current) {
+        animationRef.current.effect.updateTiming({
+          duration: responsiveDuration * 1000,
+        });
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -88,7 +92,13 @@ export const TapeSection = () => {
       {/* Main Tape with glassmorphism effect */}
       <div className="tape-gradient">
         <div className="tape-mask">
-          <div className="tape-content" ref={tapeContentRef}>
+          <div
+            className="tape-content"
+            ref={tapeContentRef}
+            style={{
+              animation: `scrollTape ${animationDuration}s linear infinite`,
+            }}
+          >
             {/* Duplicate the content to create a seamless loop */}
             <div className="tape-content-inner">
               {words.map((word, index) => (
