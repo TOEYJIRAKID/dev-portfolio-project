@@ -7,6 +7,7 @@ import { LuMedal } from "react-icons/lu";
 import Spinner from "@/components/Spinner";
 import { BiDownload } from "react-icons/bi";
 import skillData from "@/components/SkillData";
+import { TapeSection } from "@/components/Tape";
 import { GoArrowUpRight } from "react-icons/go";
 import { PiGraduationCap } from "react-icons/pi";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -238,6 +239,8 @@ export default function Home() {
           </div> */}
         </div>
       </section>
+
+      <TapeSection />
 
       {/* Services */}
       <ServicesAccordion />
