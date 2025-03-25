@@ -5215,6 +5215,10 @@ header.sticky {
     .leftcontp p {
         font-size: 15px;
     }
+
+    .exper_card h3 {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 1060px) {
