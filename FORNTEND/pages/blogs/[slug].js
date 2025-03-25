@@ -553,7 +553,7 @@ const BlogPage = () => {
                           })
                         }
                       ></textarea>
-                      <div className="flex gap-2">
+                      <div className="postbtn">
                         <button type="submit">POST COMMENT</button>
                         <p>{messageOk}</p>
                       </div>

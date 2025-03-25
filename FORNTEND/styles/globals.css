@@ -4709,6 +4709,11 @@ header.sticky {
     color: #fff;
 }
 
+.postbtn {
+    display: flex;
+    gap: 8px;
+}
+
 .leaveareplyform {
     width: 100%;
     display: flex;
@@ -6135,6 +6140,19 @@ header.sticky {
     .populartegsdata {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .leaveareplyform button {
+        width: 100%;
+    }
+
+    .postbtn {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .postbtn p {
+        margin-top: 1rem;
     }
 }
 
