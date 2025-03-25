@@ -6,6 +6,7 @@ import Typed from "typed.js";
 import { LuMedal } from "react-icons/lu";
 import Spinner from "@/components/Spinner";
 import { BiDownload } from "react-icons/bi";
+import TapeSection from "@/components/Tape";
 import skillData from "@/components/SkillData";
 import { GoArrowUpRight } from "react-icons/go";
 import { PiGraduationCap } from "react-icons/pi";
@@ -241,6 +242,9 @@ export default function Home() {
 
       {/* Services */}
       <ServicesAccordion />
+
+      {/* Tape Section */}
+      <TapeSection />
 
       {/* Projects */}
       <section className="projects">

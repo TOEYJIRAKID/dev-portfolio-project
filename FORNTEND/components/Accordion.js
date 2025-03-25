@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
-import TapeSection from "@/components/Tape";
 
 export default function ServicesAccordion() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -32,8 +31,6 @@ export default function ServicesAccordion() {
 
   return (
     <section className="services">
-      {/* Tape Section */}
-      <TapeSection />
       <div className="container">
         <div className="services_titles">
           <h2 data-aos="fade-up">My Quality Services</h2>

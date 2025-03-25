@@ -52,33 +52,25 @@ img {
 
 }
 
-/* Enhanced Tape Section Styles */
+/* Tape Section Styles */
 
 .tape-section {
     position: relative;
-    padding: 3rem 0;
+    padding: 6rem 0;
     overflow-x: clip;
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     transform: translateY(20px);
+    background: #0f0715;
+}
+
+.dark .tape-section {
+    background: var(--pure-white);
 }
 
 .tape-visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Responsive padding adjustments */
-@media (max-width: 768px) {
-    .tape-section {
-        padding: 4rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .tape-section {
-        padding: 3rem 0;
-    }
 }
 
 .tape-gradient {
@@ -158,51 +150,6 @@ img {
 .star-icon {
     color: rgba(255, 255, 255, 0.9);
     transform: rotate(-5deg);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .tape-gradient {
-        transform: rotate(-1.5deg);
-    }
-
-    .background-tape {
-        transform: rotate(1.5deg);
-    }
-
-    .word-text {
-        font-size: 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .tape-gradient {
-        transform: rotate(-1deg);
-        padding: 0.4rem 0;
-    }
-
-    .background-tape {
-        transform: rotate(1deg);
-        height: 3rem;
-    }
-
-    .tape-content-inner {
-        gap: 1.5rem;
-    }
-
-    .word-container {
-        gap: 0.5rem;
-        padding: 0.4rem 0.5rem;
-    }
-
-    .word-text {
-        font-size: 0.7rem;
-    }
-
-    .star-icon {
-        width: 12px;
-        height: 12px;
-    }
 }
 
 /* error message */
@@ -1263,7 +1210,7 @@ header.sticky {
 
 .services {
     position: relative;
-    /* padding-top: 120px; */
+    padding-top: 120px;
     padding-bottom: 120px;
     background-color: #050709;
 }
@@ -1530,7 +1477,8 @@ header.sticky {
 .projects {
     position: relative;
     padding: 8rem 1rem;
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
+    padding-top: 1rem;
     background-color: #0f0715;
 }
 
@@ -1542,7 +1490,8 @@ header.sticky {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+    margin-top: 1rem;
     max-width: 700px;
     width: 100%;
     margin-left: auto;
@@ -5638,6 +5587,24 @@ header.sticky {
     .adminslug {
         font-size: 12px;
     }
+
+    .tape-gradient {
+        transform: rotate(-3deg);
+        padding: 0;
+    }
+
+    .background-tape {
+        transform: rotate(3deg);
+        height: 3rem;
+    }
+
+    .word-text {
+        font-size: 0.75rem;
+    }
+
+    .tape-section {
+        padding: 4rem 0;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -5879,6 +5846,38 @@ header.sticky {
 
     .accordion_content p {
         font-size: 15px;
+    }
+
+    .tape-gradient {
+        transform: rotate(-4deg);
+        padding: 0;
+    }
+
+    .background-tape {
+        transform: rotate(4deg);
+        height: 3rem;
+    }
+
+    .tape-content-inner {
+        gap: 1.5rem;
+    }
+
+    .word-container {
+        gap: 0.5rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .word-text {
+        font-size: 0.7rem;
+    }
+
+    .star-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .tape-section {
+        padding: 3rem 0;
     }
 }
 
