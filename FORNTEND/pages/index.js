@@ -207,44 +207,47 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="funfect_area flex flex-sb">
+          <div className="funfect_area flex flex-sb">
             <div className="funfect_item" data-aos="fade-right">
-              <h3>7+</h3>
+              <h3>3+</h3>
               <h4>
-                Years of <br />
+                Years of Coding
+                <br />
                 Experience
               </h4>
             </div>
             <div className="funfect_item" data-aos="fade-right">
-              <h3>20+</h3>
+              <h3>10+</h3>
               <h4>
-                Projects <br />
-                Completed
+                Personal & Work
+                <br />
+                Projects
               </h4>
             </div>
             <div className="funfect_item" data-aos="fade-left">
-              <h3>12</h3>
+              <h3>30+</h3>
               <h4>
-                OpenSource <br />
-                Library
+                Tech Stacks <br />
+                Explored
               </h4>
             </div>
             <div className="funfect_item" data-aos="fade-left">
-              <h3>20+</h3>
+              <h3>100%</h3>
               <h4>
-                Happy <br />
-                Customers
+                Passion for
+                <br />
+                Development
               </h4>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
-      {/* Services */}
-      <ServicesAccordion />
-
       {/* Tape Section */}
       <TapeSection />
+
+      {/* Services */}
+      <ServicesAccordion />
 
       {/* Projects */}
       <section className="projects">
