@@ -13,7 +13,8 @@ export default function Header() {
 
   useEffect(() => {
     // check local storage for dark mode preference on initial render
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    // const isDarkMode = localStorage.getItem("darkMode") === "true";
+    const isDarkMode = localStorage.getItem("darkMode") === "false";
     setDarkMode(isDarkMode);
   }, []);
 

@@ -773,6 +773,7 @@ header.sticky {
 
 .mobilenavlist li:hover a {
     padding-left: 25px;
+    color: var(--pure-white);
 }
 
 .mobilenavlist p {
@@ -811,7 +812,8 @@ header.sticky {
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 
 .hero {
-    padding: 250px 0 50px;
+    /* padding: 250px 0 50px; */
+    padding: 200px 0 50px;
     background: #0f0715;
     position: relative;
     overflow: hidden;
@@ -1007,8 +1009,8 @@ header.sticky {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 46%;
-    top: 57%;
+    left: 72%;
+    top: 46%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     align-items: center;
@@ -1036,7 +1038,7 @@ header.sticky {
     text-transform: uppercase;
     stroke-width: 1.2;
     stroke: #2a1454;
-    font-size: 240px;
+    font-size: 250px;
     fill: transparent;
     display: inline-block;
     /* text-shadow: 0 0 10px #2a1454, 0 0 20px #2a1454, 0 0 30px #2a1454, 0 0 40px #2a1454; */
@@ -1390,7 +1392,8 @@ header.sticky {
     top: 0;
     width: 100vw;
     height: 110vh;
-    fill: #050709;
+    /* fill: #050709; */
+    fill: var(--week-white);
 }
 
 .preloader .preloader-heading {
@@ -1409,7 +1412,8 @@ header.sticky {
     width: 322px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(260deg, var(--main-site-color) 0%, rgba(115, 67, 210, 0) 100%);
+    /* background: linear-gradient(260deg, var(--main-site-color) 0%, rgba(115, 67, 210, 0) 100%); */
+    background: linear-gradient(260deg, var(--main-site-color) 0%, var(--week-white) 100%);
     filter: blur(150px);
 }
 
@@ -1419,6 +1423,7 @@ header.sticky {
     letter-spacing: 15px;
     text-transform: uppercase;
     z-index: 20;
+    color: var(--dark-site-secondary);
 }
 
 .load-text span {
@@ -2119,14 +2124,18 @@ header.sticky {
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+    outline: 1px solid transparent;
+    outline-offset: -1px;
 }
 
 .skill-card:hover {
     /* transform: translateY(-10px); */
     transform: rotate(-5deg);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border: 1px solid var(--main-site-color);
+    /* border: 1px solid var(--main-site-color); */
+    outline: 2px solid var(--main-site-color);
+    outline-offset: -1px;
 }
 
 .skill-icon {
@@ -4068,8 +4077,8 @@ header.sticky {
 .rightcontsbtn button:hover {
     cursor: pointer;
     transition: background-image all .3s ease-in;
-    padding-right: 5rem;
-    padding-left: 5rem;
+    /* padding-right: 5rem;
+    padding-left: 5rem; */
     background-position: -200%;
 }
 
@@ -5383,6 +5392,10 @@ header.sticky {
     .services {
         padding-top: 80px;
     }
+
+    .download_cv {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -5497,6 +5510,23 @@ header.sticky {
         display: inline-block;
         padding-top: 1rem;
         text-align: center;
+    }
+
+    .download_cv {
+        font-size: 18px;
+    }
+
+    .hero .intro_text svg {
+        left: 50%;
+        top: 42%;
+    }
+
+    .hero .intro_text svg text {
+        font-size: 400px;
+    }
+
+    .lead {
+        padding-top: 2rem;
     }
 }
 
@@ -5936,6 +5966,20 @@ header.sticky {
     .tape-section {
         padding: 3rem 0;
     }
+
+    .hero .intro_text svg {
+        left: 46%;
+        top: 38%;
+    }
+
+    .lead {
+        padding-top: 0rem;
+    }
+
+    .skill-slider-container::before,
+    .skill-slider-container::after {
+        width: 70px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -5953,7 +5997,7 @@ header.sticky {
     }
 
     .hero {
-        padding: 15rem 1rem;
+        padding: 12.5rem 1rem;
         padding-bottom: 5rem;
     }
 
@@ -6122,8 +6166,8 @@ header.sticky {
     }
 
     .skill-icon {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
 
     .skill-item {
@@ -6168,6 +6212,22 @@ header.sticky {
 
     .rightcontsbtn p {
         margin-top: 1rem;
+    }
+
+    .hero .intro_text svg {
+        top: 32%;
+    }
+
+    .hero .intro_text svg text {
+        font-size: 420px;
+    }
+
+    .toptitle .toptitlecont {
+        padding-top: 11rem;
+    }
+
+    .projects {
+        padding-top: 11rem;
     }
 }
 
@@ -6274,5 +6334,9 @@ header.sticky {
 
     .project_titles p {
         font-size: 13px;
+    }
+
+    .hero .intro_text svg {
+        top: 30%;
     }
 }
