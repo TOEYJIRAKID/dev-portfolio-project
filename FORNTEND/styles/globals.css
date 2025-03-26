@@ -4068,8 +4068,8 @@ header.sticky {
 .rightcontsbtn button:hover {
     cursor: pointer;
     transition: background-image all .3s ease-in;
-    padding-right: 5rem;
-    padding-left: 5rem;
+    /* padding-right: 5rem;
+    padding-left: 5rem; */
     background-position: -200%;
 }
 
