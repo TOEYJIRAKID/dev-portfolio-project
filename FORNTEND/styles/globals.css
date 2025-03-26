@@ -6201,6 +6201,14 @@ header.sticky {
     .hero .intro_text svg text {
         font-size: 420px;
     }
+
+    .toptitle .toptitlecont {
+        padding-top: 11rem;
+    }
+
+    .projects {
+        padding-top: 11rem;
+    }
 }
 
 @media screen and (max-width: 410px) {
