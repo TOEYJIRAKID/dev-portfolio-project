@@ -773,6 +773,7 @@ header.sticky {
 
 .mobilenavlist li:hover a {
     padding-left: 25px;
+    color: var(--pure-white);
 }
 
 .mobilenavlist p {
