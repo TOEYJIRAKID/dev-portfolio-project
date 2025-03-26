@@ -5517,6 +5517,10 @@ header.sticky {
     .hero .intro_text svg text {
         font-size: 400px;
     }
+
+    .lead {
+        padding-top: 2rem;
+    }
 }
 
 
@@ -5959,6 +5963,10 @@ header.sticky {
     .hero .intro_text svg {
         left: 46%;
         top: 38%;
+    }
+
+    .lead {
+        padding-top: 0rem;
     }
 }
 
