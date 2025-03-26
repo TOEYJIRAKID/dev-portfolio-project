@@ -131,7 +131,7 @@ export default function Home() {
               textAnchor="middle"
               className="animate-stroke"
             >
-              HELLO!
+              สวัสดี
             </text>
           </svg>
         </div>
@@ -153,11 +153,11 @@ export default function Home() {
               >
                 <img src="/img/me.png" alt="developer" />
               </div>
-              <div className="lead" data-aos="fade-up">
+              <div className="lead" data-aos="fade-left">
                 I specialize in developing practical and high-performance web
                 applications. Let’s discuss your next project
               </div>
-              <div className="hero_btn_box" data-aos="fade-up">
+              <div className="hero_btn_box" data-aos="fade-left">
                 <Link
                   href="https://drive.google.com/file/d/15q-qOtlov-qq69oddgraGPTsVgem1QO6/view?usp=sharing"
                   target="_blank"
