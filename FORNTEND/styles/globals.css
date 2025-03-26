@@ -1392,7 +1392,8 @@ header.sticky {
     top: 0;
     width: 100vw;
     height: 110vh;
-    fill: #050709;
+    /* fill: #050709; */
+    fill: var(--week-white);
 }
 
 .preloader .preloader-heading {
@@ -1411,7 +1412,8 @@ header.sticky {
     width: 322px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(260deg, var(--main-site-color) 0%, rgba(115, 67, 210, 0) 100%);
+    /* background: linear-gradient(260deg, var(--main-site-color) 0%, rgba(115, 67, 210, 0) 100%); */
+    background: linear-gradient(260deg, var(--main-site-color) 0%, var(--week-white) 100%);
     filter: blur(150px);
 }
 
@@ -1421,6 +1423,7 @@ header.sticky {
     letter-spacing: 15px;
     text-transform: uppercase;
     z-index: 20;
+    color: var(--dark-site-secondary);
 }
 
 .load-text span {
