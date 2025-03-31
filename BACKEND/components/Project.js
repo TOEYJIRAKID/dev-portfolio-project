@@ -199,6 +199,7 @@ export default function Project({
             <option value="Game">Game Development</option>
             <option value="ML">Machine Learning & AI</option>
             <option value="CyberSec">Cyber Security</option>
+            <option value="IoT">Internet of Things</option>
           </select>
         </div>
 

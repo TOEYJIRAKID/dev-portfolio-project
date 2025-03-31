@@ -296,6 +296,12 @@ export default function Home() {
             >
               CyberSec
             </button>
+            <button
+              className={selectedCategory === "IoT" ? "active" : ""}
+              onClick={() => setSelectedCategory("IoT")}
+            >
+              IoT
+            </button>
           </div>
           <div className="projects_cards">
             {loading ? (
