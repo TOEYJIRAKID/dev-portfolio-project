@@ -1,7 +1,8 @@
 # PORT-TOEYJIRA – Personal Portfolio Web Application
+PORT-TOEYJIRA เป็นเว็บแอปพลิเคชัน Personal Portfolio ที่ออกแบบมาเพื่อนำเสนอข้อมูลเกี่ยวกับตัวนักพัฒนา แสดงผลงานและทักษะทางเทคนิคได้อย่างมืออาชีพ โดยเว็บไซต์นี้ถูกสร้างขึ้นด้วย Next.js เพื่อให้มีดีไซน์ที่ทันสมัย ใช้งานง่าย และรองรับทุกอุปกรณ์
 
 ## Live Demo 
-- 🔗 **Live Site:** [port-toeyjira.vercel.app](https://port-toeyjira.vercel.app/)  
+- [port-toeyjira.vercel.app](https://port-toeyjira.vercel.app/)  
 
 ## Objective  
 - นำเสนอข้อมูลส่วนตัวและทักษะของนักพัฒนา  
@@ -18,11 +19,16 @@
 - **Dark Mode** – รองรับธีม Light/Dark  
 
 ## Tech Stack  
-### **Frontend**  
-- React.js, Next.js, Tailwind CSS  
-
-### **Backend**  
-- Vercel Functions (ถ้ามี API)  
-
-### **Deployment & Hosting**  
-- Vercel  
+- Axios
+- AOS
+- Cloudinary
+- CSS3
+- HTML5
+- MongoDB Atlas
+- Mongoose
+- NextAuth.js
+- Next.js
+- React.js
+- Swiper
+- Typed.js
+- Vercel
