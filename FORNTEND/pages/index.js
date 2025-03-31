@@ -290,6 +290,12 @@ export default function Home() {
             >
               ML & AI
             </button>
+            <button
+              className={selectedCategory === "CyberSec" ? "active" : ""}
+              onClick={() => setSelectedCategory("CyberSec")}
+            >
+              CyberSec
+            </button>
           </div>
           <div className="projects_cards">
             {loading ? (
