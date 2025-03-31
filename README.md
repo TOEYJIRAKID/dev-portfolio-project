@@ -18,6 +18,7 @@ PORTTOEYJIRA เป็นเว็บแอปพลิเคชัน Personal 
 - **Shop** – รายการสินค้าเทคโนโลยีต่างๆ
 - **Contact** – ฟอร์มติดต่อและโซเชียลมีเดีย  
 - **Dark Mode** – รองรับธีม Light/Dark  
+- **Admin Panel** – เพิ่ม ลบ แก้ไขข้อมูลหัวข้อต่างๆ  
 
 ## Tech Stack  
 - Axios
@@ -53,3 +54,7 @@ PORTTOEYJIRA เป็นเว็บแอปพลิเคชัน Personal 
 
 - ### Contact Page
 ![Conact Page](https://github.com/user-attachments/assets/5f78a1e3-bae6-42d7-a587-0099bb8fc6cb)
+
+- ### Admin Panel Page
+![Admin Dashboard](https://github.com/user-attachments/assets/626868ce-f141-49f0-a14f-918bf92f4bce)
+
