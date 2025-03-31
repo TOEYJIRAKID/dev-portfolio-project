@@ -36,6 +36,12 @@ PORTTOEYJIRA เป็นเว็บแอปพลิเคชัน Personal 
 - Typed.js
 - Vercel
 
+## Setup Command
+<code>npm install</code>
+
+## Start Command
+<code>npm run dev</code>
+
 ## Example Image
 - ### Home Page
 ![Home Page](https://github.com/user-attachments/assets/73308b75-2500-4a6f-a90d-fbe31928c6e3)
