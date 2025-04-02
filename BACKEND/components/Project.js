@@ -194,12 +194,12 @@ export default function Project({
             multiple
           >
             {/* <option value="">Select Category</option> */}
-            <option value="Web">Web Development</option>
-            <option value="App">App Development</option>
-            <option value="Game">Game Development</option>
-            <option value="ML">Machine Learning & AI</option>
-            <option value="CyberSec">Cyber Security</option>
-            <option value="IoT">Internet of Things</option>
+            <option value="Web Development">Web Development</option>
+            <option value="App Development">App Development</option>
+            <option value="Game Development">Game Development</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Internet of Things">Internet of Things</option>
           </select>
         </div>
 

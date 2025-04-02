@@ -5245,6 +5245,14 @@ header.sticky {
     }
 }
 
+@media screen and (max-width: 1080px) {
+
+    .project_buttons {
+        flex-wrap: wrap;
+    }
+
+}
+
 @media screen and (max-width: 1060px) {
 
     .leftadminslug {
@@ -5704,7 +5712,7 @@ header.sticky {
     }
 
     .project_buttons {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
 
     .project_buttons button {
@@ -6338,5 +6346,10 @@ header.sticky {
 
     .hero .intro_text svg {
         top: 30%;
+    }
+
+    .project_buttons button {
+        font-size: 15px;
+        padding: 0.5em 1rem;
     }
 }
