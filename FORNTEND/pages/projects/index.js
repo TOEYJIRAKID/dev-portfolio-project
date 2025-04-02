@@ -60,40 +60,52 @@ export default function projects() {
                 All
               </button>
               <button
-                className={selectedCategory === "Web" ? "active" : ""}
-                onClick={() => setSelectedCategory("Web")}
+                className={
+                  selectedCategory === "Web Development" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("Web Development")}
               >
                 Website
               </button>
               <button
-                className={selectedCategory === "App" ? "active" : ""}
-                onClick={() => setSelectedCategory("App")}
+                className={
+                  selectedCategory === "App Development" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("App Development")}
               >
-                Apps
+                Application
               </button>
               <button
-                className={selectedCategory === "Game" ? "active" : ""}
-                onClick={() => setSelectedCategory("Game")}
+                className={
+                  selectedCategory === "Game Development" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("Game Development")}
               >
                 Game
               </button>
               <button
-                className={selectedCategory === "ML" ? "active" : ""}
-                onClick={() => setSelectedCategory("ML")}
-              >
-                ML & AI
-              </button>
-              <button
-                className={selectedCategory === "CyberSec" ? "active" : ""}
-                onClick={() => setSelectedCategory("CyberSec")}
-              >
-                CyberSec
-              </button>
-              <button
-                className={selectedCategory === "IoT" ? "active" : ""}
-                onClick={() => setSelectedCategory("IoT")}
+                className={
+                  selectedCategory === "Internet of Things" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("Internet of Things")}
               >
                 IoT
+              </button>
+              <button
+                className={
+                  selectedCategory === "Machine Learning" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("Machine Learning")}
+              >
+                Machine Learning
+              </button>
+              <button
+                className={
+                  selectedCategory === "Cyber Security" ? "active" : ""
+                }
+                onClick={() => setSelectedCategory("Cyber Security")}
+              >
+                Cyber Security
               </button>
             </div>
             <div className="projects_cards">
@@ -102,7 +114,7 @@ export default function projects() {
                   <Spinner />
                 </div>
               ) : filteredProjects.length === 0 ? (
-                <h1>No Project Found</h1>
+                <h1 className="flex flex-center wh_50">No Project Found</h1>
               ) : (
                 filteredProjects.map((pro) => (
                   <Link
