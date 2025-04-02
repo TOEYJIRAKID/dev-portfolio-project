@@ -1,44 +1,57 @@
-# PORTTOEYJIRA – Personal Portfolio Web Application
+## 🚀 **Project Name** :
 
-**PORTTOEYJIRA** เป็นเว็บแอปพลิเคชันพอร์ตโฟลิโอส่วนตัว ที่ออกแบบมาเพื่อนำเสนอข้อมูลเกี่ยวกับนักพัฒนา แสดงประสบการณ์ ผลงาน และทักษะต่างๆ เว็บไซต์นี้พัฒนาโดยใช้ **Next.js** เพื่อให้ได้ดีไซน์ที่ทันสมัย โหลดเร็ว รองรับทุกอุปกรณ์ และรองรับ SEO  
+PORT TOEYJIRA – Personal Portfolio Web Application
 
-## Live Demo  
-🔗 [port-toeyjira.vercel.app](https://port-toeyjira.vercel.app/)  
+## 📌 **Project Overview** :
 
-## Objective  
-- นำเสนอข้อมูลส่วนตัวและทักษะของนักพัฒนา  
-- แสดงโปรเจกต์ที่เคยทำ พร้อมรายละเอียด  
-- รองรับ SEO และโหลดเร็ว  
-- ออกแบบให้รองรับทุกอุปกรณ์  
+PORT TOEYJIRA is a personal portfolio web application designed to showcase information about the developer, including experiences, projects, and skills. This website is built using Next.js to achieve a modern design, fast loading speed, full responsiveness across all devices, and SEO optimization.
 
-## Features  
-- **Home** – หน้าหลักแสดงแนะนำตัว  
-- **Blogs** – บทความเกี่ยวกับโค้ด และเทคโนโลยีต่างๆ  
-- **Gallery** – แกลลอรี่รวมใบรับรอง (Certificate)  
-- **Projects** – โปรเจกต์ที่เคยทำ  
-- **Shop** – รายการสินค้าเทคโนโลยีต่างๆ  
-- **Contact** – ฟอร์มติดต่อและโซเชียลมีเดีย  
-- **Dark Mode** – รองรับธีม Light/Dark  
-- **Admin Panel** – เพิ่ม ลบ แก้ไขข้อมูลได้ผ่านระบบแอดมิน  
+## 🎯 **Objective** :
 
-## Tech Stack  
+- Present personal information and developer skills
+- Showcase past projects with details
+- Support SEO and fast loading
+- Designed to be responsive on all devices
+
+## ✨ **Key Features** :
+
+- **Home** – Introduction and overview  
+- **Blogs** – Articles on coding and various technologies
+- **Gallery** – Collection of certificates
+- **Projects** – Showcasing completed projects
+- **Shop** – Technology product listings
+- **Contact** – Contact form and social media links
+- **Dark Mode** – Supports Light/Dark theme
+- **Admin Panel** – Add, delete, and edit content via the admin system
+
+## 🛠 **Tech Stack** :
+
 - **Frontend:** Next.js, React.js, AOS, Swiper, Typed.js, CSS3, HTML5  
 - **Backend & Database:** MongoDB Atlas, Mongoose, NextAuth.js  
 - **Deployment:** Vercel  
 - **Other:** Axios, Cloudinary  
 
-## Installation & Setup  
-### **ติดตั้งแพ็กเกจทั้งหมด:**  
-```bash
-npm install
-```
-### **เริ่มต้นใช้งาน:**  
-```bash
-npm run dev
-```
+## 📂 **GitHub Repository (Source Code)** :
 
-## Example Image
-- ### Home Page
-![Home Page](https://github.com/TOEYJIRAKID/personal_gif_public/blob/main/port-toeyjira.gif)
+- [https://github.com/TOEYJIRAKID/dev-portfolio-project](https://github.com/TOEYJIRAKID/dev-portfolio-project)
 
+## ⚙️ **Installation & Setup** :
 
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/TOEYJIRAKID/dev-portfolio-project.git
+   cd <Path> # Replace with "BACKEND" or "FRONTEND"
+   ```  
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```  
+3. **Run the project**  
+   ```bash
+   npm run dev
+   ```  
+4. **Open http://localhost:3000/ to view the project.**
+
+## 📽️ **Project Preview** :
+
+![PORT TOEYJIRA](https://github.com/TOEYJIRAKID/personal_gif_public/blob/main/port-toeyjira.gif)
