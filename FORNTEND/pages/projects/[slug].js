@@ -100,6 +100,10 @@ export default function projectslug() {
     }
   };
 
+  const Image = ({ node, ...props }) => {
+    return <img className="responsive-img" {...props} />;
+  };
+
   const [mainImage, setMainImage] = useState("");
 
   // useEffect to set mainImage once alldata is available
@@ -212,6 +216,7 @@ export default function projectslug() {
                     remarkPlugins={[remarkGfm]}
                     components={{
                       code: Code,
+                      img: Image,
                     }}
                   >
                     {alldata[0]?.description}

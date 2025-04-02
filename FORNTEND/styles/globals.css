@@ -4523,6 +4523,13 @@ header.sticky {
     margin: 8px 0;
 }
 
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ SHOP SLUG PAGE  */
