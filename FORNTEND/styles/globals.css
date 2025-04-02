@@ -5190,6 +5190,24 @@ header.sticky {
     background-color: #e0e0e0;
 }
 
+.custom-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.dark .custom-link {
+    color: #00a2ff;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.dark .custom-link:hover {
+    color: #0080cc;
+}
+
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ RESPONSIVE CSS         $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */

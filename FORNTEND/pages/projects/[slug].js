@@ -104,6 +104,17 @@ export default function projectslug() {
     return <img className="responsive-img" {...props} />;
   };
 
+  const Link = ({ node, ...props }) => {
+    return (
+      <a
+        className="custom-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      />
+    );
+  };
+
   const [mainImage, setMainImage] = useState("");
 
   // useEffect to set mainImage once alldata is available
@@ -217,6 +228,7 @@ export default function projectslug() {
                     components={{
                       code: Code,
                       img: Image,
+                      a: Link,
                     }}
                   >
                     {alldata[0]?.description}
