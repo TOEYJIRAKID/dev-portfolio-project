@@ -4513,6 +4513,13 @@ header.sticky {
 .blogcontent li {
     margin-bottom: 8px;
     line-height: 1.7;
+}
+
+.blogcontent ul li {
+    list-style: disc;
+}
+
+.blogcontent ol li {
     list-style: auto;
 }
 
@@ -5129,7 +5136,56 @@ header.sticky {
     background-color: #8750f7;
 }
 
+.blogcontent table {
+    width: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0.5rem;
+    border: 1px solid #555;
+}
 
+.blogcontent th,
+.blogcontent td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #555;
+}
+
+.blogcontent th {
+    background-color: #222;
+    font-weight: bold;
+}
+
+.blogcontent tr:nth-child(even) {
+    background-color: #111;
+}
+
+.blogcontent tr:hover {
+    background-color: #333;
+}
+
+/* Dark Mode Styles */
+.dark .blogcontent table {
+    border: 1px solid #999;
+}
+
+.dark .blogcontent th,
+.dark .blogcontent td {
+    border: 1px solid #999;
+}
+
+.dark .blogcontent th {
+    background-color: #dedede;
+    color: #000;
+}
+
+.dark .blogcontent tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.dark .blogcontent tr:hover {
+    background-color: #e0e0e0;
+}
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ RESPONSIVE CSS         $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
@@ -6010,6 +6066,18 @@ header.sticky {
     .skill-slider-container::before,
     .skill-slider-container::after {
         width: 70px;
+    }
+
+    .blogcontent h2 {
+        font-size: 24px;
+    }
+
+    .blogcontent h3 {
+        font-size: 18px;
+    }
+
+    .blogcontent p {
+        font-size: 16px;
     }
 }
 
