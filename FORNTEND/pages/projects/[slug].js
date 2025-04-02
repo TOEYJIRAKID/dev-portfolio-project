@@ -210,7 +210,7 @@ export default function projectslug() {
           <div className="projectslugdescription">
             <div className="container">
               <div className="psdescri">
-                <h2>Project Description</h2>
+                <h2 className="psdescri-text">Project Description</h2>
                 <div className="blogcontent">
                   <ReactMarkDown
                     remarkPlugins={[remarkGfm]}

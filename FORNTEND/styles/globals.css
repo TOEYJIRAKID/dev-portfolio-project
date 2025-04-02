@@ -5097,13 +5097,29 @@ header.sticky {
     width: auto;
 }
 
-.psdescri h2 {
+/* .psdescri h2 {
     position: relative;
     font-size: 35px;
     padding-bottom: 1rem;
 }
 
 .psdescri h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 4px;
+    background-color: #8750f7;
+} */
+
+.psdescri-text {
+    position: relative;
+    font-size: 35px;
+    padding-bottom: 1rem;
+}
+
+.psdescri-text::before {
     content: '';
     position: absolute;
     bottom: 0;
