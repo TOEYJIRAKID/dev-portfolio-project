@@ -369,8 +369,11 @@ export default function Project({
             <option value="machinelearning">Machine Learning</option>
             <option value="deeplearning">Deep Learning</option>
             <option value="microservices">Microservices</option>
+            <option value="iot">Internet of Things</option>
             <option value="malware">Malware</option>
             <option value="pefile">PE File</option>
+            <option value="linenotify">LINE Notify</option>
+            <option value="rfid">RFID</option>
           </select>
         </div>
 
