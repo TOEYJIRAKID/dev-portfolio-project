@@ -339,6 +339,7 @@ export default function Project({
             <option value="flask">Flask</option>
             <option value="elasticsearch">ElasticSearch</option>
             <option value="apexcharts">Apexcharts</option>
+            <option value="scikitlearn">Scikit Learn</option>
             <option value="php">PHP</option>
             <option value="git">Git</option>
             <option value="github">GitHub</option>
@@ -357,6 +358,7 @@ export default function Project({
             <option value="linux">Linux</option>
             <option value="ubuntu">Ubuntu</option>
             <option value="kalilinux">Kali Linux</option>
+            <option value="commandline">Command Line</option>
             <option value="cloud">Cloud</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
@@ -367,6 +369,8 @@ export default function Project({
             <option value="machinelearning">Machine Learning</option>
             <option value="deeplearning">Deep Learning</option>
             <option value="microservices">Microservices</option>
+            <option value="malware">Malware</option>
+            <option value="pefile">PE File</option>
           </select>
         </div>
 
