@@ -108,7 +108,7 @@ export default function Header() {
                   Projects
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/shop"
                   onClick={() => handleLinkClick("/shop")}
@@ -116,7 +116,7 @@ export default function Header() {
                 >
                   Shop
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
@@ -186,7 +186,7 @@ export default function Header() {
                   Projects
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/shop"
                   onClick={() => handleLinkClick("/shop")}
@@ -194,7 +194,7 @@ export default function Header() {
                 >
                   Shop
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
