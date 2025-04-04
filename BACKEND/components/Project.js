@@ -336,6 +336,9 @@ export default function Project({
             <option value="java">Java</option>
             <option value="nodejs">NodeJS</option>
             <option value="expressjs">ExpressJS</option>
+            <option value="flask">Flask</option>
+            <option value="elasticsearch">ElasticSearch</option>
+            <option value="apexcharts">Apexcharts</option>
             <option value="php">PHP</option>
             <option value="git">Git</option>
             <option value="github">GitHub</option>
@@ -344,6 +347,7 @@ export default function Project({
             <option value="mongodb">MongoDB</option>
             <option value="mysql">MySQL</option>
             <option value="postgresql">PostgreSQL</option>
+            <option value="jsonserver">Json Server</option>
             <option value="oracle">Oracle</option>
             <option value="database">Database</option>
             <option value="docker">Docker</option>
@@ -352,12 +356,14 @@ export default function Project({
             <option value="deployment">Deployment</option>
             <option value="linux">Linux</option>
             <option value="ubuntu">Ubuntu</option>
+            <option value="kalilinux">Kali Linux</option>
             <option value="cloud">Cloud</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
             <option value="fullstack">Fullstack</option>
             <option value="uiux">UX/UI</option>
             <option value="websecurity">Web Security</option>
+            <option value="cybersecurity">Cyber Security</option>
             <option value="machinelearning">Machine Learning</option>
             <option value="deeplearning">Deep Learning</option>
             <option value="microservices">Microservices</option>
