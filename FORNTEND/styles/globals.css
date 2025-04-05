@@ -5142,7 +5142,7 @@ header.sticky {
     max-width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.5rem;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     font-size: 16px;
     display: block;
     overflow-x: auto;
