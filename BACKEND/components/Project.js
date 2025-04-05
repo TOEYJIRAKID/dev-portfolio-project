@@ -329,6 +329,7 @@ export default function Project({
             <option value="reactjs">ReactJS</option>
             <option value="nextjs">NextJS</option>
             <option value="vuejs">VueJS</option>
+            <option value="dart">Dart</option>
             <option value="flutter">Flutter</option>
             <option value="python">Python</option>
             <option value="django">Django</option>
@@ -364,6 +365,7 @@ export default function Project({
             <option value="backend">Backend</option>
             <option value="fullstack">Fullstack</option>
             <option value="uiux">UX/UI</option>
+            <option value="mobileapp">Mobile App</option>
             <option value="websecurity">Web Security</option>
             <option value="cybersecurity">Cyber Security</option>
             <option value="machinelearning">Machine Learning</option>
