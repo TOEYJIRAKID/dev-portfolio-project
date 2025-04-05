@@ -5143,7 +5143,10 @@ header.sticky {
     border-collapse: collapse;
     margin-bottom: 1.5rem;
     border: 1px solid #333;
-    font-size: 18px;
+    font-size: 16px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .blogcontent th,
@@ -6100,6 +6103,14 @@ header.sticky {
 
     .blogcontent p {
         font-size: 16px;
+    }
+
+    .blogcontent table::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .blogcontent pre::-webkit-scrollbar {
+        height: 10px;
     }
 }
 
