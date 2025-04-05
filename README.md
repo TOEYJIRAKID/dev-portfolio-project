@@ -19,14 +19,13 @@ PORT TOEYJIRA is a personal portfolio web application designed to showcase infor
 - **Blogs** – Articles on coding and various technologies
 - **Gallery** – Collection of certificates
 - **Projects** – Showcasing completed projects
-- **Shop** – Technology product listings
 - **Contact** – Contact form and social media links
 - **Dark Mode** – Supports Light/Dark theme
 - **Admin Panel** – Add, delete, and edit content via the admin system
 
 ## 🛠 **Tech Stack** :
 
-- **Frontend:** Next.js, React.js, AOS, Swiper, Typed.js, CSS3, HTML5  
+- **Frontend:** CSS3, HTML5, JavaScript, Next.js, React.js, AOS, Swiper, Typed.js 
 - **Backend & Database:** MongoDB Atlas, Mongoose, NextAuth.js  
 - **Deployment:** Vercel  
 - **Other:** Axios, Cloudinary  
@@ -50,7 +49,7 @@ PORT TOEYJIRA is a personal portfolio web application designed to showcase infor
    ```bash
    npm run dev
    ```  
-4. **Open http://localhost:3000/ to view the project.**
+4. **Open http://localhost:3000 to view the project.**
 
 ## 📽️ **Project Preview** :
 
