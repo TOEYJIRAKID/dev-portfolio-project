@@ -18,12 +18,20 @@ body {
     overflow-x: hidden;
 }
 
-:root {
+/* :root {
     --image-url: url('/img/me.png');
 }
 
 .dark {
     --image-url: url('/img/me.png');
+} */
+
+:root {
+    --image-url: url('/img/my_image_1.png');
+}
+
+.dark {
+    --image-url: url('/img/my_image_1.png');
 }
 
 .hero_img_box img {
