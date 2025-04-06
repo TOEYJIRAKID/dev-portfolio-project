@@ -282,6 +282,7 @@ export default function Blog({
             id="tags"
             multiple
           >
+            {/* Frontend */}
             <option value="html">HTML</option>
             <option value="css">CSS</option>
             <option value="bootstrap">Bootstrap</option>
@@ -291,7 +292,30 @@ export default function Blog({
             <option value="reactjs">ReactJS</option>
             <option value="nextjs">NextJS</option>
             <option value="vuejs">VueJS</option>
+            <option value="svelte">Svelte</option>
+            <option value="astro">Astro</option>
+            <option value="framer-motion">Framer Motion</option>
+            <option value="gsap">GSAP</option>
+            <option value="threejs">Three.js</option>
+            <option value="figma">Figma</option>
+            <option value="frontend">Frontend</option>
+            <option value="uiux">UX/UI</option>
+            <option value="webrendering">Web Rendering</option>
+
+            {/* Mobile */}
             <option value="flutter">Flutter</option>
+            <option value="reactnative">React Native</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="swift">Swift</option>
+            <option value="android">Android</option>
+            <option value="ios">iOS</option>
+            <option value="jetpack-compose">Jetpack Compose</option>
+            <option value="xamarin">Xamarin</option>
+            <option value="cordova">Cordova</option>
+            <option value="capacitor">Capacitor</option>
+            <option value="appdevelopment">App Development</option>
+
+            {/* Backend */}
             <option value="python">Python</option>
             <option value="django">Django</option>
             <option value="csharp">C#</option>
@@ -299,30 +323,127 @@ export default function Blog({
             <option value="nodejs">NodeJS</option>
             <option value="expressjs">ExpressJS</option>
             <option value="php">PHP</option>
-            <option value="git">Git</option>
-            <option value="github">GitHub</option>
-            <option value="programming">Programming Language</option>
+            <option value="springboot">Spring Boot</option>
+            <option value="laravel">Laravel</option>
+            <option value="aspnet">ASP.NET</option>
+            <option value="fastapi">FastAPI</option>
+            <option value="backend">Backend</option>
             <option value="api">API</option>
+            <option value="microservices">Microservices</option>
+
+            {/* Database */}
             <option value="mongodb">MongoDB</option>
             <option value="mysql">MySQL</option>
             <option value="postgresql">PostgreSQL</option>
             <option value="oracle">Oracle</option>
-            <option value="database">Database</option>
-            <option value="docker">Docker</option>
             <option value="firebase">Firebase</option>
+            <option value="database">Database</option>
+
+            {/* DevOps / Tools */}
+            <option value="git">Git</option>
+            <option value="github">GitHub</option>
+            <option value="docker">Docker</option>
             <option value="vercel">Vercel</option>
             <option value="deployment">Deployment</option>
             <option value="linux">Linux</option>
             <option value="ubuntu">Ubuntu</option>
             <option value="cloud">Cloud</option>
-            <option value="frontend">Frontend</option>
-            <option value="backend">Backend</option>
-            <option value="fullstack">Fullstack</option>
-            <option value="uiux">UX/UI</option>
+            <option value="ci">CI/CD</option>
+            <option value="devops">DevOps</option>
+            <option value="kubernetes">Kubernetes</option>
+            <option value="ansible">Ansible</option>
+            <option value="terraform">Terraform</option>
+            <option value="nginx">Nginx</option>
+            <option value="aws">AWS</option>
+            <option value="gcp">GCP</option>
+            <option value="azure">Azure</option>
+
+            {/* Web Performance & SEO */}
+            <option value="ssr">SSR</option>
+            <option value="csr">CSR</option>
+            <option value="seo">SEO</option>
             <option value="websecurity">Web Security</option>
+            <option value="performance">Performance</option>
+
+            {/* Development Categories */}
+            <option value="programming">Programming Language</option>
+            <option value="webdevelopment">Web Development</option>
+            <option value="fullstack">Fullstack</option>
+
+            {/* Machine Learning & AI */}
             <option value="machinelearning">Machine Learning</option>
             <option value="deeplearning">Deep Learning</option>
-            <option value="microservices">Microservices</option>
+            <option value="ai">AI</option>
+            <option value="computervision">Computer Vision</option>
+            <option value="nlp">NLP</option>
+            <option value="tensorflow">TensorFlow</option>
+            <option value="pytorch">PyTorch</option>
+            <option value="datascience">Data Science</option>
+            <option value="modeltraining">Model Training</option>
+            <option value="mlops">MLOps</option>
+            <option value="opencv">OpenCV</option>
+            <option value="scikit-learn">Scikit-learn</option>
+            <option value="jupyter">Jupyter Notebook</option>
+            <option value="huggingface">HuggingFace</option>
+            <option value="generative-ai">Generative AI</option>
+            <option value="chatgpt">ChatGPT</option>
+
+            {/* Security */}
+            <option value="jwt">JWT</option>
+            <option value="oauth">OAuth</option>
+            <option value="authentication">Authentication</option>
+            <option value="authorization">Authorization</option>
+            <option value="cryptography">Cryptography</option>
+
+            {/* Testing */}
+            <option value="testing">Testing</option>
+            <option value="unit-testing">Unit Testing</option>
+            <option value="integration-testing">Integration Testing</option>
+            <option value="performance-testing">Performance Testing</option>
+            <option value="jest">Jest</option>
+            <option value="mocha">Mocha</option>
+            <option value="cypress">Cypress</option>
+            <option value="playwright">Playwright</option>
+            <option value="selenium">Selenium</option>
+
+            {/* Architecture / Patterns */}
+            <option value="architecture">Architecture</option>
+            <option value="designpatterns">Design Patterns</option>
+            <option value="monolith">Monolith</option>
+            <option value="event-driven">Event-Driven Architecture</option>
+            <option value="ddd">Domain Driven Design</option>
+            <option value="cqrs">CQRS</option>
+            <option value="rest">REST</option>
+            <option value="graphql">GraphQL</option>
+
+            {/* Game Development */}
+            <option value="unity">Unity</option>
+            <option value="unreal">Unreal Engine</option>
+            <option value="godot">Godot</option>
+            <option value="gamedev">Game Development</option>
+            <option value="game-design">Game Design</option>
+
+            {/* Blockchain */}
+            <option value="solidity">Solidity</option>
+            <option value="web3">Web3</option>
+            <option value="ethersjs">Ethers.js</option>
+            <option value="smartcontract">Smart Contract</option>
+
+            {/* Misc / Tools  */}
+            <option value="vscode">VS Code</option>
+            <option value="eslint">ESLint</option>
+            <option value="prettier">Prettier</option>
+            <option value="storybook">Storybook</option>
+            <option value="postman">Postman</option>
+            <option value="npm">NPM</option>
+            <option value="yarn">Yarn</option>
+            <option value="clean-code">Clean Code</option>
+            <option value="refactoring">Refactoring</option>
+            <option value="agile">Agile</option>
+            <option value="scrum">Scrum</option>
+            <option value="career">Career</option>
+            <option value="freelance">Freelance</option>
+            <option value="productivity">Productivity</option>
           </select>
         </div>
 
