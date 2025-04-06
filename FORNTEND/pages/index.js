@@ -160,7 +160,7 @@ export default function Home() {
               </div>
               <div className="hero_btn_box" data-aos="fade-up">
                 <Link
-                  href="https://drive.google.com/file/d/15qM4qFFp70TuHW5r2vvgGwpv_ad-Y3Ew/view?usp=sharing"
+                  href="https://drive.google.com/file/d/18j3Hwtiq9fTYEGQX0R1zx68G8T--reXj/view?usp=sharing"
                   target="_blank"
                   className="download_cv"
                 >
