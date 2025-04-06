@@ -15,7 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function blogs() {
   // pagination
   const [currentPage, setCurrentPage] = useState(1); // for page 1
-  const [perPage] = useState(7);
+  const [perPage] = useState(6);
 
   const [searchInput, setSearchInput] = useState(false);
 
