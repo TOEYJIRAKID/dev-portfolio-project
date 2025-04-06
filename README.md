@@ -53,4 +53,3 @@ PORT TOEYJIRA is a personal portfolio web application designed to showcase infor
 
 ## 📽️ **Project Preview** :
 
-![PORT TOEYJIRA](https://github.com/TOEYJIRAKID/personal_gif_public/blob/main/port-toeyjira.gif)
