@@ -661,11 +661,11 @@ const BlogPage = () => {
                           />
                           <div>
                             <h3>{blog.title}</h3>
-                            <h4 className="mt-1">
-                              {blog.tags.map((cat) => {
-                                return <span key={cat}>{cat}</span>;
-                              })}
-                            </h4>
+                            <div className="mt-1 tag-container">
+                              {blog.tags.map((cat) => (
+                                <span key={cat}>{cat}</span>
+                              ))}
+                            </div>
                           </div>
                         </Link>
                       );
