@@ -5195,7 +5195,7 @@ header.sticky {
 
 /* Dark Mode Styles */
 .dark .blogcontent table {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
 }
 
 .dark .blogcontent th,
