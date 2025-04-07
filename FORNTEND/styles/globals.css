@@ -6277,6 +6277,7 @@ header.sticky {
     }
 
     .fpostinfo h2 {
+        line-height: 2.8;
         font-size: 0.8rem;
     }
 
