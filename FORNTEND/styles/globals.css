@@ -5452,9 +5452,15 @@ header.sticky {
         gap: 2rem;
     }
 
+
     .re_blog {
-        max-width: 47%;
+        min-width: 100%;
+        max-width: 100%;
     }
+
+    /* .re_blog {
+        max-width: 47%;
+    } */
 
     .blogslugpagecont {
         flex-direction: column;
@@ -5858,10 +5864,10 @@ header.sticky {
         padding: 3rem 1rem;
     }
 
-    .re_blog {
+    /* .re_blog {
         min-width: 100%;
         max-width: 100%;
-    }
+    } */
 
     .lpost {
         min-width: 100%;
