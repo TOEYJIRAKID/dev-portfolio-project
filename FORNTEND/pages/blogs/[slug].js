@@ -289,6 +289,17 @@ const BlogPage = () => {
     }
   };
 
+  const Links = ({ node, ...props }) => {
+    return (
+      <a
+        className="custom-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      />
+    );
+  };
+
   const renderComments = (comments) => {
     if (!comments) {
       return null; // handle case when comments are not yet loaded
@@ -456,6 +467,7 @@ const BlogPage = () => {
                         remarkPlugins={[remarkGfm]}
                         components={{
                           code: Code,
+                          a: Links,
                         }}
                       >
                         {blogData.blog.description}
