@@ -369,6 +369,7 @@ export default function Blog({
             <option value="programming">Programming Language</option>
             <option value="webdevelopment">Web Development</option>
             <option value="fullstack">Fullstack</option>
+            <option value="developertools">Developer Tools</option>
 
             {/* Machine Learning & AI */}
             <option value="machinelearning">Machine Learning</option>
