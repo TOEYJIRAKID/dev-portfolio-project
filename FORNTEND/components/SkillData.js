@@ -47,175 +47,175 @@ const skillData = [
     name: "Bootstrap",
     icon: "/img/bootstrap.svg",
   },
+  // {
+  //   id: 10,
+  //   name: "Framer Motion",
+  //   icon: "/img/framer-motion.svg",
+  // },
+  // {
+  //   id: 11,
+  //   name: "shadcn",
+  //   icon: "/img/shadcn.svg",
+  // },
   {
     id: 10,
-    name: "Framer Motion",
-    icon: "/img/framer-motion.svg",
-  },
-  {
-    id: 11,
-    name: "shadcn",
-    icon: "/img/shadcn.svg",
-  },
-  {
-    id: 12,
     name: "Flutter",
     icon: "/img/flutter.svg",
   },
   {
-    id: 13,
+    id: 11,
     name: "Dart",
     icon: "/img/dart.svg",
   },
   // Backend
   {
-    id: 14,
+    id: 12,
     name: "Node.js",
     icon: "/img/nodejs.svg",
   },
   {
-    id: 15,
+    id: 13,
     name: "Express.js",
     icon: "/img/express.svg",
   },
   {
-    id: 16,
+    id: 14,
     name: "C#",
     icon: "/img/csharp.svg",
   },
   {
-    id: 17,
+    id: 15,
     name: "ASP.NET",
     icon: "/img/asp.svg",
   },
   {
-    id: 18,
+    id: 16,
     name: "Python",
     icon: "/img/python.svg",
   },
   // Database
   {
-    id: 19,
+    id: 17,
     name: "MongoDB",
     icon: "/img/mongodb.svg",
   },
   {
-    id: 20,
+    id: 18,
     name: "MySQL",
     icon: "/img/mysql.svg",
   },
   {
-    id: 21,
+    id: 19,
     name: "Oracle",
     icon: "/img/oracle.svg",
   },
   // Tools & Utilities
   {
-    id: 22,
+    id: 20,
     name: "Git",
     icon: "/img/git.svg",
   },
   {
-    id: 23,
+    id: 21,
     name: "GitHub",
     icon: "/img/github.svg",
   },
   {
-    id: 24,
+    id: 22,
     name: "Docker",
     icon: "/img/docker.svg",
   },
   {
-    id: 25,
+    id: 23,
     name: "pnpm",
     icon: "/img/pnpm.svg",
   },
   {
-    id: 26,
+    id: 24,
     name: "Bun",
     icon: "/img/bun.svg",
   },
   {
-    id: 27,
+    id: 25,
     name: "npm",
     icon: "/img/npm.svg",
   },
   {
-    id: 28,
+    id: 26,
     name: "Postman",
     icon: "/img/postman.svg",
   },
   {
-    id: 29,
+    id: 27,
     name: "Insomnia",
     icon: "/img/insomnia.svg",
   },
   {
-    id: 30,
+    id: 28,
     name: "DBeaver",
     icon: "/img/DBeaver.svg",
   },
   {
-    id: 31,
+    id: 29,
     name: "ESLint",
     icon: "/img/eslint.svg",
   },
   {
-    id: 32,
+    id: 30,
     name: "Jupyter",
     icon: "/img/jupyter.svg",
   },
   {
-    id: 33,
+    id: 31,
     name: "VS Code",
     icon: "/img/vscode.svg",
   },
   {
-    id: 34,
+    id: 32,
     name: "Visual Studio",
     icon: "/img/visualstudio.svg",
   },
   // Cloud & Deployment
   {
-    id: 35,
+    id: 33,
     name: "Firebase",
     icon: "/img/firebase.svg",
   },
   {
-    id: 36,
+    id: 34,
     name: "Vercel",
     icon: "/img/vercel.svg",
   },
   {
-    id: 37,
+    id: 35,
     name: "NextAuth.js",
     icon: "/img/nextauth.svg",
   },
   // Design
   {
-    id: 38,
+    id: 36,
     name: "Figma",
     icon: "/img/figma.svg",
   },
   // OS
   {
-    id: 39,
+    id: 37,
     name: "Linux",
     icon: "/img/linux.svg",
   },
   {
-    id: 40,
+    id: 38,
     name: "Ubuntu",
     icon: "/img/ubuntu.svg",
   },
   {
-    id: 41,
+    id: 39,
     name: "Kali Linux",
     icon: "/img/kali.svg",
   },
   // Data Analysis
   {
-    id: 42,
+    id: 40,
     name: "Power BI",
     icon: "/img/powerbi.svg",
   },
